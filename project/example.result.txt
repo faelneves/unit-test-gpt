@@ -1,0 +1,13 @@
+PASS project/example.test.js
+  isPalindrome
+    ✓ should return true for a palindrome word (1 ms)
+    ✓ should return false for a non-palindrome word (1 ms)
+    ✓ should handle empty string and single character input
+    ✓ should ignore leading and trailing whitespaces (1 ms)
+    ✓ should ignore case when checking for palindrome
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.473 s, estimated 1 s
+Ran all test suites matching /.\/project\/example.test.js/i.

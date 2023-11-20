@@ -1,6 +1,7 @@
 import "dotenv/config.js";
 import OpenAI from 'openai';
 import fs from 'fs';
+import { exec } from 'child_process';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
@@ -32,16 +33,31 @@ function addTestOnPath(originalPath: string): string {
   return `${pathWithoutExtensao}.test${extension}`;
 }
 
+function runTests(filePath: string) {
+  exec(`npm run test -- ${filePath}`, (error, _stdout, stderr) => {
+    console.log(stderr);
+    let arrayPath = filePath.split('/');
+    const [filename] = arrayPath.at(-1).split('.');
+    arrayPath.pop();
+    console.log(`stderr: ${stderr}`);
+    createFile(`${arrayPath.join('/')}/${filename}.result.txt`, stderr);
+  })
+}
 
-(async (filePath: string) => {
+async function handle(filePath: string) {
   const response = await openai.chat.completions.create({
     model: process.env.MODEL as string,
     messages: [{ "role": "system", "content": getFileContent('./inputs/tests_v1.txt').fileContents },
+    { "role": "user", "content": `file path: ${filePath}` },
     { "role": "user", "content": getFileContent(filePath).fileContents }],
   });
-  const codeFromMessage = getCodeFromMessage(response.choices[0].message.content).join('\n')
-  createFile(addTestOnPath(filePath), codeFromMessage)
-})('./project/example.test.js')
+  const testFilePath = addTestOnPath(filePath);
+  const codeFromMessage = getCodeFromMessage(response.choices[0].message.content)[0].split('\n');
+  codeFromMessage.shift();
+  createFile(testFilePath, codeFromMessage.join('\n'));
+  runTests(testFilePath);
+}
 
-// console.log(getFileContent('./project/example.js').fileContents)
-// console.log(getFileContent('./inputs/tests.txt').fileContents);
+(async () => {
+  await handle('./project/example.js');
+})()

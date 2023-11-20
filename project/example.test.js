@@ -1,27 +1,30 @@
-import { isPalindrome } from './example.js'
+import { isPalindrome } from './example';
 
-describe("isPalindrome", () => {
-  test("should return true for palindrome word", () => {
-    expect(isPalindrome("level")).toBe(true);
+describe('isPalindrome', () => {
+  it('should return true for a palindrome word', () => {
+    expect(isPalindrome('level')).toBe(true);
+    expect(isPalindrome('radar')).toBe(true);
+    expect(isPalindrome('madam')).toBe(true);
   });
 
-  test("should return false for non-palindrome word", () => {
-    expect(isPalindrome("hello")).toBe(false);
+  it('should return false for a non-palindrome word', () => {
+    expect(isPalindrome('hello')).toBe(false);
+    expect(isPalindrome('world')).toBe(false);
+    expect(isPalindrome('javascript')).toBe(false);
   });
 
-  test("should return true for palindrome word with spaces", () => {
-    expect(isPalindrome("A man a plan a canal Panama")).toBe(true);
+  it('should handle empty string and single character input', () => {
+    expect(isPalindrome('')).toBe(true);
+    expect(isPalindrome('a')).toBe(true);
   });
 
-  test("should return true for palindrome word with special characters", () => {
-    expect(isPalindrome("Madam, in Eden I'm Adam")).toBe(true);
+  it('should ignore leading and trailing whitespaces', () => {
+    expect(isPalindrome(' level ')).toBe(true);
+    expect(isPalindrome('      radar      ')).toBe(true);
   });
 
-  test("should return true for palindrome word with numbers", () => {
-    expect(isPalindrome("12321")).toBe(true);
-  });
-
-  test("should return false for non-palindrome word with numbers", () => {
-    expect(isPalindrome("12342")).toBe(false);
+  it('should ignore case when checking for palindrome', () => {
+    expect(isPalindrome('LeveL')).toBe(true);
+    expect(isPalindrome('Radar')).toBe(true);
   });
 });
