@@ -1,6 +1,6 @@
-import SetCache from './SetCache.js'
-import some from '../some.js'
-import cacheHas from './cacheHas.js'
+import SetCache from './SetCache'
+import some from '../some'
+import cacheHas from './cacheHas'
 
 /** Used to compose bitmasks for value comparisons. */
 const COMPARE_PARTIAL_FLAG = 1
@@ -70,7 +70,7 @@ function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
       }
     } else if (!(
       arrValue === othValue ||
-            equalFunc(arrValue, othValue, bitmask, customizer, stack)
+      equalFunc(arrValue, othValue, bitmask, customizer, stack)
     )) {
       result = false
       break

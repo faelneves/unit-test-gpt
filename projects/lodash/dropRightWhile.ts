@@ -1,4 +1,4 @@
-import baseWhile from './.internal/baseWhile.js';
+import baseWhile from './.internal/baseWhile';
 
 /**
  * Creates a slice of `array` excluding elements dropped from the end.
@@ -22,7 +22,7 @@ import baseWhile from './.internal/baseWhile.js';
  * // => objects for ['barney']
  */
 function dropRightWhile(array, predicate) {
-    return array != null && array.length ? baseWhile(array, predicate, true, true) : [];
+  return array != null && array.length ? baseWhile(array, predicate, true, true) : [];
 }
 
 export default dropRightWhile;

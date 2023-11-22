@@ -1,4 +1,4 @@
-import isObject from './isObject.js';
+import isObject from './isObject';
 
 /**
  * Used to match `RegExp`
@@ -8,10 +8,10 @@ const reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
 
 /** Used to detect if a method is native. */
 const reIsNative = RegExp(
-    `^${Function.prototype.toString
-        .call(Object.prototype.hasOwnProperty)
-        .replace(reRegExpChar, '\\$&')
-        .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?')}$`,
+  `^${Function.prototype.toString
+    .call(Object.prototype.hasOwnProperty)
+    .replace(reRegExpChar, '\\$&')
+    .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?')}$`,
 );
 
 /**
@@ -31,7 +31,7 @@ const reIsNative = RegExp(
  * // => false
  */
 function isNative(value) {
-    return isObject(value) && reIsNative.test(value);
+  return isObject(value) && reIsNative.test(value);
 }
 
 export default isNative;

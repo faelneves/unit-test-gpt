@@ -1,8 +1,8 @@
-import getTag from './.internal/getTag.js';
-import isObjectLike from './isObjectLike.js';
-import nodeTypes from './.internal/nodeTypes.js';
+import getTag from './.internal/getTag';
+import isObjectLike from './isObjectLike';
+import nodeTypes from './.internal/nodeTypes';
 
-/* Node.js helper references. */
+/* Node helper references. */
 const nodeIsMap = nodeTypes && nodeTypes.isMap;
 
 /**
@@ -21,7 +21,7 @@ const nodeIsMap = nodeTypes && nodeTypes.isMap;
  * // => false
  */
 const isMap = nodeIsMap
-    ? (value) => nodeIsMap(value)
-    : (value) => isObjectLike(value) && getTag(value) === '[object Map]';
+  ? (value) => nodeIsMap(value)
+  : (value) => isObjectLike(value) && getTag(value) === '[object Map]';
 
 export default isMap;

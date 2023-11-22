@@ -1,4 +1,4 @@
-import baseIndexOf from './baseIndexOf.js'
+import baseIndexOf from './baseIndexOf'
 
 /**
  * Used by `trim` and `trimStart` to get the index of the first string symbol
@@ -13,7 +13,7 @@ function charsStartIndex(strSymbols, chrSymbols) {
   let index = -1
   const length = strSymbols.length
 
-  while (++index < length && baseIndexOf(chrSymbols, strSymbols[index], 0) > -1) {}
+  while (++index < length && baseIndexOf(chrSymbols, strSymbols[index], 0) > -1) { }
   return index
 }
 

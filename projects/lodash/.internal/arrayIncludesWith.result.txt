@@ -1,0 +1,11 @@
+PASS projects/lodash/.internal/arrayIncludesWith.test.ts
+  arrayIncludesWith
+    ✓ should return true if target is found in the array using the comparator (2 ms)
+    ✓ should return false if target is not found in the array using the comparator (1 ms)
+    ✓ should return false if the array is null (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.461 s, estimated 1 s
+Ran all test suites matching /projects\/lodash\/.internal\/arrayIncludesWith.test.ts/i.

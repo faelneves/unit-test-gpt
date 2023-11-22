@@ -1,9 +1,9 @@
-import getTag from './.internal/getTag.js';
-import isArguments from './isArguments.js';
-import isArrayLike from './isArrayLike.js';
-import isBuffer from './isBuffer.js';
-import isPrototype from './.internal/isPrototype.js';
-import isTypedArray from './isTypedArray.js';
+import getTag from './.internal/getTag';
+import isArguments from './isArguments';
+import isArrayLike from './isArrayLike';
+import isBuffer from './isBuffer';
+import isPrototype from './.internal/isPrototype';
+import isTypedArray from './isTypedArray';
 
 /** Used to check objects for own properties. */
 const hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -43,33 +43,33 @@ const hasOwnProperty = Object.prototype.hasOwnProperty;
  * // => false
  */
 function isEmpty(value) {
-    if (value == null) {
-        return true;
-    }
-    if (
-        isArrayLike(value) &&
-        (Array.isArray(value) ||
-            typeof value === 'string' ||
-            typeof value.splice === 'function' ||
-            isBuffer(value) ||
-            isTypedArray(value) ||
-            isArguments(value))
-    ) {
-        return !value.length;
-    }
-    const tag = getTag(value);
-    if (tag === '[object Map]' || tag === '[object Set]') {
-        return !value.size;
-    }
-    if (isPrototype(value)) {
-        return !Object.keys(value).length;
-    }
-    for (const key in value) {
-        if (hasOwnProperty.call(value, key)) {
-            return false;
-        }
-    }
+  if (value == null) {
     return true;
+  }
+  if (
+    isArrayLike(value) &&
+    (Array.isArray(value) ||
+      typeof value === 'string' ||
+      typeof value.splice === 'function' ||
+      isBuffer(value) ||
+      isTypedArray(value) ||
+      isArguments(value))
+  ) {
+    return !value.length;
+  }
+  const tag = getTag(value);
+  if (tag === '[object Map]' || tag === '[object Set]') {
+    return !value.size;
+  }
+  if (isPrototype(value)) {
+    return !Object.keys(value).length;
+  }
+  for (const key in value) {
+    if (hasOwnProperty.call(value, key)) {
+      return false;
+    }
+  }
+  return true;
 }
 
 export default isEmpty;

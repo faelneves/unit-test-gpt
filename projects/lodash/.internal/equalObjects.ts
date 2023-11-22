@@ -1,4 +1,4 @@
-import getAllKeys from './getAllKeys.js'
+import getAllKeys from './getAllKeys'
 
 /** Used to compose bitmasks for value comparisons. */
 const COMPARE_PARTIAL_FLAG = 1
@@ -74,9 +74,9 @@ function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
 
     // Non `Object` object instances with different constructors are not equal.
     if (objCtor !== othCtor &&
-        ('constructor' in object && 'constructor' in other) &&
-        !(typeof objCtor === 'function' && objCtor instanceof objCtor &&
-          typeof othCtor === 'function' && othCtor instanceof othCtor)) {
+      ('constructor' in object && 'constructor' in other) &&
+      !(typeof objCtor === 'function' && objCtor instanceof objCtor &&
+        typeof othCtor === 'function' && othCtor instanceof othCtor)) {
       result = false
     }
   }

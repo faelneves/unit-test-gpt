@@ -1,4 +1,4 @@
-import baseInRange from './.internal/baseInRange.js';
+import baseInRange from './.internal/baseInRange';
 
 /**
  * Checks if `number` is between `start` and up to, but not including, `end`. If
@@ -37,11 +37,11 @@ import baseInRange from './.internal/baseInRange.js';
  * // => true
  */
 function inRange(number, start, end) {
-    if (end === undefined) {
-        end = start;
-        start = 0;
-    }
-    return baseInRange(+number, +start, +end);
+  if (end === undefined) {
+    end = start;
+    start = 0;
+  }
+  return baseInRange(+number, +start, +end);
 }
 
 export default inRange;

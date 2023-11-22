@@ -1,5 +1,5 @@
-import createPadding from './.internal/createPadding.js';
-import stringSize from './.internal/stringSize.js';
+import createPadding from './.internal/createPadding';
+import stringSize from './.internal/stringSize';
 
 /**
  * Pads `string` on the right side if it's shorter than `length`. Padding
@@ -23,10 +23,10 @@ import stringSize from './.internal/stringSize.js';
  * // => 'abc'
  */
 function padEnd(string, length, chars) {
-    const strLength = length ? stringSize(string) : 0;
-    return length && strLength < length
-        ? string + createPadding(length - strLength, chars)
-        : string || '';
+  const strLength = length ? stringSize(string) : 0;
+  return length && strLength < length
+    ? string + createPadding(length - strLength, chars)
+    : string || '';
 }
 
 export default padEnd;

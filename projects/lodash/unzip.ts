@@ -1,7 +1,7 @@
-import filter from './filter.js';
-import map from './map.js';
-import baseProperty from './.internal/baseProperty.js';
-import isArrayLikeObject from './isArrayLikeObject.js';
+import filter from './filter';
+import map from './map';
+import baseProperty from './.internal/baseProperty';
+import isArrayLikeObject from './isArrayLikeObject';
 
 /**
  * This method is like `zip` except that it accepts an array of grouped
@@ -22,23 +22,23 @@ import isArrayLikeObject from './isArrayLikeObject.js';
  * // => [['a', 'b'], [1, 2], [true, false]]
  */
 function unzip(array) {
-    if (!(array != null && array.length)) {
-        return [];
+  if (!(array != null && array.length)) {
+    return [];
+  }
+  let length = 0;
+  // eslint-disable-next-line consistent-return
+  array = filter(array, (group) => {
+    if (isArrayLikeObject(group)) {
+      length = Math.max(group.length, length);
+      return true;
     }
-    let length = 0;
-    // eslint-disable-next-line consistent-return
-    array = filter(array, (group) => {
-        if (isArrayLikeObject(group)) {
-            length = Math.max(group.length, length);
-            return true;
-        }
-    });
-    let index = -1;
-    const result = new Array(length);
-    while (++index < length) {
-        result[index] = map(array, baseProperty(index));
-    }
-    return result;
+  });
+  let index = -1;
+  const result = new Array(length);
+  while (++index < length) {
+    result[index] = map(array, baseProperty(index));
+  }
+  return result;
 }
 
 export default unzip;

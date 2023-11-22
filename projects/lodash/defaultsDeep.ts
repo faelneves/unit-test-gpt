@@ -1,5 +1,5 @@
-import customDefaultsMerge from './.internal/customDefaultsMerge.js';
-import mergeWith from './mergeWith.js';
+import customDefaultsMerge from './.internal/customDefaultsMerge';
+import mergeWith from './mergeWith';
 
 /**
  * This method is like `defaults` except that it recursively assigns
@@ -19,8 +19,8 @@ import mergeWith from './mergeWith.js';
  * // => { 'a': { 'b': 2, 'c': 3 } }
  */
 function defaultsDeep(...args) {
-    args.push(undefined, customDefaultsMerge);
-    return mergeWith.apply(undefined, args);
+  args.push(undefined, customDefaultsMerge);
+  return mergeWith.apply(undefined, args);
 }
 
 export default defaultsDeep;

@@ -1,6 +1,6 @@
-import castSlice from './.internal/castSlice.js';
-import charsEndIndex from './.internal/charsEndIndex.js';
-import stringToArray from './.internal/stringToArray.js';
+import castSlice from './.internal/castSlice';
+import charsEndIndex from './.internal/charsEndIndex';
+import stringToArray from './.internal/stringToArray';
 
 const methodName = ''.trimRight ? 'trimRight' : 'trimEnd';
 
@@ -22,15 +22,15 @@ const methodName = ''.trimRight ? 'trimRight' : 'trimEnd';
  * // => '-_-abc'
  */
 function trimEnd(string, chars) {
-    if (string && chars === undefined) {
-        return string[methodName]();
-    }
-    if (!string || !chars) {
-        return string || '';
-    }
-    const strSymbols = stringToArray(string);
-    const end = charsEndIndex(strSymbols, stringToArray(chars)) + 1;
-    return castSlice(strSymbols, 0, end).join('');
+  if (string && chars === undefined) {
+    return string[methodName]();
+  }
+  if (!string || !chars) {
+    return string || '';
+  }
+  const strSymbols = stringToArray(string);
+  const end = charsEndIndex(strSymbols, stringToArray(chars)) + 1;
+  return castSlice(strSymbols, 0, end).join('');
 }
 
 export default trimEnd;

@@ -1,4 +1,4 @@
-import toInteger from './toInteger.js';
+import toInteger from './toInteger';
 
 /** Used as references for the maximum length and index of an array. */
 const MAX_ARRAY_LENGTH = 4294967295;
@@ -29,17 +29,17 @@ const MAX_ARRAY_LENGTH = 4294967295;
  * // => 3
  */
 function toLength(value) {
-    if (!value) {
-        return 0;
-    }
-    value = toInteger(value);
-    if (value < 0) {
-        return 0;
-    }
-    if (value > MAX_ARRAY_LENGTH) {
-        return MAX_ARRAY_LENGTH;
-    }
-    return value;
+  if (!value) {
+    return 0;
+  }
+  value = toInteger(value);
+  if (value < 0) {
+    return 0;
+  }
+  if (value > MAX_ARRAY_LENGTH) {
+    return MAX_ARRAY_LENGTH;
+  }
+  return value;
 }
 
 export default toLength;

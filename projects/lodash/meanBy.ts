@@ -1,4 +1,4 @@
-import baseSum from './.internal/baseSum.js';
+import baseSum from './.internal/baseSum';
 
 /** Used as references for various `Number` constants. */
 const NAN = 0 / 0;
@@ -21,8 +21,8 @@ const NAN = 0 / 0;
  * // => 5
  */
 function meanBy(array, iteratee) {
-    const length = array == null ? 0 : array.length;
-    return length ? baseSum(array, iteratee) / length : NAN;
+  const length = array == null ? 0 : array.length;
+  return length ? baseSum(array, iteratee) / length : NAN;
 }
 
 export default meanBy;

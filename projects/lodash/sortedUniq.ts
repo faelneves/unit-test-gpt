@@ -1,4 +1,4 @@
-import baseSortedUniq from './.internal/baseSortedUniq.js';
+import baseSortedUniq from './.internal/baseSortedUniq';
 
 /**
  * This method is like `uniq` except that it only works
@@ -16,7 +16,7 @@ import baseSortedUniq from './.internal/baseSortedUniq.js';
  * // => [1, 2]
  */
 function sortedUniq(array) {
-    return array != null && array.length ? baseSortedUniq(array) : [];
+  return array != null && array.length ? baseSortedUniq(array) : [];
 }
 
 export default sortedUniq;

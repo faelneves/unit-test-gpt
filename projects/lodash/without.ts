@@ -1,5 +1,5 @@
-import baseDifference from './.internal/baseDifference.js';
-import isArrayLikeObject from './isArrayLikeObject.js';
+import baseDifference from './.internal/baseDifference';
+import isArrayLikeObject from './isArrayLikeObject';
 
 /**
  * Creates an array excluding all given values using
@@ -20,7 +20,7 @@ import isArrayLikeObject from './isArrayLikeObject.js';
  * // => [3]
  */
 function without(array, ...values) {
-    return isArrayLikeObject(array) ? baseDifference(array, values) : [];
+  return isArrayLikeObject(array) ? baseDifference(array, values) : [];
 }
 
 export default without;

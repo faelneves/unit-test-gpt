@@ -1,8 +1,8 @@
-import map from './map.js';
-import baseAt from './.internal/baseAt.js';
-import basePullAt from './.internal/basePullAt.js';
-import compareAscending from './.internal/compareAscending.js';
-import isIndex from './.internal/isIndex.js';
+import map from './map';
+import baseAt from './.internal/baseAt';
+import basePullAt from './.internal/basePullAt';
+import compareAscending from './.internal/compareAscending';
+import isIndex from './.internal/isIndex';
 
 /**
  * Removes elements from `array` corresponding to `indexes` and returns an
@@ -28,14 +28,14 @@ import isIndex from './.internal/isIndex.js';
  * // => ['b', 'd']
  */
 function pullAt(array, ...indexes) {
-    const length = array == null ? 0 : array.length;
-    const result = baseAt(array, indexes);
+  const length = array == null ? 0 : array.length;
+  const result = baseAt(array, indexes);
 
-    basePullAt(
-        array,
-        map(indexes, (index) => (isIndex(index, length) ? +index : index)).sort(compareAscending),
-    );
-    return result;
+  basePullAt(
+    array,
+    map(indexes, (index) => (isIndex(index, length) ? +index : index)).sort(compareAscending),
+  );
+  return result;
 }
 
 export default pullAt;

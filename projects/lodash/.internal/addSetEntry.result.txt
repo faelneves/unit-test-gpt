@@ -1,0 +1,10 @@
+PASS projects/lodash/.internal/addSetEntry.test.ts
+  addSetEntry
+    ✓ should add the value to the set (2 ms)
+    ✓ should return the modified set
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.453 s, estimated 1 s
+Ran all test suites matching /projects\/lodash\/.internal\/addSetEntry.test.ts/i.

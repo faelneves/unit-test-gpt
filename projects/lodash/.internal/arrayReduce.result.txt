@@ -1,0 +1,28 @@
+FAIL projects/lodash/.internal/arrayReduce.test.ts
+  arrayReduce
+    ✓ should reduce the array using the iteratee function and return the accumulated value (2 ms)
+    ✕ should reduce the array using the iteratee function and initial value and return the accumulated value (3 ms)
+    ✓ should return the initial value when the array is empty
+
+  ● arrayReduce › should reduce the array using the iteratee function and initial value and return the accumulated value
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 25
+    Received: 15
+
+      17 |     const result = arrayReduce(array, iteratee, accumulator, true);
+      18 |
+    > 19 |     expect(result).toBe(25);
+         |                    ^
+      20 |   });
+      21 |
+      22 |   it('should return the initial value when the array is empty', () => {
+
+      at Object.toBe (projects/lodash/.internal/arrayReduce.test.ts:19:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.547 s, estimated 1 s
+Ran all test suites matching /projects\/lodash\/.internal\/arrayReduce.test.ts/i.

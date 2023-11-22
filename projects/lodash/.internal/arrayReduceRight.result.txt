@@ -1,0 +1,46 @@
+FAIL projects/lodash/.internal/arrayReduceRight.test.ts
+  arrayReduceRight
+    ✓ should correctly reduce an array from right to left with initial value (2 ms)
+    ✕ should correctly reduce an array from right to left without initial value (1 ms)
+    ✓ should correctly reduce an empty array without initial value
+    ✕ should return the last element as the initial value if specified (1 ms)
+
+  ● arrayReduceRight › should correctly reduce an array from right to left without initial value
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 15
+    Received: NaN
+
+      16 |     const result = arrayReduceRight(array, iteratee)
+      17 |
+    > 18 |     expect(result).toEqual(15)
+         |                    ^
+      19 |   })
+      20 |
+      21 |   it('should correctly reduce an empty array without initial value', () => {
+
+      at Object.toEqual (projects/lodash/.internal/arrayReduceRight.test.ts:18:20)
+
+  ● arrayReduceRight › should return the last element as the initial value if specified
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 5
+    Received: 15
+
+      32 |     const result = arrayReduceRight(array, iteratee, null, true)
+      33 |
+    > 34 |     expect(result).toEqual(5)
+         |                    ^
+      35 |   })
+      36 | })
+      37 |
+
+      at Object.toEqual (projects/lodash/.internal/arrayReduceRight.test.ts:34:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 passed, 4 total
+Snapshots:   0 total
+Time:        0.489 s, estimated 1 s
+Ran all test suites matching /projects\/lodash\/.internal\/arrayReduceRight.test.ts/i.

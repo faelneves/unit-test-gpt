@@ -1,5 +1,5 @@
-import words from './words.js';
-import toString from './toString.js';
+import words from './words';
+import toString from './toString';
 
 /**
  * Converts `string` to
@@ -22,9 +22,9 @@ import toString from './toString.js';
  * // => 'foo-bar'
  */
 const kebabCase = (string) =>
-    words(toString(string).replace(/['\u2019]/g, '')).reduce(
-        (result, word, index) => result + (index ? '-' : '') + word.toLowerCase(),
-        '',
-    );
+  words(toString(string).replace(/['\u2019]/g, '')).reduce(
+    (result, word, index) => result + (index ? '-' : '') + word.toLowerCase(),
+    '',
+  );
 
 export default kebabCase;

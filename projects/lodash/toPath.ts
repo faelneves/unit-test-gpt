@@ -1,8 +1,8 @@
-import map from './map.js';
-import copyArray from './.internal/copyArray.js';
-import isSymbol from './isSymbol.js';
-import stringToPath from './.internal/stringToPath.js';
-import toKey from './.internal/toKey.js';
+import map from './map';
+import copyArray from './.internal/copyArray';
+import isSymbol from './isSymbol';
+import stringToPath from './.internal/stringToPath';
+import toKey from './.internal/toKey';
 
 /**
  * Converts `value` to a property path array.
@@ -20,10 +20,10 @@ import toKey from './.internal/toKey.js';
  * // => ['a', '0', 'b', 'c']
  */
 function toPath(value) {
-    if (Array.isArray(value)) {
-        return map(value, toKey);
-    }
-    return isSymbol(value) ? [value] : copyArray(stringToPath(value));
+  if (Array.isArray(value)) {
+    return map(value, toKey);
+  }
+  return isSymbol(value) ? [value] : copyArray(stringToPath(value));
 }
 
 export default toPath;

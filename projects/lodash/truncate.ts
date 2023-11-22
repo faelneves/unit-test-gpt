@@ -1,11 +1,11 @@
-import baseToString from './.internal/baseToString.js';
-import castSlice from './.internal/castSlice.js';
-import hasUnicode from './.internal/hasUnicode.js';
-import isObject from './isObject.js';
-import isRegExp from './isRegExp.js';
-import stringSize from './.internal/stringSize.js';
-import stringToArray from './.internal/stringToArray.js';
-import toString from './toString.js';
+import baseToString from './.internal/baseToString';
+import castSlice from './.internal/castSlice';
+import hasUnicode from './.internal/hasUnicode';
+import isObject from './isObject';
+import isRegExp from './isRegExp';
+import stringSize from './.internal/stringSize';
+import stringToArray from './.internal/stringToArray';
+import toString from './toString';
 
 /** Used as default options for `truncate`. */
 const DEFAULT_TRUNC_LENGTH = 30;
@@ -51,61 +51,61 @@ const reFlags = /\w*$/;
  * // => 'hi-diddly-ho there, neig [...]'
  */
 function truncate(string, options) {
-    let separator;
-    let length = DEFAULT_TRUNC_LENGTH;
-    let omission = DEFAULT_TRUNC_OMISSION;
+  let separator;
+  let length = DEFAULT_TRUNC_LENGTH;
+  let omission = DEFAULT_TRUNC_OMISSION;
 
-    if (isObject(options)) {
-        separator = 'separator' in options ? options.separator : separator;
-        length = 'length' in options ? options.length : length;
-        omission = 'omission' in options ? baseToString(options.omission) : omission;
-    }
+  if (isObject(options)) {
+    separator = 'separator' in options ? options.separator : separator;
+    length = 'length' in options ? options.length : length;
+    omission = 'omission' in options ? baseToString(options.omission) : omission;
+  }
 
-    string = toString(string);
+  string = toString(string);
 
-    let strSymbols;
-    let strLength = string.length;
-    if (hasUnicode(string)) {
-        strSymbols = stringToArray(string);
-        strLength = strSymbols.length;
-    }
-    if (length >= strLength) {
-        return string;
-    }
-    let end = length - stringSize(omission);
-    if (end < 1) {
-        return omission;
-    }
-    let result = strSymbols ? castSlice(strSymbols, 0, end).join('') : string.slice(0, end);
+  let strSymbols;
+  let strLength = string.length;
+  if (hasUnicode(string)) {
+    strSymbols = stringToArray(string);
+    strLength = strSymbols.length;
+  }
+  if (length >= strLength) {
+    return string;
+  }
+  let end = length - stringSize(omission);
+  if (end < 1) {
+    return omission;
+  }
+  let result = strSymbols ? castSlice(strSymbols, 0, end).join('') : string.slice(0, end);
 
-    if (separator === undefined) {
-        return result + omission;
-    }
-    if (strSymbols) {
-        end += result.length - end;
-    }
-    if (isRegExp(separator)) {
-        if (string.slice(end).search(separator)) {
-            let match;
-            let newEnd;
-            const substring = result;
-
-            if (!separator.global) {
-                separator = RegExp(separator.source, `${reFlags.exec(separator) || ''}g`);
-            }
-            separator.lastIndex = 0;
-            while ((match = separator.exec(substring))) {
-                newEnd = match.index;
-            }
-            result = result.slice(0, newEnd === undefined ? end : newEnd);
-        }
-    } else if (string.indexOf(baseToString(separator), end) !== end) {
-        const index = result.lastIndexOf(separator);
-        if (index > -1) {
-            result = result.slice(0, index);
-        }
-    }
+  if (separator === undefined) {
     return result + omission;
+  }
+  if (strSymbols) {
+    end += result.length - end;
+  }
+  if (isRegExp(separator)) {
+    if (string.slice(end).search(separator)) {
+      let match;
+      let newEnd;
+      const substring = result;
+
+      if (!separator.global) {
+        separator = RegExp(separator.source, `${reFlags.exec(separator) || ''}g`);
+      }
+      separator.lastIndex = 0;
+      while ((match = separator.exec(substring))) {
+        newEnd = match.index;
+      }
+      result = result.slice(0, newEnd === undefined ? end : newEnd);
+    }
+  } else if (string.indexOf(baseToString(separator), end) !== end) {
+    const index = result.lastIndexOf(separator);
+    if (index > -1) {
+      result = result.slice(0, index);
+    }
+  }
+  return result + omission;
 }
 
 export default truncate;

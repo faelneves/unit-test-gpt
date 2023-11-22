@@ -1,0 +1,9 @@
+PASS projects/lodash/.internal/asciiSize.test.ts
+  asciiSize
+    ✓ should return the size of the ASCII string (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.443 s, estimated 1 s
+Ran all test suites matching /projects\/lodash\/.internal\/asciiSize.test.ts/i.

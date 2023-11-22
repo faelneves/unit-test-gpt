@@ -1,4 +1,4 @@
-import basePullAll from './.internal/basePullAll.js';
+import basePullAll from './.internal/basePullAll';
 
 /**
  * This method is like `pull` except that it accepts an array of values to remove.
@@ -20,9 +20,9 @@ import basePullAll from './.internal/basePullAll.js';
  * // => ['b', 'b']
  */
 function pullAll(array, values) {
-    return array != null && array.length && values != null && values.length
-        ? basePullAll(array, values)
-        : array;
+  return array != null && array.length && values != null && values.length
+    ? basePullAll(array, values)
+    : array;
 }
 
 export default pullAll;

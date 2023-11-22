@@ -1,4 +1,4 @@
-import some from './some.js';
+import some from './some';
 
 /**
  * Creates a function that checks if **any** of the `predicates` return
@@ -23,9 +23,9 @@ import some from './some.js';
  * // => false
  */
 function overSome(iteratees) {
-    return function (...args) {
-        return some(iteratees, (iteratee) => iteratee.apply(this, args));
-    };
+  return function (...args) {
+    return some(iteratees, (iteratee) => iteratee.apply(this, args));
+  };
 }
 
 export default overSome;

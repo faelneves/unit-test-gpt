@@ -1,4 +1,4 @@
-import createRange from './.internal/createRange.js';
+import createRange from './.internal/createRange';
 
 /**
  * This method is like `range` except that it populates values in

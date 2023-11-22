@@ -1,4 +1,4 @@
-import createRound from './.internal/createRound.js';
+import createRound from './.internal/createRound';
 
 /**
  * Computes `number` rounded to `precision`.

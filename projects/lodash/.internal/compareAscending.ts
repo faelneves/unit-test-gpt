@@ -1,4 +1,4 @@
-import isSymbol from '../isSymbol.js'
+import isSymbol from '../isSymbol'
 
 /**
  * Compares values to sort them in ascending order.
@@ -25,17 +25,17 @@ function compareAscending(value, other) {
       : -other
 
     if ((!othIsNull && !othIsSymbol && !valIsSymbol && val > 0) ||
-        (valIsSymbol && othIsDefined && othIsReflexive && !othIsNull && !othIsSymbol) ||
-        (valIsNull && othIsDefined && othIsReflexive) ||
-        (!valIsDefined && othIsReflexive) ||
-        !valIsReflexive) {
+      (valIsSymbol && othIsDefined && othIsReflexive && !othIsNull && !othIsSymbol) ||
+      (valIsNull && othIsDefined && othIsReflexive) ||
+      (!valIsDefined && othIsReflexive) ||
+      !valIsReflexive) {
       return 1
     }
     if ((!valIsNull && !valIsSymbol && !othIsSymbol && val < 0) ||
-        (othIsSymbol && valIsDefined && valIsReflexive && !valIsNull && !valIsSymbol) ||
-        (othIsNull && valIsDefined && valIsReflexive) ||
-        (!othIsDefined && valIsReflexive) ||
-        !othIsReflexive) {
+      (othIsSymbol && valIsDefined && valIsReflexive && !valIsNull && !valIsSymbol) ||
+      (othIsNull && valIsDefined && valIsReflexive) ||
+      (!othIsDefined && valIsReflexive) ||
+      !othIsReflexive) {
       return -1
     }
   }

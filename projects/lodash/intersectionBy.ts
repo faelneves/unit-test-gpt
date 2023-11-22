@@ -1,7 +1,7 @@
-import map from './map.js';
-import baseIntersection from './.internal/baseIntersection.js';
-import castArrayLikeObject from './.internal/castArrayLikeObject.js';
-import last from './last.js';
+import map from './map';
+import baseIntersection from './.internal/baseIntersection';
+import castArrayLikeObject from './.internal/castArrayLikeObject';
+import last from './last';
 
 /**
  * This method is like `intersection` except that it accepts `iteratee`
@@ -21,15 +21,15 @@ import last from './last.js';
  * // => [2.1]
  */
 function intersectionBy(...arrays) {
-    let iteratee = last(arrays);
-    const mapped = map(arrays, castArrayLikeObject);
+  let iteratee = last(arrays);
+  const mapped = map(arrays, castArrayLikeObject);
 
-    if (iteratee === last(mapped)) {
-        iteratee = undefined;
-    } else {
-        mapped.pop();
-    }
-    return mapped.length && mapped[0] === arrays[0] ? baseIntersection(mapped, iteratee) : [];
+  if (iteratee === last(mapped)) {
+    iteratee = undefined;
+  } else {
+    mapped.pop();
+  }
+  return mapped.length && mapped[0] === arrays[0] ? baseIntersection(mapped, iteratee) : [];
 }
 
 export default intersectionBy;

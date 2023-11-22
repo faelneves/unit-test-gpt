@@ -1,6 +1,6 @@
-import castSlice from './.internal/castSlice.js';
-import charsStartIndex from './.internal/charsStartIndex.js';
-import stringToArray from './.internal/stringToArray.js';
+import castSlice from './.internal/castSlice';
+import charsStartIndex from './.internal/charsStartIndex';
+import stringToArray from './.internal/stringToArray';
 
 const methodName = ''.trimLeft ? 'trimLeft' : 'trimStart';
 
@@ -22,15 +22,15 @@ const methodName = ''.trimLeft ? 'trimLeft' : 'trimStart';
  * // => 'abc-_-'
  */
 function trimStart(string, chars) {
-    if (string && chars === undefined) {
-        return string[methodName]();
-    }
-    if (!string || !chars) {
-        return string || '';
-    }
-    const strSymbols = stringToArray(string);
-    const start = charsStartIndex(strSymbols, stringToArray(chars));
-    return castSlice(strSymbols, start).join('');
+  if (string && chars === undefined) {
+    return string[methodName]();
+  }
+  if (!string || !chars) {
+    return string || '';
+  }
+  const strSymbols = stringToArray(string);
+  const start = charsStartIndex(strSymbols, stringToArray(chars));
+  return castSlice(strSymbols, start).join('');
 }
 
 export default trimStart;

@@ -1,5 +1,5 @@
-import words from './words.js';
-import toString from './toString.js';
+import words from './words';
+import toString from './toString';
 
 /**
  * Converts `string`, as space separated words, to upper case.
@@ -21,9 +21,9 @@ import toString from './toString.js';
  * // => 'FOO BAR'
  */
 const upperCase = (string) =>
-    words(toString(string).replace(/['\u2019]/g, '')).reduce(
-        (result, word, index) => result + (index ? ' ' : '') + word.toUpperCase(),
-        '',
-    );
+  words(toString(string).replace(/['\u2019]/g, '')).reduce(
+    (result, word, index) => result + (index ? ' ' : '') + word.toUpperCase(),
+    '',
+  );
 
 export default upperCase;

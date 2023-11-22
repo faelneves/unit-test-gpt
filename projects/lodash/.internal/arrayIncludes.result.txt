@@ -1,0 +1,18 @@
+PASS projects/lodash/.internal/arrayIncludes.test.ts
+  arrayIncludes
+    ✓ should return true if the array includes the target value (2 ms)
+    ✓ should return false if the array does not include the target value
+    ✓ should return false if the array is empty
+    ✓ should return true if the array includes the target value multiple times (1 ms)
+    ✓ should return true if the array includes the target value at the end
+    ✓ should return true if the array includes the target value at the beginning
+    ✓ should return true if the target value is null and the array includes null (1 ms)
+    ✓ should return false if the array is undefined
+    ✓ should return false if the target value is undefined and the array does not include undefined (1 ms)
+    ✓ should return false if the target value is null and the array does not include null
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        0.499 s, estimated 1 s
+Ran all test suites matching /projects\/lodash\/.internal\/arrayIncludes.test.ts/i.

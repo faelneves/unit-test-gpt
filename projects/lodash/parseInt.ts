@@ -1,4 +1,4 @@
-import root from './.internal/root.js';
+import root from './.internal/root';
 
 /** Used to match leading and trailing whitespace. */
 const reTrimStart = /^\s+/;
@@ -25,12 +25,12 @@ const nativeParseInt = root.parseInt;
  * // => 8
  */
 function parseInt(string, radix) {
-    if (radix == null) {
-        radix = 0;
-    } else if (radix) {
-        radix = +radix;
-    }
-    return nativeParseInt(`${string}`.replace(reTrimStart, ''), radix || 0);
+  if (radix == null) {
+    radix = 0;
+  } else if (radix) {
+    radix = +radix;
+  }
+  return nativeParseInt(`${string}`.replace(reTrimStart, ''), radix || 0);
 }
 
 export default parseInt;

@@ -1,4 +1,4 @@
-import createRange from './.internal/createRange.js';
+import createRange from './.internal/createRange';
 
 /**
  * Creates an array of numbers (positive and/or negative) progressing from

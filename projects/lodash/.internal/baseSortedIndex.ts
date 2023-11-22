@@ -1,5 +1,5 @@
-import baseSortedIndexBy from './baseSortedIndexBy.js'
-import isSymbol from '../isSymbol.js'
+import baseSortedIndexBy from './baseSortedIndexBy'
+import isSymbol from '../isSymbol'
 
 /** Used as references for the maximum length and index of an array. */
 const MAX_ARRAY_LENGTH = 4294967295
@@ -26,7 +26,7 @@ function baseSortedIndex(array, value, retHighest) {
       const mid = (low + high) >>> 1
       const computed = array[mid]
       if (computed !== null && !isSymbol(computed) &&
-          (retHighest ? (computed <= value) : (computed < value))) {
+        (retHighest ? (computed <= value) : (computed < value))) {
         low = mid + 1
       } else {
         high = mid

@@ -1,5 +1,5 @@
-import slice from './slice.js';
-import toInteger from './toInteger.js';
+import slice from './slice';
+import toInteger from './toInteger';
 
 /**
  * Creates a slice of `array` with `n` elements dropped from the beginning.
@@ -24,8 +24,8 @@ import toInteger from './toInteger.js';
  * // => [1, 2, 3]
  */
 function drop(array, n = 1) {
-    const length = array == null ? 0 : array.length;
-    return length ? slice(array, n < 0 ? 0 : toInteger(n), length) : [];
+  const length = array == null ? 0 : array.length;
+  return length ? slice(array, n < 0 ? 0 : toInteger(n), length) : [];
 }
 
 export default drop;

@@ -1,4 +1,4 @@
-import deburrLetter from './.internal/deburrLetter.js';
+import deburrLetter from './.internal/deburrLetter';
 
 /** Used to match Latin Unicode letters (excluding mathematical operators). */
 const reLatin = /[\xc0-\xd6\xd8-\xf6\xf8-\xff\u0100-\u017f]/g;
@@ -10,11 +10,11 @@ const rsComboSymbolsRange = '\\u20d0-\\u20ff';
 const rsComboMarksExtendedRange = '\\u1ab0-\\u1aff';
 const rsComboMarksSupplementRange = '\\u1dc0-\\u1dff';
 const rsComboRange =
-    rsComboMarksRange +
-    reComboHalfMarksRange +
-    rsComboSymbolsRange +
-    rsComboMarksExtendedRange +
-    rsComboMarksSupplementRange;
+  rsComboMarksRange +
+  reComboHalfMarksRange +
+  rsComboSymbolsRange +
+  rsComboMarksExtendedRange +
+  rsComboMarksSupplementRange;
 
 /** Used to compose unicode capture groups. */
 const rsCombo = `[${rsComboRange}]`;
@@ -43,7 +43,7 @@ const reComboMark = RegExp(rsCombo, 'g');
  * // => 'deja vu'
  */
 function deburr(string) {
-    return string && string.replace(reLatin, deburrLetter).replace(reComboMark, '');
+  return string && string.replace(reLatin, deburrLetter).replace(reComboMark, '');
 }
 
 export default deburr;

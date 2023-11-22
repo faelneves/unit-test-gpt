@@ -1,0 +1,26 @@
+FAIL projects/lodash/.internal/arrayLikeKeys.test.ts
+  ● Test suite failed to run
+
+    Cannot find module './.internal/getTag' from 'projects/lodash/isArguments.ts'
+
+    Require stack:
+      projects/lodash/isArguments.ts
+      projects/lodash/.internal/arrayLikeKeys.ts
+      projects/lodash/.internal/arrayLikeKeys.test.ts
+
+    > 1 | import getTag from './.internal/getTag';
+        | ^
+      2 | import isObjectLike from './isObjectLike';
+      3 |
+      4 | /**
+
+      at Resolver._throwModNotFoundError (node_modules/jest-resolve/build/resolver:427:11)
+      at Object.require (projects/lodash/isArguments.ts:1:1)
+      at Object.require (projects/lodash/.internal/arrayLikeKeys.ts:1:1)
+      at Object.require (projects/lodash/.internal/arrayLikeKeys.test.ts:1:1)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.515 s
+Ran all test suites matching /projects\/lodash\/.internal\/arrayLikeKeys.test.ts/i.

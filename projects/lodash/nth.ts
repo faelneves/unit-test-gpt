@@ -1,4 +1,4 @@
-import isIndex from './.internal/isIndex.js';
+import isIndex from './.internal/isIndex';
 
 /**
  * Gets the element at index `n` of `array`. If `n` is negative, the nth
@@ -20,13 +20,13 @@ import isIndex from './.internal/isIndex.js';
  * // => 'c'
  */
 function nth(array: any[], n: number) {
-    const length = array == null ? 0 : array.length;
-    if (!length) {
-        return;
-    }
-    n += n < 0 ? length : 0;
-    // eslint-disable-next-line consistent-return
-    return isIndex(n, length) ? array[n] : undefined;
+  const length = array == null ? 0 : array.length;
+  if (!length) {
+    return;
+  }
+  n += n < 0 ? length : 0;
+  // eslint-disable-next-line consistent-return
+  return isIndex(n, length) ? array[n] : undefined;
 }
 
 export default nth;

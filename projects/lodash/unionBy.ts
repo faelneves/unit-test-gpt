@@ -1,7 +1,7 @@
-import baseFlatten from './.internal/baseFlatten.js';
-import baseUniq from './.internal/baseUniq.js';
-import isArrayLikeObject from './isArrayLikeObject.js';
-import last from './last.js';
+import baseFlatten from './.internal/baseFlatten';
+import baseUniq from './.internal/baseUniq';
+import isArrayLikeObject from './isArrayLikeObject';
+import last from './last';
 
 /**
  * This method is like `union` except that it accepts `iteratee` which is
@@ -22,11 +22,11 @@ import last from './last.js';
  * // => [2.1, 1.2]
  */
 function unionBy(...arrays) {
-    let iteratee = last(arrays);
-    if (isArrayLikeObject(iteratee)) {
-        iteratee = undefined;
-    }
-    return baseUniq(baseFlatten(arrays, 1, isArrayLikeObject, true), iteratee);
+  let iteratee = last(arrays);
+  if (isArrayLikeObject(iteratee)) {
+    iteratee = undefined;
+  }
+  return baseUniq(baseFlatten(arrays, 1, isArrayLikeObject, true), iteratee);
 }
 
 export default unionBy;

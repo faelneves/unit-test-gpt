@@ -1,4 +1,4 @@
-import baseIndexOf from './baseIndexOf.js'
+import baseIndexOf from './baseIndexOf'
 
 /**
  * Used by `trim` and `trimEnd` to get the index of the last string symbol
@@ -12,7 +12,7 @@ import baseIndexOf from './baseIndexOf.js'
 function charsEndIndex(strSymbols, chrSymbols) {
   let index = strSymbols.length
 
-  while (index-- && baseIndexOf(chrSymbols, strSymbols[index], 0) > -1) {}
+  while (index-- && baseIndexOf(chrSymbols, strSymbols[index], 0) > -1) { }
   return index
 }
 

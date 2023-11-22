@@ -1,7 +1,7 @@
-import getTag from './.internal/getTag.js';
-import isArrayLike from './isArrayLike.js';
-import isString from './isString.js';
-import stringSize from './.internal/stringSize.js';
+import getTag from './.internal/getTag';
+import isArrayLike from './isArrayLike';
+import isString from './isString';
+import stringSize from './.internal/stringSize';
 
 /** `Object#toString` result references. */
 const mapTag = '[object Map]';
@@ -27,17 +27,17 @@ const setTag = '[object Set]';
  * // => 7
  */
 function size(collection) {
-    if (collection == null) {
-        return 0;
-    }
-    if (isArrayLike(collection)) {
-        return isString(collection) ? stringSize(collection) : collection.length;
-    }
-    const tag = getTag(collection);
-    if (tag === mapTag || tag === setTag) {
-        return collection.size;
-    }
-    return Object.keys(collection).length;
+  if (collection == null) {
+    return 0;
+  }
+  if (isArrayLike(collection)) {
+    return isString(collection) ? stringSize(collection) : collection.length;
+  }
+  const tag = getTag(collection);
+  if (tag === mapTag || tag === setTag) {
+    return collection.size;
+  }
+  return Object.keys(collection).length;
 }
 
 export default size;

@@ -1,7 +1,7 @@
-import eq from '../eq.js'
-import equalArrays from './equalArrays.js'
-import mapToArray from './mapToArray.js'
-import setToArray from './setToArray.js'
+import eq from '../eq'
+import equalArrays from './equalArrays'
+import mapToArray from './mapToArray'
+import setToArray from './setToArray'
 
 /** Used to compose bitmasks for value comparisons. */
 const COMPARE_PARTIAL_FLAG = 1
@@ -45,7 +45,7 @@ function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
   switch (tag) {
     case dataViewTag:
       if ((object.byteLength !== other.byteLength) ||
-          (object.byteOffset !== other.byteOffset)) {
+        (object.byteOffset !== other.byteOffset)) {
         return false
       }
       object = object.buffer
@@ -53,7 +53,7 @@ function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
 
     case arrayBufferTag:
       if ((object.byteLength !== other.byteLength) ||
-          !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
+        !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
         return false
       }
       return true

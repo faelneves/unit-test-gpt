@@ -1,6 +1,6 @@
-import map from './map.js';
-import basePickBy from './.internal/basePickBy.js';
-import getAllKeysIn from './.internal/getAllKeysIn.js';
+import map from './map';
+import basePickBy from './.internal/basePickBy';
+import getAllKeysIn from './.internal/getAllKeysIn';
 
 /**
  * Creates an object composed of the `object` properties `predicate` returns
@@ -19,11 +19,11 @@ import getAllKeysIn from './.internal/getAllKeysIn.js';
  * // => { 'a': 1, 'c': 3 }
  */
 function pickBy(object, predicate) {
-    if (object == null) {
-        return {};
-    }
-    const props = map(getAllKeysIn(object), (prop) => [prop]);
-    return basePickBy(object, props, (value, path) => predicate(value, path[0]));
+  if (object == null) {
+    return {};
+  }
+  const props = map(getAllKeysIn(object), (prop) => [prop]);
+  return basePickBy(object, props, (value, path) => predicate(value, path[0]));
 }
 
 export default pickBy;

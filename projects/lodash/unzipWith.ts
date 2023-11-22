@@ -1,5 +1,5 @@
-import map from './map.js';
-import unzip from './unzip.js';
+import map from './map';
+import unzip from './unzip';
 
 /**
  * This method is like `unzip` except that it accepts `iteratee` to specify
@@ -21,11 +21,11 @@ import unzip from './unzip.js';
  * // => [3, 30, 300]
  */
 function unzipWith(array, iteratee) {
-    if (!(array != null && array.length)) {
-        return [];
-    }
-    const result = unzip(array);
-    return map(result, (group) => iteratee.apply(undefined, group));
+  if (!(array != null && array.length)) {
+    return [];
+  }
+  const result = unzip(array);
+  return map(result, (group) => iteratee.apply(undefined, group));
 }
 
 export default unzipWith;

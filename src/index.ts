@@ -45,10 +45,11 @@ function runTests(filePath: string) {
 }
 
 async function handle(filePath: string) {
+  const filename = filePath.split('/').at(-1);
   const response = await openai.chat.completions.create({
     model: process.env.MODEL as string,
     messages: [{ "role": "system", "content": getFileContent('./inputs/tests_v1.txt').fileContents },
-    { "role": "user", "content": `file path: ${filePath}` },
+    { "role": "user", "content": `file path: ./${filename}` },
     { "role": "user", "content": getFileContent(filePath).fileContents }],
   });
   const testFilePath = addTestOnPath(filePath);
@@ -59,5 +60,11 @@ async function handle(filePath: string) {
 }
 
 (async () => {
-  await handle('./project/example.js');
+  // await handle('./projects/lodash/.internal/addMapEntry.ts');
+  const handlePromisses = [];
+  for (let index = 2; index < process.argv.length; index++) {
+    //console.log(process.argv[index]);
+    handlePromisses.push(handle(process.argv[index]));
+  }
+  await Promise.all(handlePromisses);
 })()

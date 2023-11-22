@@ -1,4 +1,4 @@
-import basePullAll from './.internal/basePullAll.js';
+import basePullAll from './.internal/basePullAll';
 
 /**
  * This method is like `pullAll` except that it accepts `iteratee` which is
@@ -23,9 +23,9 @@ import basePullAll from './.internal/basePullAll.js';
  * // => [{ 'x': 2 }]
  */
 function pullAllBy(array, values, iteratee) {
-    return array != null && array.length && values != null && values.length
-        ? basePullAll(array, values, iteratee)
-        : array;
+  return array != null && array.length && values != null && values.length
+    ? basePullAll(array, values, iteratee)
+    : array;
 }
 
 export default pullAllBy;

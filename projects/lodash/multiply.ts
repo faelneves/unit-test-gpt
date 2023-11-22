@@ -1,4 +1,4 @@
-import createMathOperation from './.internal/createMathOperation.js';
+import createMathOperation from './.internal/createMathOperation';
 
 /**
  * Multiply two numbers.

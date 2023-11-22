@@ -1,7 +1,7 @@
-import isArguments from '../isArguments.js'
-import isBuffer from '../isBuffer.js'
-import isIndex from './isIndex.js'
-import isTypedArray from '../isTypedArray.js'
+import isArguments from '../isArguments'
+import isBuffer from '../isBuffer'
+import isIndex from './isIndex'
+import isTypedArray from '../isTypedArray'
 
 /** Used to check objects for own properties. */
 const hasOwnProperty = Object.prototype.hasOwnProperty
@@ -28,12 +28,12 @@ function arrayLikeKeys(value, inherited) {
   }
   for (const key in value) {
     if ((inherited || hasOwnProperty.call(value, key)) &&
-        !(skipIndexes && (
+      !(skipIndexes && (
         // Safari 9 has enumerable `arguments.length` in strict mode.
-          (key === 'length' ||
-           // Skip index properties.
-           isIndex(key, length))
-        ))) {
+        (key === 'length' ||
+          // Skip index properties.
+          isIndex(key, length))
+      ))) {
       result.push(key)
     }
   }

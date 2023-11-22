@@ -1,0 +1,32 @@
+FAIL projects/lodash/.internal/assignMergeValue.test.ts
+  assignMergeValue
+    ✓ should assign a value to the object for a key that does not exist (3 ms)
+    ✓ should assign a value to the object for a key that exists but the values are not equal (1 ms)
+    ✓ should not assign a value to the object for a key that exists and the values are equal (1 ms)
+    ✓ should not assign undefined values to the object (1 ms)
+    ✓ should assign undefined values to the object if the key does not exist
+    ✕ should pass the object, key, and value to baseAssignValue (3 ms)
+
+  ● assignMergeValue › should pass the object, key, and value to baseAssignValue
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: {"key": "value"}, "key", "value"
+
+    Number of calls: 0
+
+      41 |     jest.mock('./baseAssignValue', () => mockBaseAssignValue);
+      42 |     assignMergeValue(obj, key, value);
+    > 43 |     expect(mockBaseAssignValue).toHaveBeenCalledWith(obj, key, value);
+         |                                 ^
+      44 |   });
+      45 | });
+      46 |
+
+      at Object.toHaveBeenCalledWith (projects/lodash/.internal/assignMergeValue.test.ts:43:33)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        0.556 s
+Ran all test suites matching /projects\/lodash\/.internal\/assignMergeValue.test.ts/i.

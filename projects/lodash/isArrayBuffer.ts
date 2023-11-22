@@ -1,8 +1,8 @@
-import getTag from './.internal/getTag.js';
-import isObjectLike from './isObjectLike.js';
-import nodeTypes from './.internal/nodeTypes.js';
+import getTag from './.internal/getTag';
+import isObjectLike from './isObjectLike';
+import nodeTypes from './.internal/nodeTypes';
 
-/* Node.js helper references. */
+/* Node helper references. */
 const nodeIsArrayBuffer = nodeTypes && nodeTypes.isArrayBuffer;
 
 /**
@@ -21,7 +21,7 @@ const nodeIsArrayBuffer = nodeTypes && nodeTypes.isArrayBuffer;
  * // => false
  */
 const isArrayBuffer = nodeIsArrayBuffer
-    ? (value) => nodeIsArrayBuffer(value)
-    : (value) => isObjectLike(value) && getTag(value) === '[object ArrayBuffer]';
+  ? (value) => nodeIsArrayBuffer(value)
+  : (value) => isObjectLike(value) && getTag(value) === '[object ArrayBuffer]';
 
 export default isArrayBuffer;
