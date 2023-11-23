@@ -1,45 +1,45 @@
-import assignMergeValue from './assignMergeValue';
-import baseAssignValue from './baseAssignValue';
-import eq from '../eq';
+import assignMergeValue from './assignMergeValue'
+import baseAssignValue from './baseAssignValue'
+import eq from '../eq'
 
 describe('assignMergeValue', () => {
-  it('should assign a value to the object for a key that does not exist', () => {
-    const obj = {};
-    assignMergeValue(obj, 'key', 'value');
-    expect(obj).toEqual({ key: 'value' });
-  });
+  it('should assign value if it is not undefined and not equal to existing value in object', () => {
+    const object = { foo: 1 }
+    const key = 'foo'
+    const value = 2
 
-  it('should assign a value to the object for a key that exists but the values are not equal', () => {
-    const obj = { key: 'value1' };
-    assignMergeValue(obj, 'key', 'value2');
-    expect(obj).toEqual({ key: 'value2' });
-  });
+    assignMergeValue(object, key, value)
 
-  it('should not assign a value to the object for a key that exists and the values are equal', () => {
-    const obj = { key: 'value' };
-    assignMergeValue(obj, 'key', 'value');
-    expect(obj).toEqual({ key: 'value' });
-  });
+    expect(object).toEqual({ foo: 2 })
+  })
 
-  it('should not assign undefined values to the object', () => {
-    const obj = {};
-    assignMergeValue(obj, 'key', undefined);
-    expect(obj).toEqual({});
-  });
+  it('should assign value if it is undefined but key not in object', () => {
+    const object = { foo: 1 }
+    const key = 'bar'
+    const value = undefined
 
-  it('should assign undefined values to the object if the key does not exist', () => {
-    const obj = {};
-    assignMergeValue(obj, 'key', undefined);
-    expect(obj).toEqual({ key: undefined });
-  });
+    assignMergeValue(object, key, value)
 
-  it('should pass the object, key, and value to baseAssignValue', () => {
-    const mockBaseAssignValue = jest.fn();
-    const obj = {};
-    const key = 'key';
-    const value = 'value';
-    jest.mock('./baseAssignValue', () => mockBaseAssignValue);
-    assignMergeValue(obj, key, value);
-    expect(mockBaseAssignValue).toHaveBeenCalledWith(obj, key, value);
-  });
-});
+    expect(object).toEqual({ foo: 1, bar: undefined })
+  })
+
+  it('should not assign value if it is undefined and key already in object', () => {
+    const object = { foo: 1 }
+    const key = 'foo'
+    const value = undefined
+
+    assignMergeValue(object, key, value)
+
+    expect(object).toEqual({ foo: 1 })
+  })
+
+  it('should not assign value if it is not undefined but equal to existing value in object', () => {
+    const object = { foo: 1 }
+    const key = 'foo'
+    const value = 1
+
+    assignMergeValue(object, key, value)
+
+    expect(object).toEqual({ foo: 1 })
+  })
+})

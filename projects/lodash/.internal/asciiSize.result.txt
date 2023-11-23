@@ -1,9 +1,12 @@
 PASS projects/lodash/.internal/asciiSize.test.ts
   asciiSize
-    ✓ should return the size of the ASCII string (2 ms)
+    ✓ should return the length of the string (2 ms)
+    ✓ should return 0 when the string is empty (1 ms)
+    ✓ should return 1 when the string contains a single character
+    ✓ should return the correct length when the string contains special characters
 
 Test Suites: 1 passed, 1 total
-Tests:       1 passed, 1 total
+Tests:       4 passed, 4 total
 Snapshots:   0 total
-Time:        0.443 s, estimated 1 s
+Time:        0.448 s, estimated 1 s
 Ran all test suites matching /projects\/lodash\/.internal\/asciiSize.test.ts/i.

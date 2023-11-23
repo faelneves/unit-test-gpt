@@ -1,52 +1,48 @@
 FAIL projects/lodash/.internal/assignValue.test.ts
   assignValue
-    ✓ should assign value to key if the existing value is not equivalent (3 ms)
-    ✓ should not assign value to key if the existing value is equivalent (1 ms)
-    ✓ should assign value to key if the existing value is undefined and key is not in object
-    ✕ should not assign value to key if the existing value is undefined and key is already in object (2 ms)
-    ✓ should assign value to key if the existing value is 0 and value is not 0
-    ✕ should not assign value to key if the existing value is 0 and value is also 0 (1 ms)
+    ✓ should assign value to key of object if the existing value is not equivalent (2 ms)
+    ✓ should not assign value to key of object if the existing value is equivalent
+    ✓ should assign value to key of object if value is undefined and key is not in object
+    ✕ should not assign value to key of object if value is undefined but key is in object (1 ms)
+    ✕ should assign value to key of object if value is 0 and existing value is not 0 (1 ms)
+    ✓ should not assign value to key of object if value is 0 and existing value is 0 (1 ms)
 
-  ● assignValue › should not assign value to key if the existing value is undefined and key is already in object
+  ● assignValue › should not assign value to key of object if value is undefined but key is in object
 
-    expect(jest.fn()).not.toHaveBeenCalled()
+    expect(received).toBe(expected) // Object.is equality
 
-    Expected number of calls: 0
-    Received number of calls: 1
+    Expected: "value1"
+    Received: undefined
 
-    1: {"foo": undefined}, "foo", undefined
+      41 |     assignValue(object, key, value)
+      42 |
+    > 43 |     expect(object[key]).toBe('value1')
+         |                         ^
+      44 |   })
+      45 |
+      46 |   // Additional test cases:
 
-      59 |     assignValue(object, key, value)
-      60 |
-    > 61 |     expect(baseAssignValue).not.toHaveBeenCalled()
-         |                                 ^
-      62 |   })
-      63 |
-      64 |   it('should assign value to key if the existing value is 0 and value is not 0', () => {
+      at Object.toBe (projects/lodash/.internal/assignValue.test.ts:43:25)
 
-      at Object.toHaveBeenCalled (projects/lodash/.internal/assignValue.test.ts:61:33)
+  ● assignValue › should assign value to key of object if value is 0 and existing value is not 0
 
-  ● assignValue › should not assign value to key if the existing value is 0 and value is also 0
+    expect(received).toBe(expected) // Object.is equality
 
-    expect(jest.fn()).not.toHaveBeenCalled()
+    Expected: 0
+    Received: 1
 
-    Expected number of calls: 0
-    Received number of calls: 1
+      52 |     assignValue(object, key, value)
+      53 |
+    > 54 |     expect(object[key]).toBe(value)
+         |                         ^
+      55 |   })
+      56 |
+      57 |   it('should not assign value to key of object if value is 0 and existing value is 0', () => {
 
-    1: {"foo": 0}, "foo", 0
-
-      80 |     assignValue(object, key, value)
-      81 |
-    > 82 |     expect(baseAssignValue).not.toHaveBeenCalled()
-         |                                 ^
-      83 |   })
-      84 | })
-      85 |
-
-      at Object.toHaveBeenCalled (projects/lodash/.internal/assignValue.test.ts:82:33)
+      at Object.toBe (projects/lodash/.internal/assignValue.test.ts:54:25)
 
 Test Suites: 1 failed, 1 total
 Tests:       2 failed, 4 passed, 6 total
 Snapshots:   0 total
-Time:        0.564 s
+Time:        0.493 s, estimated 1 s
 Ran all test suites matching /projects\/lodash\/.internal\/assignValue.test.ts/i.

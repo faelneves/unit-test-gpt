@@ -1,26 +1,61 @@
 FAIL projects/lodash/.internal/arrayLikeKeys.test.ts
-  ● Test suite failed to run
+  arrayLikeKeys
+    ✓ should return an array of property names for an array-like value (2 ms)
+    ✕ should return an array of property names for an object with non-enumerable properties (3 ms)
+    ✕ should return an array of property names for an object with inherited properties (1 ms)
+    ✓ should return an empty array for an empty array-like value
+    ✓ should return an empty array for an object with no properties
+    ✓ should include numeric string keys for an array with sparse elements
+    ✓ should include numeric string keys for an object with sparse properties
 
-    Cannot find module './.internal/getTag' from 'projects/lodash/isArguments.ts'
+  ● arrayLikeKeys › should return an array of property names for an object with non-enumerable properties
 
-    Require stack:
-      projects/lodash/isArguments.ts
-      projects/lodash/.internal/arrayLikeKeys.ts
-      projects/lodash/.internal/arrayLikeKeys.test.ts
+    expect(received).toEqual(expected) // deep equality
 
-    > 1 | import getTag from './.internal/getTag';
-        | ^
-      2 | import isObjectLike from './isObjectLike';
-      3 |
-      4 | /**
+    - Expected  - 5
+    + Received  + 1
 
-      at Resolver._throwModNotFoundError (node_modules/jest-resolve/build/resolver:427:11)
-      at Object.require (projects/lodash/isArguments.ts:1:1)
-      at Object.require (projects/lodash/.internal/arrayLikeKeys.ts:1:1)
-      at Object.require (projects/lodash/.internal/arrayLikeKeys.test.ts:1:1)
+    - Array [
+    -   "a",
+    -   "b",
+    -   "c",
+    - ]
+    + Array []
+
+      13 |       c: { value: 'C', enumerable: false }
+      14 |     })
+    > 15 |     expect(arrayLikeKeys(obj)).toEqual(['a', 'b', 'c'])
+         |                                ^
+      16 |   })
+      17 |
+      18 |   it('should return an array of property names for an object with inherited properties', () => {
+
+      at Object.toEqual (projects/lodash/.internal/arrayLikeKeys.test.ts:15:32)
+
+  ● arrayLikeKeys › should return an array of property names for an object with inherited properties
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        "a",
+    -   "b",
+      ]
+
+      22 |     Parent.prototype.b = 'B'
+      23 |     const obj = new Parent()
+    > 24 |     expect(arrayLikeKeys(obj)).toEqual(['a', 'b'])
+         |                                ^
+      25 |   })
+      26 |
+      27 |   it('should return an empty array for an empty array-like value', () => {
+
+      at Object.toEqual (projects/lodash/.internal/arrayLikeKeys.test.ts:24:32)
 
 Test Suites: 1 failed, 1 total
-Tests:       0 total
+Tests:       2 failed, 5 passed, 7 total
 Snapshots:   0 total
-Time:        0.515 s
+Time:        0.682 s
 Ran all test suites matching /projects\/lodash\/.internal\/arrayLikeKeys.test.ts/i.

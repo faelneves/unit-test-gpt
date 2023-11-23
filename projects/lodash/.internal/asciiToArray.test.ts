@@ -2,13 +2,13 @@ import asciiToArray from './asciiToArray';
 
 describe('asciiToArray', () => {
   it('should convert an ASCII string to an array', () => {
-    const string = 'hello';
-    const expected = ['h', 'e', 'l', 'l', 'o'];
+    const string = 'Hello World!';
+    const expected = ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!'];
     const result = asciiToArray(string);
     expect(result).toEqual(expected);
   });
 
-  it('should convert an empty ASCII string to an empty array', () => {
+  it('should return an empty array for an empty string', () => {
     const string = '';
     const expected = [];
     const result = asciiToArray(string);
@@ -16,8 +16,8 @@ describe('asciiToArray', () => {
   });
 
   it('should convert a string with special characters to an array', () => {
-    const string = 'abc!@#$%^&*()123';
-    const expected = ['a', 'b', 'c', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '1', '2', '3'];
+    const string = 'Hello, World!';
+    const expected = ['H', 'e', 'l', 'l', 'o', ',', ' ', 'W', 'o', 'r', 'l', 'd', '!'];
     const result = asciiToArray(string);
     expect(result).toEqual(expected);
   });
