@@ -1,0 +1,30 @@
+FAIL projects/lodash/sumBy.test.ts
+  sumBy
+    ✓ should return the sum based on the iteratee function (2 ms)
+    ✓ should return 0 if the input array is null (1 ms)
+    ✓ should return 0 if the input array is empty
+    ✕ should return 0 if the iteratee function returns NaN for all elements (2 ms)
+    ✓ should handle arrays with negative numbers in the iteratee function
+
+  ● sumBy › should return 0 if the iteratee function returns NaN for all elements
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 0
+    Received: NaN
+
+      27 |     const result = sumBy(objects, ({ n }) => parseInt(n));
+      28 |
+    > 29 |     expect(result).toEqual(0);
+         |                    ^
+      30 |   });
+      31 |
+      32 |   it('should handle arrays with negative numbers in the iteratee function', () => {
+
+      at Object.toEqual (projects/lodash/sumBy.test.ts:29:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        2.136 s
+Ran all test suites matching /projects\/lodash\/sumBy.test.ts/i.

@@ -1,0 +1,14 @@
+PASS projects/lodash/kebabCase.test.ts
+  kebabCase
+    ✓ should return kebab cased string for normal string with spaces (3 ms)
+    ✓ should return kebab cased string for string with camel case (1 ms)
+    ✓ should return kebab cased string for string with special characters
+    ✓ should return empty string for empty input
+    ✓ should return kebab cased string for string with numbers (1 ms)
+    ✓ should return kebab cased string for string with whitespace at the start and end
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        1.599 s
+Ran all test suites matching /projects\/lodash\/kebabCase.test.ts/i.

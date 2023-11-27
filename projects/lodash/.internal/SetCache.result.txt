@@ -1,0 +1,17 @@
+PASS projects/lodash/.internal/SetCache.test.ts
+  SetCache
+    constructor
+      ✓ should create an empty cache when no values are provided (23 ms)
+      ✓ should add the provided values to the cache (1 ms)
+    add
+      ✓ should add the specified value to the cache
+      ✓ should return the cache instance
+    has
+      ✓ should return true if the value is in the cache (1 ms)
+      ✓ should return false if the value is not in the cache (3 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        1.535 s
+Ran all test suites matching /projects\/lodash\/.internal\/SetCache.test.ts/i.

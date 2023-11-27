@@ -1,0 +1,11 @@
+PASS projects/lodash/pickBy.test.ts
+  pickBy
+    ✓ should return an empty object if the input object is null or undefined (2 ms)
+    ✓ should return a new object with properties that satisfy the predicate function
+    ✓ should not mutate the original object
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.531 s
+Ran all test suites matching /projects\/lodash\/pickBy.test.ts/i.

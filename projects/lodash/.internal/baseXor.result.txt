@@ -1,0 +1,61 @@
+FAIL projects/lodash/.internal/baseXor.test.ts
+  baseXor
+    ✓ should return an empty array if no arrays are provided (5 ms)
+    ✓ should return the unique values from the arrays (1 ms)
+    ✕ should apply the iteratee function if provided (3 ms)
+    ✕ should apply the comparator function if provided (1 ms)
+    ✓ should work correctly with a single array
+
+  ● baseXor › should apply the iteratee function if provided
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Array [
+        "apple",
+    -   "kiwi",
+    +   "pineapple",
+      ]
+
+      30 |     const result = baseXor(arrays, iteratee)
+      31 |
+    > 32 |     expect(result).toEqual(['apple', 'kiwi'])
+         |                    ^
+      33 |   })
+      34 |
+      35 |   it('should apply the comparator function if provided', () => {
+
+      at Object.toEqual (projects/lodash/.internal/baseXor.test.ts:32:20)
+
+  ● baseXor › should apply the comparator function if provided
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 0
+
+      Array [
+        1,
+    -   2,
+    -   3,
+    -   4,
+        5,
+      ]
+
+      42 |     const result = baseXor(arrays, undefined, comparator)
+      43 |
+    > 44 |     expect(result).toEqual([1, 2, 3, 4, 5])
+         |                    ^
+      45 |   })
+      46 |
+      47 |   it('should work correctly with a single array', () => {
+
+      at Object.toEqual (projects/lodash/.internal/baseXor.test.ts:44:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        0.611 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseXor.test.ts/i.

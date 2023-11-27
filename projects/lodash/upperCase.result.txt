@@ -1,0 +1,31 @@
+FAIL projects/lodash/upperCase.test.ts
+  upperCase
+    ✓ should convert string with hyphens to upper case (3 ms)
+    ✓ should convert string with camel case to upper case (14 ms)
+    ✓ should convert string with underscores to upper case
+    ✓ should convert empty string to empty string
+    ✕ should convert string with apostrophes to upper case (3 ms)
+    ✓ should convert non-string input to upper case (1 ms)
+
+  ● upperCase › should convert string with apostrophes to upper case
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "IT'S A STRING"
+    Received: "ITS A STRING"
+
+      34 |     const expectedOutput = "IT'S A STRING";
+      35 |
+    > 36 |     expect(upperCase(input)).toBe(expectedOutput);
+         |                              ^
+      37 |   });
+      38 |
+      39 |   it('should convert non-string input to upper case', () => {
+
+      at Object.toBe (projects/lodash/upperCase.test.ts:36:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        2.019 s
+Ran all test suites matching /projects\/lodash\/upperCase.test.ts/i.

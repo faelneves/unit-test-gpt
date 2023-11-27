@@ -1,0 +1,53 @@
+FAIL projects/lodash/.internal/charsEndIndex.test.ts
+  charsEndIndex
+    ✕ should return the index of the last unmatched string symbol (2 ms)
+    ✕ should return -1 if all string symbols are matched (1 ms)
+    ✕ should return -1 if both strSymbols and chrSymbols are empty (1 ms)
+
+  ● charsEndIndex › should return the index of the last unmatched string symbol
+
+    ReferenceError: charsEndIndex is not defined
+
+       6 |     const chrSymbols = ['d', 'c'];
+       7 |
+    >  8 |     const result = charsEndIndex(strSymbols, chrSymbols);
+         |                    ^
+       9 |
+      10 |     expect(result).toBe(1);
+      11 |   });
+
+      at Object.charsEndIndex (projects/lodash/.internal/charsEndIndex.test.ts:8:20)
+
+  ● charsEndIndex › should return -1 if all string symbols are matched
+
+    ReferenceError: charsEndIndex is not defined
+
+      15 |     const chrSymbols = ['d', 'c'];
+      16 |
+    > 17 |     const result = charsEndIndex(strSymbols, chrSymbols);
+         |                    ^
+      18 |
+      19 |     expect(result).toBe(-1);
+      20 |   });
+
+      at Object.charsEndIndex (projects/lodash/.internal/charsEndIndex.test.ts:17:20)
+
+  ● charsEndIndex › should return -1 if both strSymbols and chrSymbols are empty
+
+    ReferenceError: charsEndIndex is not defined
+
+      24 |     const chrSymbols = [];
+      25 |
+    > 26 |     const result = charsEndIndex(strSymbols, chrSymbols);
+         |                    ^
+      27 |
+      28 |     expect(result).toBe(-1);
+      29 |   });
+
+      at Object.charsEndIndex (projects/lodash/.internal/charsEndIndex.test.ts:26:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 total
+Snapshots:   0 total
+Time:        0.729 s
+Ran all test suites matching /projects\/lodash\/.internal\/charsEndIndex.test.ts/i.

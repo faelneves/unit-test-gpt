@@ -1,0 +1,15 @@
+PASS projects/lodash/camelCase.test.ts
+  camelCase
+    ✓ should convert string with normal spaces to camel case (4 ms)
+    ✓ should convert string with dashed spaces to camel case (1 ms)
+    ✓ should convert string with underscore spaces to camel case (1 ms)
+    ✓ should convert empty string to empty string
+    ✓ should convert string with only one word to lowercase (1 ms)
+    ✓ should convert non-string values to camel case
+    ✓ should remove apostrophes and smart quotes (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        0.618 s, estimated 3 s
+Ran all test suites matching /projects\/lodash\/camelCase.test.ts/i.

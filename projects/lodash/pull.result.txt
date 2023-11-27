@@ -1,0 +1,11 @@
+PASS projects/lodash/pull.test.ts
+  pull
+    ✓ should remove all given values from array (3 ms)
+    ✓ should remove all instances of given values from array
+    ✓ should remove all instances of given values from empty array (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.772 s
+Ran all test suites matching /projects\/lodash\/pull.test.ts/i.

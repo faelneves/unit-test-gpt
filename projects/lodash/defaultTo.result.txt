@@ -1,0 +1,11 @@
+PASS projects/lodash/defaultTo.test.ts
+  defaultTo
+    ✓ should return the value if it is not null, undefined or NaN (5 ms)
+    ✓ should return the default value if the value is null, undefined or NaN (1 ms)
+    ✓ should handle special cases (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.918 s
+Ran all test suites matching /projects\/lodash\/defaultTo.test.ts/i.

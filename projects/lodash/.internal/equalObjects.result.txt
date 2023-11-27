@@ -1,0 +1,44 @@
+FAIL projects/lodash/.internal/equalObjects.test.ts
+  equalObjects
+    ✓ should return true if two objects are equivalent (2 ms)
+    ✕ should return false if two objects are not equivalent (1 ms)
+    ✕ should return true if two objects are equivalent with partial comparison (2 ms)
+    ✓ should return false if two objects are not equivalent with partial comparison (1 ms)
+
+  ● equalObjects › should return false if two objects are not equivalent
+
+    TypeError: equalFunc is not a function
+
+      61 |     // Recursively compare objects (susceptible to call stack limits).
+      62 |     if (!(compared === undefined
+    > 63 |       ? (objValue === othValue || equalFunc(objValue, othValue, bitmask, customizer, stack))
+         |                                   ^
+      64 |       : compared
+      65 |     )) {
+      66 |       result = false
+
+      at equalFunc (projects/lodash/.internal/equalObjects.ts:63:35)
+      at Object.<anonymous> (projects/lodash/.internal/equalObjects.test.ts:14:24)
+
+  ● equalObjects › should return true if two objects are equivalent with partial comparison
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      18 |     const obj1 = { a: 1, b: 2 }
+      19 |     const obj2 = { a: 1 }
+    > 20 |     expect(equalObjects(obj1, obj2, 1, null, null, new Map())).toBe(true)
+         |                                                                ^
+      21 |   })
+      22 |
+      23 |   it('should return false if two objects are not equivalent with partial comparison', () => {
+
+      at Object.toBe (projects/lodash/.internal/equalObjects.test.ts:20:64)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 passed, 4 total
+Snapshots:   0 total
+Time:        0.524 s
+Ran all test suites matching /projects\/lodash\/.internal\/equalObjects.test.ts/i.

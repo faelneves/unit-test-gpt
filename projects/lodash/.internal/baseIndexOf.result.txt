@@ -1,0 +1,12 @@
+PASS projects/lodash/.internal/baseIndexOf.test.ts
+  baseIndexOf
+    ✓ should return the index of the matched value if the value is found (2 ms)
+    ✓ should return -1 if the value is not found (1 ms)
+    ✓ should return -1 if the array is empty
+    ✓ should return the index of the matched value if fromIndex is negative (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.491 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseIndexOf.test.ts/i.

@@ -1,0 +1,28 @@
+FAIL projects/lodash/.internal/getSymbols.test.ts
+  getSymbols
+    ✓ should return an empty array for a null object (16 ms)
+    ✕ should return an array of symbols for an object with symbols (3 ms)
+    ✓ should not include symbols that are not enumerable (1 ms)
+
+  ● getSymbols › should return an array of symbols for an object with symbols
+
+    expect(received).toContainEqual(expected) // deep equality
+
+    Expected value: Symbol(symbol1)
+    Received array: [Symbol(symbol1), Symbol(symbol2)]
+
+      13 |     }
+      14 |     const symbols = getSymbols(object)
+    > 15 |     expect(symbols).toContainEqual(Symbol('symbol1'))
+         |                     ^
+      16 |     expect(symbols).toContainEqual(Symbol('symbol2'))
+      17 |   })
+      18 |
+
+      at Object.toContainEqual (projects/lodash/.internal/getSymbols.test.ts:15:21)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.67 s
+Ran all test suites matching /projects\/lodash\/.internal\/getSymbols.test.ts/i.

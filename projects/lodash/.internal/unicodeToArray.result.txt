@@ -1,0 +1,12 @@
+PASS projects/lodash/.internal/unicodeToArray.test.ts
+  unicodeToArray
+    ✓ should convert a Unicode string to an array (2 ms)
+    ✓ should return an empty array if the input string is empty
+    ✓ should handle Unicode astral symbols (1 ms)
+    ✓ should handle Unicode combining marks
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.483 s
+Ran all test suites matching /projects\/lodash\/.internal\/unicodeToArray.test.ts/i.

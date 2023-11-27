@@ -1,0 +1,48 @@
+FAIL projects/lodash/memoize.test.ts
+  memoize
+    ✓ should memoize the result of the function (3 ms)
+    ✕ should use the resolver to determine the cache key (2 ms)
+    ✓ should throw a TypeError if the first argument is not a function (4 ms)
+    ✕ should throw a TypeError if the second argument is provided and not a function (2 ms)
+    ✓ should use the provided cache implementation (1 ms)
+
+  ● memoize › should use the resolver to determine the cache key
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 2
+
+      24 |     const memoizedFn = memoize(mockFn, resolver);
+      25 |
+    > 26 |     expect(memoizedFn(1, 2)).toBe(3);
+         |                              ^
+      27 |     expect(memoizedFn(1, 2)).toBe(3);
+      28 |     expect(mockFn).toHaveBeenCalledTimes(1);    // function should be called only once
+      29 |     expect(resolver).toHaveBeenCalledTimes(1); // resolver should be called only once
+
+      at Object.toBe (projects/lodash/memoize.test.ts:26:30)
+
+  ● memoize › should throw a TypeError if the second argument is provided and not a function
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+      55 |     expect(() => memoize(mockFn, 'not-a-function')).toThrow(TypeError);
+      56 |     expect(() => memoize(mockFn, {})).toThrow(TypeError);
+    > 57 |     expect(() => memoize(mockFn, null)).toThrow(TypeError);
+         |                                         ^
+      58 |     expect(() => memoize(mockFn, undefined)).toThrow(TypeError);
+      59 |   });
+      60 |
+
+      at Object.toThrow (projects/lodash/memoize.test.ts:57:41)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        0.607 s
+Ran all test suites matching /projects\/lodash\/memoize.test.ts/i.

@@ -1,0 +1,11 @@
+PASS projects/lodash/some.test.ts
+  some
+    ✓ should return true if any element passes the predicate check (1 ms)
+    ✓ should return false if no element passes the predicate check
+    ✓ should return false for an empty array
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.467 s
+Ran all test suites matching /projects\/lodash\/some.test.ts/i.

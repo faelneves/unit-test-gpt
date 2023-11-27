@@ -1,0 +1,39 @@
+FAIL projects/lodash/mapValue.test.ts
+  mapValue
+    ✓ should return an empty object when given an empty object (2 ms)
+    ✓ should map the values of the object using the provided iteratee (1 ms)
+    ✕ should work with non-string keys (4 ms)
+
+  ● mapValue › should work with non-string keys
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,8 +1,8 @@
+      Array [
+        "one",
+    -   1,
+    +   "1",
+        Object {
+          "1": "one",
+          "2": "two",
+          "3": "three",
+        },
+
+      43 |     });
+      44 |     expect(capitalizeIteratee).toHaveBeenCalledTimes(3);
+    > 45 |     expect(capitalizeIteratee.mock.calls[0]).toEqual(['one', 1, object]);
+         |                                              ^
+      46 |     expect(capitalizeIteratee.mock.calls[1]).toEqual(['two', 2, object]);
+      47 |     expect(capitalizeIteratee.mock.calls[2]).toEqual(['three', 3, object]);
+      48 |   });
+
+      at Object.toEqual (projects/lodash/mapValue.test.ts:45:46)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.522 s
+Ran all test suites matching /projects\/lodash\/mapValue.test.ts/i.

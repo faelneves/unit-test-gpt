@@ -1,0 +1,14 @@
+PASS projects/lodash/.internal/isIterateeCall.test.ts
+  isIterateeCall
+    ✓ should return true if arguments are from an iteratee call (2 ms)
+    ✓ should return false if arguments are not from an iteratee call
+    ✓ should return false if object is not an object (1 ms)
+    ✓ should return false if index is not a number or string
+    ✓ should return false if index is a number but not a valid index for the object (1 ms)
+    ✓ should return false if index is a string but not a valid key for the object
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.503 s
+Ran all test suites matching /projects\/lodash\/.internal\/isIterateeCall.test.ts/i.

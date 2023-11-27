@@ -1,0 +1,74 @@
+FAIL projects/lodash/.internal/baseClone.test.ts
+  baseClone
+    ✓ should clone non-object values (2 ms)
+    ✓ should clone arrays (1 ms)
+    ✓ should clone objects (1 ms)
+    ✕ should clone nested objects (2 ms)
+    ✕ should clone objects with circular references (1 ms)
+    ✓ should clone typed arrays
+    ✓ should clone Maps (1 ms)
+    ✓ should clone Sets
+    ✓ should clone Date objects
+    ✓ should clone RegExp objects (1 ms)
+    ✕ should clone other Cloneable objects (2 ms)
+
+  ● baseClone › should clone nested objects
+
+    expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not {"b": {"c": 1}}
+
+      30 |     expect(newObj).toEqual(obj);
+      31 |     expect(newObj).not.toBe(obj);
+    > 32 |     expect(newObj.a).not.toBe(obj.a);
+         |                          ^
+      33 |     expect(newObj.a.b).not.toBe(obj.a.b);
+      34 |   });
+      35 |
+
+      at Object.toBe (projects/lodash/.internal/baseClone.test.ts:32:26)
+
+  ● baseClone › should clone objects with circular references
+
+    expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not {"a": {"b": [Circular]}}
+
+      41 |     expect(newObj).not.toBe(obj);
+      42 |     expect(newObj.a.b).toEqual(newObj);
+    > 43 |     expect(newObj.a.b).not.toBe(obj);
+         |                            ^
+      44 |   });
+      45 |
+      46 |   it('should clone typed arrays', () => {
+
+      at Object.toBe (projects/lodash/.internal/baseClone.test.ts:43:28)
+
+  ● baseClone › should clone other Cloneable objects
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 4
+    + Received  + 1
+
+    - Object {
+    -   "clone": [Function clone],
+    -   Symbol(Symbol.toStringTag): "CustomCloneable",
+    - }
+    + Object {}
+
+      89 |     };
+      90 |     const newCustomCloneable = baseClone(customCloneable);
+    > 91 |     expect(newCustomCloneable).toEqual(customCloneable);
+         |                                ^
+      92 |     expect(newCustomCloneable).not.toBe(customCloneable);
+      93 |   });
+      94 | });
+
+      at Object.toEqual (projects/lodash/.internal/baseClone.test.ts:91:32)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 8 passed, 11 total
+Snapshots:   0 total
+Time:        1.183 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseClone.test.ts/i.

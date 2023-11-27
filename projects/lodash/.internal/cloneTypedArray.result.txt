@@ -1,0 +1,26 @@
+FAIL projects/lodash/.internal/cloneTypedArray.test.ts
+  cloneTypedArray
+    ✕ should clone the typed array (4 ms)
+    ✓ should perform a deep clone if isDeep parameter is true
+
+  ● cloneTypedArray › should clone the typed array
+
+    expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not []
+
+       9 |     expect(cloned).toBeInstanceOf(Int8Array);
+      10 |     expect(cloned).toEqual(typedArray);
+    > 11 |     expect(cloned.buffer).not.toBe(typedArray.buffer);
+         |                               ^
+      12 |   });
+      13 |
+      14 |   it('should perform a deep clone if isDeep parameter is true', () => {
+
+      at Object.toBe (projects/lodash/.internal/cloneTypedArray.test.ts:11:31)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.499 s
+Ran all test suites matching /projects\/lodash\/.internal\/cloneTypedArray.test.ts/i.

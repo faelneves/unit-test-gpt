@@ -1,0 +1,13 @@
+PASS projects/lodash/remove.test.ts
+  remove
+    ✓ should remove all even numbers from the array (3 ms)
+    ✓ should return an empty array if the input array is empty
+    ✓ should return an empty array if the input array is null or undefined (1 ms)
+    ✓ should remove all elements from the array if the predicate always returns true (1 ms)
+    ✓ should remove no elements from the array if the predicate always returns false
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.641 s
+Ran all test suites matching /projects\/lodash\/remove.test.ts/i.

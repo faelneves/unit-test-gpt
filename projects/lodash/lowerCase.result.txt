@@ -1,0 +1,28 @@
+FAIL projects/lodash/lowerCase.test.ts
+  lowerCase
+    ✓ should convert string to lower case (3 ms)
+    ✓ should handle empty string
+    ✕ should handle string with special characters (3 ms)
+
+  ● lowerCase › should handle string with special characters
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "!@#$%^&*()"
+    Received: ""
+
+      14 |
+      15 |   it('should handle string with special characters', () => {
+    > 16 |     expect(lowerCase('!@#$%^&*()')).toBe('!@#$%^&*()');
+         |                                     ^
+      17 |   });
+      18 | });
+      19 |
+
+      at Object.toBe (projects/lodash/lowerCase.test.ts:16:37)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.659 s
+Ran all test suites matching /projects\/lodash\/lowerCase.test.ts/i.

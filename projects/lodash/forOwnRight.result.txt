@@ -1,0 +1,45 @@
+FAIL projects/lodash/forOwnRight.test.ts
+  forOwnRight
+    ✕ should iterate over properties of the object in the opposite order (4 ms)
+    ✕ should handle objects with null prototype (1 ms)
+    ✓ should not iterate over properties if the object is null or undefined (1 ms)
+
+  ● forOwnRight › should iterate over properties of the object in the opposite order
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "c"
+    Received: [Function mockConstructor]
+
+       8 |     expect(iteratee.mock.calls.length).toBe(3);
+       9 |     expect(iteratee.mock.calls[0][0]).toBe(3);
+    > 10 |     expect(iteratee.mock.calls[0][1]).toBe('c');
+         |                                       ^
+      11 |     expect(iteratee.mock.calls[1][0]).toBe(2);
+      12 |     expect(iteratee.mock.calls[1][1]).toBe('b');
+      13 |     expect(iteratee.mock.calls[2][0]).toBe(1);
+
+      at Object.toBe (projects/lodash/forOwnRight.test.ts:10:39)
+
+  ● forOwnRight › should handle objects with null prototype
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "c"
+    Received: [Function mockConstructor]
+
+      24 |     expect(iteratee.mock.calls.length).toBe(3);
+      25 |     expect(iteratee.mock.calls[0][0]).toBe(3);
+    > 26 |     expect(iteratee.mock.calls[0][1]).toBe('c');
+         |                                       ^
+      27 |     expect(iteratee.mock.calls[1][0]).toBe(2);
+      28 |     expect(iteratee.mock.calls[1][1]).toBe('b');
+      29 |     expect(iteratee.mock.calls[2][0]).toBe(1);
+
+      at Object.toBe (projects/lodash/forOwnRight.test.ts:26:39)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.586 s
+Ran all test suites matching /projects\/lodash\/forOwnRight.test.ts/i.

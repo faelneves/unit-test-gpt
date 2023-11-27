@@ -1,0 +1,21 @@
+FAIL projects/lodash/.internal/customDefaultsMerge.test.ts
+  ● Test suite failed to run
+
+    Cannot find module '@testing-library/dom' from 'projects/lodash/.internal/customDefaultsMerge.test.ts'
+
+      2 | import isObject from '../isObject';
+      3 | import { describe, expect, it } from '@jest/globals';
+    > 4 | import { screen } from '@testing-library/dom';
+        | ^
+      5 | import customDefaultsMerge from './customDefaultsMerge';
+      6 |
+      7 | describe('customDefaultsMerge', () => {
+
+      at Resolver._throwModNotFoundError (node_modules/jest-resolve/build/resolver.js:427:11)
+      at Object.require (projects/lodash/.internal/customDefaultsMerge.test.ts:4:1)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.573 s
+Ran all test suites matching /projects\/lodash\/.internal\/customDefaultsMerge.test.ts/i.

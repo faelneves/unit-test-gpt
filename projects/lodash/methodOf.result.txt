@@ -1,0 +1,21 @@
+FAIL projects/lodash/methodOf.test.ts
+  ● Test suite failed to run
+
+    ReferenceError: times is not defined
+
+      3 |
+      4 | describe('methodOf', () => {
+    > 5 |   const array = times(3, i => () => i);
+        |                 ^
+      6 |   const object = { 'a': array, 'b': array, 'c': array };
+      7 |   
+      8 |   it('should return a function that invokes the method at the given path of the object', () => {
+
+      at times (projects/lodash/methodOf.test.ts:5:17)
+      at Object.describe (projects/lodash/methodOf.test.ts:4:1)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.531 s
+Ran all test suites matching /projects\/lodash\/methodOf.test.ts/i.

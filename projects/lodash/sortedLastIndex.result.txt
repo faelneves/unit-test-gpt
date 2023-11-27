@@ -1,0 +1,12 @@
+PASS projects/lodash/sortedLastIndex.test.ts
+  sortedLastIndex
+    ✓ should return the highest index at which the value should be inserted into the sorted array (2 ms)
+    ✓ should return the index at which the value should be inserted when array has duplicates (1 ms)
+    ✓ should return the index at which the value should be inserted when array has negative values
+    ✓ should return the index at which the value should be inserted when array is empty
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.642 s
+Ran all test suites matching /projects\/lodash\/sortedLastIndex.test.ts/i.

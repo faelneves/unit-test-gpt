@@ -1,0 +1,46 @@
+FAIL projects/lodash/update.test.ts
+  update
+    ✓ should update a nested property with a function (9 ms)
+    ✕ should create nested property if it does not exist (8 ms)
+    ✕ should not mutate the original object (1 ms)
+    ✓ should return the object if it is null or undefined (1 ms)
+
+  ● update › should create nested property if it does not exist
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: undefined
+
+      11 |     const obj = {};
+      12 |     const updatedObj = update(obj, 'a.b.c', n => n ? n + 1 : 0);
+    > 13 |     expect(updatedObj.a.b.c).toBe(0);
+         |                              ^
+      14 |   });
+      15 |
+      16 |   it('should not mutate the original object', () => {
+
+      at Object.toBe (projects/lodash/update.test.ts:13:30)
+
+  ● update › should not mutate the original object
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 9
+
+      17 |     const obj = { 'a': [{ 'b': { 'c': 3 } }] };
+      18 |     update(obj, 'a[0].b.c', n => n * n);
+    > 19 |     expect(obj.a[0].b.c).toBe(3);
+         |                          ^
+      20 |   });
+      21 |
+      22 |   it('should return the object if it is null or undefined', () => {
+
+      at Object.toBe (projects/lodash/update.test.ts:19:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 passed, 4 total
+Snapshots:   0 total
+Time:        4.62 s
+Ran all test suites matching /projects\/lodash\/update.test.ts/i.

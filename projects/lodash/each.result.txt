@@ -1,0 +1,10 @@
+PASS projects/lodash/each.test.ts
+  each
+    ✓ should iterate over an array (4 ms)
+    ✓ should iterate over an object (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.558 s
+Ran all test suites matching /projects\/lodash\/each.test.ts/i.

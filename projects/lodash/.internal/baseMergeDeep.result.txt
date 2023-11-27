@@ -1,0 +1,59 @@
+FAIL projects/lodash/.internal/baseMergeDeep.test.ts
+  baseMergeDeep
+    ✕ should merge objects deeply (2 ms)
+    ✕ should merge arrays deeply
+    ✕ should handle circular references
+
+  ● baseMergeDeep › should merge objects deeply
+
+    TypeError: Cannot read properties of undefined (reading 'get')
+
+      30 |   const objValue = object[key]
+      31 |   const srcValue = source[key]
+    > 32 |   const stacked = stack.get(srcValue)
+         |                         ^
+      33 |
+      34 |   if (stacked) {
+      35 |     assignMergeValue(object, key, stacked)
+
+      at get (projects/lodash/.internal/baseMergeDeep.ts:32:25)
+      at mergeFunc (projects/lodash/.internal/baseMergeDeep.ts:85:5)
+      at Object.<anonymous> (projects/lodash/.internal/baseMergeDeep.test.ts:27:18)
+
+  ● baseMergeDeep › should merge arrays deeply
+
+    TypeError: Cannot read properties of undefined (reading 'get')
+
+      30 |   const objValue = object[key]
+      31 |   const srcValue = source[key]
+    > 32 |   const stacked = stack.get(srcValue)
+         |                         ^
+      33 |
+      34 |   if (stacked) {
+      35 |     assignMergeValue(object, key, stacked)
+
+      at get (projects/lodash/.internal/baseMergeDeep.ts:32:25)
+      at mergeFunc (projects/lodash/.internal/baseMergeDeep.ts:85:5)
+      at Object.<anonymous> (projects/lodash/.internal/baseMergeDeep.test.ts:42:18)
+
+  ● baseMergeDeep › should handle circular references
+
+    TypeError: Cannot read properties of undefined (reading 'get')
+
+      30 |   const objValue = object[key]
+      31 |   const srcValue = source[key]
+    > 32 |   const stacked = stack.get(srcValue)
+         |                         ^
+      33 |
+      34 |   if (stacked) {
+      35 |     assignMergeValue(object, key, stacked)
+
+      at get (projects/lodash/.internal/baseMergeDeep.ts:32:25)
+      at mergeFunc (projects/lodash/.internal/baseMergeDeep.ts:85:5)
+      at Object.<anonymous> (projects/lodash/.internal/baseMergeDeep.test.ts:66:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 total
+Snapshots:   0 total
+Time:        0.541 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseMergeDeep.test.ts/i.

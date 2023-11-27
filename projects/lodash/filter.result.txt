@@ -1,0 +1,12 @@
+PASS projects/lodash/filter.test.ts
+  filter
+    ✓ should return a new array with elements that pass the predicate function (3 ms)
+    ✓ should return an empty array if the input array is empty (1 ms)
+    ✓ should return an empty array if no elements pass the predicate function (1 ms)
+    ✓ should return a new array with objects that pass the predicate function
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.801 s
+Ran all test suites matching /projects\/lodash\/filter.test.ts/i.

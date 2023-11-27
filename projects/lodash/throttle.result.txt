@@ -1,0 +1,69 @@
+FAIL projects/lodash/throttle.test.ts
+  throttle
+    ✓ should call the function immediately if leading is true (7 ms)
+    ✓ should not call the function immediately if leading is false (1 ms)
+    ✕ should call the function after the wait time has passed (3 ms)
+    ✕ should not call the function multiple times within the wait time (1 ms)
+    ✓ should call the function on the trailing edge if trailing is true (3 ms)
+    ✓ should not call the function on the trailing edge if trailing is false (1 ms)
+    ✕ should cancel the delayed function invocation (1 ms)
+    ✓ should invoke the delayed function immediately
+
+  ● throttle › should call the function after the wait time has passed
+
+    expect(jest.fn()).toHaveBeenCalledTimes(expected)
+
+    Expected number of calls: 1
+    Received number of calls: 2
+
+      27 |     throttledFunc();
+      28 |     jest.advanceTimersByTime(100);
+    > 29 |     expect(func).toHaveBeenCalledTimes(1);
+         |                  ^
+      30 |   });
+      31 |   
+      32 |   it('should not call the function multiple times within the wait time', () => {
+
+      at Object.toHaveBeenCalledTimes (projects/lodash/throttle.test.ts:29:18)
+
+  ● throttle › should not call the function multiple times within the wait time
+
+    expect(jest.fn()).toHaveBeenCalledTimes(expected)
+
+    Expected number of calls: 1
+    Received number of calls: 2
+
+      36 |     throttledFunc();
+      37 |     jest.advanceTimersByTime(100);
+    > 38 |     expect(func).toHaveBeenCalledTimes(1);
+         |                  ^
+      39 |   });
+      40 |   
+      41 |   it('should call the function on the trailing edge if trailing is true', () => {
+
+      at Object.toHaveBeenCalledTimes (projects/lodash/throttle.test.ts:38:18)
+
+  ● throttle › should cancel the delayed function invocation
+
+    expect(jest.fn()).not.toHaveBeenCalled()
+
+    Expected number of calls: 0
+    Received number of calls: 1
+
+    1: called with 0 arguments
+
+      60 |     throttledFunc.cancel();
+      61 |     jest.advanceTimersByTime(100);
+    > 62 |     expect(func).not.toHaveBeenCalled();
+         |                      ^
+      63 |   });
+      64 |   
+      65 |   it('should invoke the delayed function immediately', () => {
+
+      at Object.toHaveBeenCalled (projects/lodash/throttle.test.ts:62:22)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 5 passed, 8 total
+Snapshots:   0 total
+Time:        0.979 s
+Ran all test suites matching /projects\/lodash\/throttle.test.ts/i.

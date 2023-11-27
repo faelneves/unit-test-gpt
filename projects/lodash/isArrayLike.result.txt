@@ -1,0 +1,13 @@
+PASS projects/lodash/isArrayLike.test.ts
+  isArrayLike
+    ✓ should return true for array (3 ms)
+    ✓ should return true for string (1 ms)
+    ✓ should return true for array-like objects (1 ms)
+    ✓ should return false for function
+    ✓ should return false for null and undefined (4 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        1.801 s
+Ran all test suites matching /projects\/lodash\/isArrayLike.test.ts/i.

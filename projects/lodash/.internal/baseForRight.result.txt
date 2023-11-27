@@ -1,0 +1,10 @@
+PASS projects/lodash/.internal/baseForRight.test.ts
+  baseForRight
+    ✓ should iterate over each property in reverse order (3 ms)
+    ✓ should break iteration when iteratee returns false
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.513 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseForRight.test.ts/i.

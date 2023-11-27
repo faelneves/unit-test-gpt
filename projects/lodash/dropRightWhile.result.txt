@@ -1,0 +1,11 @@
+PASS projects/lodash/dropRightWhile.test.ts
+  dropRightWhile
+    ✓ should drop elements from the end until the predicate returns falsey (3 ms)
+    ✓ should return an empty array if the input array is empty (1 ms)
+    ✓ should return an empty array if the input array is null or undefined
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.53 s
+Ran all test suites matching /projects\/lodash\/dropRightWhile.test.ts/i.

@@ -1,0 +1,14 @@
+PASS projects/lodash/toString.test.ts
+  toString
+    ✓ should return an empty string for null value (2 ms)
+    ✓ should return "-0" for -0 value
+    ✓ should convert an array to a comma-separated string (1 ms)
+    ✓ should recursively convert nested arrays to comma-separated strings (1 ms)
+    ✓ should convert a symbol to its string representation
+    ✓ should convert other types to their string representation (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.903 s
+Ran all test suites matching /projects\/lodash\/toString.test.ts/i.

@@ -1,0 +1,16 @@
+PASS projects/lodash/.internal/isKey.test.ts
+  isKey
+    ✓ should return true for string values (3 ms)
+    ✓ should return true for number values (1 ms)
+    ✓ should return true for boolean values
+    ✓ should return true for null values
+    ✓ should return true for undefined values (1 ms)
+    ✓ should return true for symbols
+    ✓ should return false for arrays
+    ✓ should return false for complex object paths (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        1.584 s
+Ran all test suites matching /projects\/lodash\/.internal\/isKey.test.ts/i.

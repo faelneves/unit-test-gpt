@@ -1,0 +1,12 @@
+PASS projects/lodash/trimEnd.test.ts
+  trimEnd
+    ✓ should remove trailing whitespace (2 ms)
+    ✓ should remove specified characters
+    ✓ should return empty string if string is empty
+    ✓ should return empty string if characters are not provided
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.63 s
+Ran all test suites matching /projects\/lodash\/trimEnd.test.ts/i.

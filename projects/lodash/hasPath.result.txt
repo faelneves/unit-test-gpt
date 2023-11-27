@@ -1,0 +1,53 @@
+FAIL projects/lodash/hasPath.test.ts
+  hasPath
+    ✓ should return true if path exists in object using dot notation (2 ms)
+    ✓ should return true if path exists in object using array notation
+    ✓ should return false if path does not exist in object
+    ✓ should return false if object is null or undefined
+    ✓ should return false if path is empty
+    ✕ should return false if path is not a string or an array (1 ms)
+    ✓ should return false if path is an empty array (1 ms)
+    ✓ should return false if path contains indices greater than the object length (1 ms)
+    ✓ should return false if the object is not an array but the path contains indices (1 ms)
+    ✕ should return false if the object is an array but the path does not contain indices (7 ms)
+
+  ● hasPath › should return false if path is not a string or an array
+
+    TypeError: string.charCodeAt is not a function
+
+      26 | const stringToPath = memoizeCapped((string) => {
+      27 |   const result = []
+    > 28 |   if (string.charCodeAt(0) === charCodeOfDot) {
+         |              ^
+      29 |     result.push('')
+      30 |   }
+      31 |   string.replace(rePropName, (match, expression, quote, subString) => {
+
+      at charCodeAt (projects/lodash/.internal/stringToPath.ts:28:14)
+      at apply (projects/lodash/memoize.ts:54:29)
+      at castPath (projects/lodash/.internal/castPath.ts:16:55)
+      at hasPath (projects/lodash/hasPath.ts:31:18)
+      at Object.<anonymous> (projects/lodash/hasPath.test.ts:32:19)
+
+  ● hasPath › should return false if the object is an array but the path does not contain indices
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      52 |   it('should return false if the object is an array but the path does not contain indices', () => {
+      53 |     const array = [1, 2, 3];
+    > 54 |     expect(hasPath(array, 'length')).toBe(false);
+         |                                      ^
+      55 |     expect(hasPath(array, '[0].value')).toBe(false);
+      56 |   });
+      57 | });
+
+      at Object.toBe (projects/lodash/hasPath.test.ts:54:38)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 8 passed, 10 total
+Snapshots:   0 total
+Time:        0.581 s
+Ran all test suites matching /projects\/lodash\/hasPath.test.ts/i.

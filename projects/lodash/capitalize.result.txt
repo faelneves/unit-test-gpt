@@ -1,0 +1,47 @@
+FAIL projects/lodash/capitalize.test.ts
+  capitalize
+    ✓ should capitalize the first character of a string (2 ms)
+    ✓ should return an empty string if the input is empty (1 ms)
+    ✕ should handle special characters correctly (2 ms)
+    ✓ should handle numbers correctly
+    ✕ should handle non-string input correctly
+
+  ● capitalize › should handle special characters correctly
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "-Foo"
+    Received: "-foo"
+
+      12 |
+      13 |   it('should handle special characters correctly', () => {
+    > 14 |     expect(capitalize('-foo')).toBe('-Foo');
+         |                                ^
+      15 |     expect(capitalize('@bar')).toBe('@Bar');
+      16 |   });
+      17 |
+
+      at Object.toBe (projects/lodash/capitalize.test.ts:14:32)
+
+  ● capitalize › should handle non-string input correctly
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Null"
+    Received: ""
+
+      22 |
+      23 |   it('should handle non-string input correctly', () => {
+    > 24 |     expect(capitalize(null)).toBe('Null');
+         |                              ^
+      25 |     expect(capitalize(undefined)).toBe('Undefined');
+      26 |   });
+      27 | });
+
+      at Object.toBe (projects/lodash/capitalize.test.ts:24:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        0.515 s
+Ran all test suites matching /projects\/lodash\/capitalize.test.ts/i.

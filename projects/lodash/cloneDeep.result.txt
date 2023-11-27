@@ -1,0 +1,25 @@
+FAIL projects/lodash/cloneDeep.test.ts
+  cloneDeep
+    ✕ should return a deep cloned value (5 ms)
+
+  ● cloneDeep › should return a deep cloned value
+
+    expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not 5
+
+      26 |     
+      27 |     expect(clonedObj.b.e.f).toEqual(obj.b.e.f); // deep nested objects should have the same value
+    > 28 |     expect(clonedObj.b.e.f).not.toBe(obj.b.e.f); // deep nested objects should not be the same object reference
+         |                                 ^
+      29 |   });
+      30 | });
+      31 |
+
+      at Object.toBe (projects/lodash/cloneDeep.test.ts:28:33)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.673 s
+Ran all test suites matching /projects\/lodash\/cloneDeep.test.ts/i.

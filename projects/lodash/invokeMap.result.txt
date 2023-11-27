@@ -1,0 +1,40 @@
+FAIL projects/lodash/invokeMap.test.ts
+  invokeMap
+    ✓ should return an array of results (8 ms)
+    ✓ should invoke the method at path for each element in the collection (1 ms)
+    ✕ should invoke the function at path for each element in the collection (5 ms)
+    ✓ should bind `this` to each element when path is a function (5 ms)
+    ✓ should handle empty collection (1 ms)
+    ✓ should handle non-array and non-object collection gracefully (1 ms)
+
+  ● invokeMap › should invoke the function at path for each element in the collection
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 3
+
+      Array [
+    -   2,
+    -   4,
+    -   6,
+    +   NaN,
+    +   NaN,
+    +   NaN,
+      ]
+
+      21 |     const path = (value) => value * 2;
+      22 |     const result = invokeMap(collection, path);
+    > 23 |     expect(result).toEqual([2, 4, 6]);
+         |                    ^
+      24 |   });
+      25 |
+      26 |   it('should bind `this` to each element when path is a function', () => {
+
+      at Object.toEqual (projects/lodash/invokeMap.test.ts:23:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        0.772 s
+Ran all test suites matching /projects\/lodash\/invokeMap.test.ts/i.

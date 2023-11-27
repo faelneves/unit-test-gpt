@@ -1,0 +1,30 @@
+FAIL projects/lodash/startCase.test.ts
+  startCase
+    ✓ should convert hyphen separated string to start case (2 ms)
+    ✓ should convert camel case string to start case
+    ✓ should keep all uppercase string as is (1 ms)
+    ✓ should convert empty string to empty start case (1 ms)
+    ✕ should convert non-string values to start case (2 ms)
+
+  ● startCase › should convert non-string values to start case
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "Null"
+
+      19 |
+      20 |   it('should convert non-string values to start case', () => {
+    > 21 |     expect(startCase(null)).toBe('');
+         |                             ^
+      22 |     expect(startCase(undefined)).toBe('');
+      23 |     expect(startCase(123)).toBe('123');
+      24 |     expect(startCase({})).toBe('[object Object]');
+
+      at Object.toBe (projects/lodash/startCase.test.ts:21:29)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.539 s
+Ran all test suites matching /projects\/lodash\/startCase.test.ts/i.

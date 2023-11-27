@@ -1,0 +1,29 @@
+FAIL projects/lodash/.internal/isStrictComparable.test.ts
+  isStrictComparable
+    ✓ should return true for primitive values (2 ms)
+    ✓ should return false for objects (including arrays) (1 ms)
+    ✕ should return false for NaN and Infinity (2 ms)
+    ✓ should return false for functions and classes
+
+  ● isStrictComparable › should return false for NaN and Infinity
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      18 |   it('should return false for NaN and Infinity', () => {
+      19 |     expect(isStrictComparable(NaN)).toBe(false);
+    > 20 |     expect(isStrictComparable(Infinity)).toBe(false);
+         |                                          ^
+      21 |   });
+      22 |
+      23 |   it('should return false for functions and classes', () => {
+
+      at Object.toBe (projects/lodash/.internal/isStrictComparable.test.ts:20:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        0.607 s
+Ran all test suites matching /projects\/lodash\/.internal\/isStrictComparable.test.ts/i.

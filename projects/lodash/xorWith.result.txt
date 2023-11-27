@@ -1,0 +1,13 @@
+PASS projects/lodash/xorWith.test.ts
+  xorWith
+    ✓ should return array of filtered values with custom comparator (8 ms)
+    ✓ should return array of filtered values when no arrays are provided
+    ✓ should return array of filtered values when empty arrays are provided
+    ✓ should return array of filtered values when arrays contain duplicate objects (1 ms)
+    ✓ should return array of filtered values when arrays have different lengths
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        2.194 s
+Ran all test suites matching /projects\/lodash\/xorWith.test.ts/i.

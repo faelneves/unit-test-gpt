@@ -1,0 +1,36 @@
+FAIL projects/lodash/intersectionBy.test.ts
+  intersectionBy
+    ✓ should return an array of intersecting values based on the iteratee function (2 ms)
+    ✓ should return an empty array if no intersecting values are found
+    ✓ should handle empty arrays
+    ✓ should handle arrays with one element
+    ✓ should handle arrays with multiple elements and the same iteratee value
+    ✕ should handle arrays with multiple elements and different iteratee values (3 ms)
+
+  ● intersectionBy › should handle arrays with multiple elements and different iteratee values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   2.1,
+    + ]
+
+      23 |
+      24 |   it('should handle arrays with multiple elements and different iteratee values', () => {
+    > 25 |     expect(intersectionBy([2.1, 1.2], [2.3, 3.4], Math.ceil)).toEqual([]);
+         |                                                               ^
+      26 |   });
+      27 | });
+      28 |
+
+      at Object.toEqual (projects/lodash/intersectionBy.test.ts:25:63)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        0.563 s
+Ran all test suites matching /projects\/lodash\/intersectionBy.test.ts/i.

@@ -1,0 +1,13 @@
+PASS projects/lodash/sortedUniq.test.ts
+  sortedUniq
+    ✓ should return duplicate free array for sorted array (29 ms)
+    ✓ should return an empty array if input is null (1 ms)
+    ✓ should return an empty array if input is an empty array (1 ms)
+    ✓ should return the input array if it is already duplicate free
+    ✓ should return the input array if it contains only one element
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        1.827 s
+Ran all test suites matching /projects\/lodash\/sortedUniq.test.ts/i.

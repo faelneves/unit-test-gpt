@@ -1,0 +1,30 @@
+FAIL projects/lodash/takeWhile.test.ts
+  takeWhile
+    ✓ should return the slice of array with elements taken from the beginning until predicate returns falsey (3 ms)
+    ✓ should return an empty array if the input array is empty (1 ms)
+    ✓ should return an empty array if the input array is null (1 ms)
+    ✓ should return an empty array if the input array is undefined
+    ✓ should return an empty array if the predicate always returns falsey (1 ms)
+    ✕ should work with an empty predicate
+
+  ● takeWhile › should work with an empty predicate
+
+    TypeError: predicate is not a function
+
+      16 |
+      17 |   while ((fromRight ? index-- : ++index < length) &&
+    > 18 |     predicate(array[index], index, array)) { }
+         |     ^
+      19 |
+      20 |   return isDrop
+      21 |     ? slice(array, (fromRight ? 0 : index), (fromRight ? index + 1 : length))
+
+      at predicate (projects/lodash/.internal/baseWhile.ts:18:5)
+      at takeWhile (projects/lodash/takeWhile.ts:25:51)
+      at Object.<anonymous> (projects/lodash/takeWhile.test.ts:68:29)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        0.724 s
+Ran all test suites matching /projects\/lodash\/takeWhile.test.ts/i.

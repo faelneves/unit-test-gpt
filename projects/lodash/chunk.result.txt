@@ -1,0 +1,14 @@
+PASS projects/lodash/chunk.test.ts
+  chunk
+    ✓ should split array into chunks of specified size (8 ms)
+    ✓ should return an empty array if the input array is empty
+    ✓ should return an empty array if the chunk size is less than 1 (8 ms)
+    ✓ should split array into chunks of size 1 if no chunk size is provided (4 ms)
+    ✓ should handle array-like objects (1 ms)
+    ✓ should handle strings (6 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        1.675 s
+Ran all test suites matching /projects\/lodash\/chunk.test.ts/i.

@@ -1,0 +1,29 @@
+FAIL projects/lodash/.internal/reEvaluate.test.ts
+  reEvaluate
+    ✓ should match template delimiters (3 ms)
+    ✓ should match multiple template delimiters
+    ✓ should match template delimiters with special characters (1 ms)
+    ✕ should not match template delimiters with whitespace (2 ms)
+    ✓ should not match empty template (1 ms)
+
+  ● reEvaluate › should not match template delimiters with whitespace
+
+    expect(received).toBeNull()
+
+    Received: ["<%   %>"]
+
+      26 |     const template = '<%   %>';
+      27 |     const matches = template.match(reEvaluate);
+    > 28 |     expect(matches).toBeNull();
+         |                     ^
+      29 |   });
+      30 |
+      31 |   it('should not match empty template', () => {
+
+      at Object.toBeNull (projects/lodash/.internal/reEvaluate.test.ts:28:21)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.659 s
+Ran all test suites matching /projects\/lodash\/.internal\/reEvaluate.test.ts/i.

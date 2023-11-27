@@ -1,0 +1,26 @@
+FAIL projects/lodash/.internal/stringSize.test.ts
+  stringSize
+    ✕ should return the number of symbols in a string (4 ms)
+
+  ● stringSize › should return the number of symbols in a string
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 8
+    Received: 7
+
+      10 |
+      11 |     // Mix of ASCII and Unicode characters
+    > 12 |     expect(stringSize('hello 🌍')).toBe(8);
+         |                                    ^
+      13 |
+      14 |     // Empty string
+      15 |     expect(stringSize('')).toBe(0);
+
+      at Object.toBe (projects/lodash/.internal/stringSize.test.ts:12:36)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.659 s
+Ran all test suites matching /projects\/lodash\/.internal\/stringSize.test.ts/i.

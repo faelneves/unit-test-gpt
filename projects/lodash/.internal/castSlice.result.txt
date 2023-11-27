@@ -1,0 +1,27 @@
+FAIL projects/lodash/.internal/castSlice.test.ts
+  castSlice
+    ✕ should cast array to a slice if start is 0 and end is greater than or equal to array length (3 ms)
+    ✓ should cast array to a slice with specified start and end positions (1 ms)
+    ✓ should cast array to a slice with default end position if omitted
+
+  ● castSlice › should cast array to a slice if start is 0 and end is greater than or equal to array length
+
+    expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not [1, 2, 3]
+
+      11 |
+      12 |     expect(result).toEqual(array)
+    > 13 |     expect(result).not.toBe(array)
+         |                        ^
+      14 |   })
+      15 |
+      16 |   it('should cast array to a slice with specified start and end positions', () => {
+
+      at Object.toBe (projects/lodash/.internal/castSlice.test.ts:13:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.539 s
+Ran all test suites matching /projects\/lodash\/.internal\/castSlice.test.ts/i.

@@ -1,0 +1,11 @@
+PASS projects/lodash/.internal/mapToArray.test.ts
+  mapToArray
+    ✓ should convert a map to its key-value pairs (10 ms)
+    ✓ should return an empty array when given an empty map (1 ms)
+    ✓ should return an array with a single key-value pair when given a map with one entry
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.574 s
+Ran all test suites matching /projects\/lodash\/.internal\/mapToArray.test.ts/i.

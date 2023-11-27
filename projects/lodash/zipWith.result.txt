@@ -1,0 +1,88 @@
+FAIL projects/lodash/zipWith.test.ts
+  zipWith
+    ✓ should combine arrays and apply iteratee function (4 ms)
+    ✓ should combine arrays and apply iteratee function with single array
+    ✓ should return empty array when no arrays provided
+    ✓ should return empty array when empty arrays provided
+    ✕ should combine arrays with undefined iteratee (1 ms)
+    ✕ should combine arrays with null iteratee (1 ms)
+    ✕ should combine arrays with non-function iteratee
+    ✕ should combine arrays with additional parameters in iteratee
+
+  ● zipWith › should combine arrays with undefined iteratee
+
+    TypeError: Cannot read properties of undefined (reading 'apply')
+
+      26 |   }
+      27 |   const result = unzip(array);
+    > 28 |   return map(result, (group) => iteratee.apply(undefined, group));
+         |                                          ^
+      29 | }
+      30 |
+      31 | export default unzipWith;
+
+      at apply (projects/lodash/unzipWith.ts:28:42)
+      at iteratee (projects/lodash/map.ts:25:25)
+      at unzipWith (projects/lodash/unzipWith.ts:28:13)
+      at zipWith (projects/lodash/zipWith.ts:24:19)
+      at Object.<anonymous> (projects/lodash/zipWith.test.ts:30:27)
+
+  ● zipWith › should combine arrays with null iteratee
+
+    TypeError: Cannot read properties of undefined (reading 'apply')
+
+      26 |   }
+      27 |   const result = unzip(array);
+    > 28 |   return map(result, (group) => iteratee.apply(undefined, group));
+         |                                          ^
+      29 | }
+      30 |
+      31 | export default unzipWith;
+
+      at apply (projects/lodash/unzipWith.ts:28:42)
+      at iteratee (projects/lodash/map.ts:25:25)
+      at unzipWith (projects/lodash/unzipWith.ts:28:13)
+      at zipWith (projects/lodash/zipWith.ts:24:19)
+      at Object.<anonymous> (projects/lodash/zipWith.test.ts:35:27)
+
+  ● zipWith › should combine arrays with non-function iteratee
+
+    TypeError: Cannot read properties of undefined (reading 'apply')
+
+      26 |   }
+      27 |   const result = unzip(array);
+    > 28 |   return map(result, (group) => iteratee.apply(undefined, group));
+         |                                          ^
+      29 | }
+      30 |
+      31 | export default unzipWith;
+
+      at apply (projects/lodash/unzipWith.ts:28:42)
+      at iteratee (projects/lodash/map.ts:25:25)
+      at unzipWith (projects/lodash/unzipWith.ts:28:13)
+      at zipWith (projects/lodash/zipWith.ts:24:19)
+      at Object.<anonymous> (projects/lodash/zipWith.test.ts:40:27)
+
+  ● zipWith › should combine arrays with additional parameters in iteratee
+
+    TypeError: Cannot read properties of undefined (reading 'apply')
+
+      26 |   }
+      27 |   const result = unzip(array);
+    > 28 |   return map(result, (group) => iteratee.apply(undefined, group));
+         |                                          ^
+      29 | }
+      30 |
+      31 | export default unzipWith;
+
+      at apply (projects/lodash/unzipWith.ts:28:42)
+      at iteratee (projects/lodash/map.ts:25:25)
+      at unzipWith (projects/lodash/unzipWith.ts:28:13)
+      at zipWith (projects/lodash/zipWith.ts:24:19)
+      at Object.<anonymous> (projects/lodash/zipWith.test.ts:46:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 4 passed, 8 total
+Snapshots:   0 total
+Time:        1.095 s
+Ran all test suites matching /projects\/lodash\/zipWith.test.ts/i.

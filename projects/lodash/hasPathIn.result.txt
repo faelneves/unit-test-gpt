@@ -1,0 +1,36 @@
+FAIL projects/lodash/hasPathIn.test.ts
+  hasPathIn
+    ✓ should return true if path exists in object (2 ms)
+    ✓ should return false if path does not exist in object
+    ✓ should return true if path exists in object using array notation (1 ms)
+    ✓ should return false if path does not exist in object using array notation
+    ✓ should return false if object is null or undefined
+    ✓ should return false if object is an empty array (1 ms)
+    ✓ should return true if object is an array and index is within bounds
+    ✓ should return false if object is an array and index is out of bounds (1 ms)
+    ✓ should return true if object is an array-like object and index is within bounds
+    ✓ should return false if object is an array-like object and index is out of bounds (1 ms)
+    ✕ should return false if object is an arguments object (1 ms)
+
+  ● hasPathIn › should return false if object is an arguments object
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+       98 |     const result = hasPathIn(object, path);
+       99 |
+    > 100 |     expect(result).toBe(false);
+          |                    ^
+      101 |   });
+      102 | });
+      103 |
+
+      at Object.toBe (projects/lodash/hasPathIn.test.ts:100:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 10 passed, 11 total
+Snapshots:   0 total
+Time:        0.578 s
+Ran all test suites matching /projects\/lodash\/hasPathIn.test.ts/i.

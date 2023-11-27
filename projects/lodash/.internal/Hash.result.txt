@@ -1,0 +1,42 @@
+FAIL projects/lodash/.internal/Hash.test.ts
+  Hash
+    constructor
+      ✓ should create an empty hash when no entries are provided (2 ms)
+      ✓ should create a hash and populate it with the provided entries (1 ms)
+    clear
+      ✓ should remove all entries from the hash (5 ms)
+    delete
+      ✓ should remove the entry with the specified key (1 ms)
+      ✓ should return true if the entry was removed, false otherwise
+    get
+      ✓ should return the value associated with the specified key
+      ✓ should return undefined if the key does not exist in the hash
+    has
+      ✓ should return true if the key exists in the hash (1 ms)
+      ✓ should return false if the key does not exist in the hash
+    set
+      ✓ should set the value associated with the specified key (1 ms)
+      ✓ should update the value if the key already exists in the hash
+      ✓ should handle setting the value as undefined (1 ms)
+      ✕ should handle setting the value as HASH_UNDEFINED
+      ✓ should return the hash instance (1 ms)
+
+  ● Hash › set › should handle setting the value as HASH_UNDEFINED
+
+    ReferenceError: HASH_UNDEFINED is not defined
+
+      118 |     it("should handle setting the value as HASH_UNDEFINED", () => {
+      119 |       const hash = new Hash();
+    > 120 |       hash.set("key1", HASH_UNDEFINED);
+          |                        ^
+      121 |
+      122 |       expect(hash.size).toBe(1);
+      123 |       expect(hash.get("key1")).toBe(undefined);
+
+      at Object.HASH_UNDEFINED (projects/lodash/.internal/Hash.test.ts:120:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 13 passed, 14 total
+Snapshots:   0 total
+Time:        0.577 s
+Ran all test suites matching /projects\/lodash\/.internal\/Hash.test.ts/i.

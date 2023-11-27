@@ -1,0 +1,68 @@
+FAIL projects/lodash/.internal/baseEach.test.ts
+  baseEach
+    ✕ should return the collection itself if it is null or undefined (7 ms)
+    ✕ should iterate over an array-like collection and call the iteratee for each element (1 ms)
+    ✕ should iterate over an object collection and call the iteratee for each own enumerable property
+    ✕ should break the iteration when the iteratee returns false
+
+  ● baseEach › should return the collection itself if it is null or undefined
+
+    ReferenceError: baseEach is not defined
+
+      1 | describe('baseEach', () => {
+      2 |   it('should return the collection itself if it is null or undefined', () => {
+    > 3 |     expect(baseEach(null, () => {})).toBe(null)
+        |     ^
+      4 |     expect(baseEach(undefined, () => {})).toBe(undefined)
+      5 |   })
+      6 |
+
+      at Object.expect (projects/lodash/.internal/baseEach.test.ts:3:5)
+
+  ● baseEach › should iterate over an array-like collection and call the iteratee for each element
+
+    ReferenceError: baseEach is not defined
+
+       8 |     const collection = [1, 2, 3]
+       9 |     const iteratee = jest.fn()
+    > 10 |     baseEach(collection, iteratee)
+         |     ^
+      11 |     expect(iteratee).toHaveBeenCalledTimes(3)
+      12 |     expect(iteratee).toHaveBeenCalledWith(1, 0, collection)
+      13 |     expect(iteratee).toHaveBeenCalledWith(2, 1, collection)
+
+      at Object.baseEach (projects/lodash/.internal/baseEach.test.ts:10:5)
+
+  ● baseEach › should iterate over an object collection and call the iteratee for each own enumerable property
+
+    ReferenceError: baseEach is not defined
+
+      18 |     const collection = { a: 1, b: 2, c: 3 }
+      19 |     const iteratee = jest.fn()
+    > 20 |     baseEach(collection, iteratee)
+         |     ^
+      21 |     expect(iteratee).toHaveBeenCalledTimes(3)
+      22 |     expect(iteratee).toHaveBeenCalledWith(1, 'a', collection)
+      23 |     expect(iteratee).toHaveBeenCalledWith(2, 'b', collection)
+
+      at Object.baseEach (projects/lodash/.internal/baseEach.test.ts:20:5)
+
+  ● baseEach › should break the iteration when the iteratee returns false
+
+    ReferenceError: baseEach is not defined
+
+      28 |     const collection = [1, 2, 3]
+      29 |     const iteratee = jest.fn((value) => value !== 2)
+    > 30 |     baseEach(collection, iteratee)
+         |     ^
+      31 |     expect(iteratee).toHaveBeenCalledTimes(2)
+      32 |     expect(iteratee).toHaveBeenCalledWith(1, 0, collection)
+      33 |     expect(iteratee).toHaveBeenCalledWith(2, 1, collection)
+
+      at Object.baseEach (projects/lodash/.internal/baseEach.test.ts:30:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 4 total
+Snapshots:   0 total
+Time:        0.509 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseEach.test.ts/i.

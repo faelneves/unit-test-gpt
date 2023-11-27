@@ -1,0 +1,10 @@
+PASS projects/lodash/.internal/isPrototype.test.ts
+  isPrototype
+    ✓ should return true if value is a prototype (13 ms)
+    ✓ should return false if value is not a prototype (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.527 s
+Ran all test suites matching /projects\/lodash\/.internal\/isPrototype.test.ts/i.

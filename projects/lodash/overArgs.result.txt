@@ -1,0 +1,99 @@
+FAIL projects/lodash/overArgs.test.ts
+  overArgs
+    ✕ should apply transforms to function arguments (7 ms)
+    ✕ should handle extra transforms (1 ms)
+    ✕ should handle missing transforms (1 ms)
+    ✓ should handle empty transforms array
+    ✕ should handle extra arguments (1 ms)
+    ✕ should handle fewer arguments (1 ms)
+
+  ● overArgs › should apply transforms to function arguments
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 144
+    Received: 72
+
+       9 |   it('should apply transforms to function arguments', () => {
+      10 |     const transformedFunc = overArgs(multiply, [square, double]);
+    > 11 |     expect(transformedFunc(3, 4)).toBe(144);
+         |                                   ^
+      12 |   });
+      13 |
+      14 |   it('should handle extra transforms', () => {
+
+      at Object.toBe (projects/lodash/overArgs.test.ts:11:35)
+
+  ● overArgs › should handle extra transforms
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2304
+    Received: 72
+
+      14 |   it('should handle extra transforms', () => {
+      15 |     const transformedFunc = overArgs(multiply, [square, double, square]);
+    > 16 |     expect(transformedFunc(3, 4)).toBe(2304);
+         |                                   ^
+      17 |   });
+      18 |
+      19 |   it('should handle missing transforms', () => {
+
+      at Object.toBe (projects/lodash/overArgs.test.ts:16:35)
+
+  ● overArgs › should handle missing transforms
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 65
+    Received: 17
+
+      19 |   it('should handle missing transforms', () => {
+      20 |     const transformedFunc = overArgs(add, [square, double]);
+    > 21 |     expect(transformedFunc(3, 4)).toBe(65);
+         |                                   ^
+      22 |   });
+      23 |
+      24 |   it('should handle empty transforms array', () => {
+
+      at Object.toBe (projects/lodash/overArgs.test.ts:21:35)
+
+  ● overArgs › should handle extra arguments
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 60
+    Received: 24
+
+      29 |   it('should handle extra arguments', () => {
+      30 |     const transformedFunc = overArgs(multiply, [double]);
+    > 31 |     expect(transformedFunc(3, 4, 5)).toBe(60);
+         |                                      ^
+      32 |   });
+      33 |
+      34 |   it('should handle fewer arguments', () => {
+
+      at Object.toBe (projects/lodash/overArgs.test.ts:31:38)
+
+  ● overArgs › should handle fewer arguments
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 18
+    Received: NaN
+
+      34 |   it('should handle fewer arguments', () => {
+      35 |     const transformedFunc = overArgs(multiply, [double, square]);
+    > 36 |     expect(transformedFunc(3)).toBe(18);
+         |                                ^
+      37 |   });
+      38 | });
+      39 |
+
+      at Object.toBe (projects/lodash/overArgs.test.ts:36:32)
+
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 1 passed, 6 total
+Snapshots:   0 total
+Time:        1.444 s
+Ran all test suites matching /projects\/lodash\/overArgs.test.ts/i.

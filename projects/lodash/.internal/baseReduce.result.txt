@@ -1,0 +1,76 @@
+FAIL projects/lodash/.internal/baseReduce.test.ts
+  baseReduce
+    ✕ should return the accumulated value when iterating over an array (1 ms)
+    ✕ should return the accumulated value when iterating over an object (2 ms)
+    ✕ should return the accumulated value with initial value from the first element of collection
+    ✕ should return the accumulated value with initial value from the last element of collection
+
+  ● baseReduce › should return the accumulated value when iterating over an array
+
+    TypeError: Array.prototype.forEach called on null or undefined
+        at forEach (<anonymous>)
+
+      13 |  */
+      14 | function baseReduce(collection, iteratee, accumulator, initAccum, eachFunc) {
+    > 15 |   eachFunc(collection, (value, index, collection) => {
+         |   ^
+      16 |     accumulator = initAccum
+      17 |       ? (initAccum = false, value)
+      18 |       : iteratee(accumulator, value, index, collection)
+
+      at eachFunc (projects/lodash/.internal/baseReduce.ts:15:3)
+      at Object.<anonymous> (projects/lodash/.internal/baseReduce.test.ts:9:22)
+
+  ● baseReduce › should return the accumulated value when iterating over an object
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 15
+    Received: 0
+
+      15 |     const accumulator = 0
+      16 |
+    > 17 |     expect(baseReduce(collection, iteratee, accumulator, true, Object.keys)).toBe(15)
+         |                                                                              ^
+      18 |   })
+      19 |
+      20 |   it('should return the accumulated value with initial value from the first element of collection', () => {
+
+      at Object.toBe (projects/lodash/.internal/baseReduce.test.ts:17:78)
+
+  ● baseReduce › should return the accumulated value with initial value from the first element of collection
+
+    TypeError: Array.prototype.forEach called on null or undefined
+        at forEach (<anonymous>)
+
+      13 |  */
+      14 | function baseReduce(collection, iteratee, accumulator, initAccum, eachFunc) {
+    > 15 |   eachFunc(collection, (value, index, collection) => {
+         |   ^
+      16 |     accumulator = initAccum
+      17 |       ? (initAccum = false, value)
+      18 |       : iteratee(accumulator, value, index, collection)
+
+      at eachFunc (projects/lodash/.internal/baseReduce.ts:15:3)
+      at Object.<anonymous> (projects/lodash/.internal/baseReduce.test.ts:24:22)
+
+  ● baseReduce › should return the accumulated value with initial value from the last element of collection
+
+    TypeError: eachFunc is not a function
+
+      13 |  */
+      14 | function baseReduce(collection, iteratee, accumulator, initAccum, eachFunc) {
+    > 15 |   eachFunc(collection, (value, index, collection) => {
+         |   ^
+      16 |     accumulator = initAccum
+      17 |       ? (initAccum = false, value)
+      18 |       : iteratee(accumulator, value, index, collection)
+
+      at eachFunc (projects/lodash/.internal/baseReduce.ts:15:3)
+      at Object.<anonymous> (projects/lodash/.internal/baseReduce.test.ts:31:22)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 4 total
+Snapshots:   0 total
+Time:        0.555 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseReduce.test.ts/i.

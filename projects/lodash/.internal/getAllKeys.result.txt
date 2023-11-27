@@ -1,0 +1,53 @@
+FAIL projects/lodash/.internal/getAllKeys.test.ts
+  getAllKeys
+    ✓ should return an array of property names and symbols for an object (4 ms)
+    ✕ should return an array of property names, symbols, and array indices for an array (5 ms)
+    ✕ should return an array of property names and symbols for an object with symbols (2 ms)
+    ✓ should return an empty array if the object is empty
+
+  ● getAllKeys › should return an array of property names, symbols, and array indices for an array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        "0",
+        "1",
+        "2",
+    -   Symbol(Symbol.iterator),
+      ]
+
+      16 |     const arr = [1, 2, 3];
+      17 |     const result = getAllKeys(arr);
+    > 18 |     expect(result).toEqual(["0", "1", "2", Symbol.iterator]);
+         |                    ^
+      19 |   });
+      20 |
+      21 |   it("should return an array of property names and symbols for an object with symbols", () => {
+
+      at Object.toEqual (projects/lodash/.internal/getAllKeys.test.ts:18:20)
+
+  ● getAllKeys › should return an array of property names and symbols for an object with symbols
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: ["a", Symbol(b)]
+    Received: serializes to the same string
+
+      25 |     };
+      26 |     const result = getAllKeys(obj);
+    > 27 |     expect(result).toEqual(["a", Symbol("b")]);
+         |                    ^
+      28 |   });
+      29 |
+      30 |   it("should return an empty array if the object is empty", () => {
+
+      at Object.toEqual (projects/lodash/.internal/getAllKeys.test.ts:27:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 passed, 4 total
+Snapshots:   0 total
+Time:        1.516 s
+Ran all test suites matching /projects\/lodash\/.internal\/getAllKeys.test.ts/i.

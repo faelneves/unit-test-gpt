@@ -1,0 +1,30 @@
+FAIL projects/lodash/pullAllBy.test.ts
+  pullAllBy
+    ✕ should remove elements from the array based on the iteratee function (1 ms)
+    ✓ should not modify the array if it is null or empty (2 ms)
+    ✓ should not modify the array if the values is null or empty (1 ms)
+    ✓ should not modify the array if the iteratee function is not provided (1 ms)
+
+  ● pullAllBy › should remove elements from the array based on the iteratee function
+
+    TypeError: iteratee is not a function
+
+      25 |   }
+      26 |   if (iteratee) {
+    > 27 |     seen = map(array, (value) => iteratee(value))
+         |                                  ^
+      28 |   }
+      29 |   while (++index < length) {
+      30 |     let fromIndex = 0
+
+      at iteratee (projects/lodash/.internal/basePullAll.ts:27:34)
+      at iteratee (projects/lodash/map.ts:25:25)
+      at basePullAll (projects/lodash/.internal/basePullAll.ts:27:15)
+      at pullAllBy (projects/lodash/pullAllBy.ts:27:18)
+      at Object.<anonymous> (projects/lodash/pullAllBy.test.ts:6:14)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        0.669 s
+Ran all test suites matching /projects\/lodash\/pullAllBy.test.ts/i.

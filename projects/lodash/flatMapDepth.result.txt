@@ -1,0 +1,20 @@
+FAIL projects/lodash/flatMapDepth.test.ts
+  ● Test suite failed to run
+
+    Cannot find module '@testing-library/react' from 'projects/lodash/flatMapDepth.test.ts'
+
+      1 | import flatMapDepth from './flatMapDepth';
+    > 2 | import { screen } from '@testing-library/react';
+        | ^
+      3 | import '@testing-library/jest-dom/extend-expect';
+      4 |
+      5 | describe('flatMapDepth', () => {
+
+      at Resolver._throwModNotFoundError (node_modules/jest-resolve/build/resolver.js:427:11)
+      at Object.require (projects/lodash/flatMapDepth.test.ts:2:1)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.648 s
+Ran all test suites matching /projects\/lodash\/flatMapDepth.test.ts/i.

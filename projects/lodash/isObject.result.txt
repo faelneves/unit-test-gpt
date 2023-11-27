@@ -1,0 +1,10 @@
+PASS projects/lodash/isObject.test.ts
+  isObject
+    ✓ should return true if value is an object (3 ms)
+    ✓ should return false if value is not an object (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        1.214 s
+Ran all test suites matching /projects\/lodash\/isObject.test.ts/i.

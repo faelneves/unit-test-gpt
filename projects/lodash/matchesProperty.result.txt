@@ -1,0 +1,11 @@
+PASS projects/lodash/matchesProperty.test.ts
+  matchesProperty
+    ✓ should return a function (2 ms)
+    ✓ should return true if the object value at the given path is equivalent to srcValue
+    ✓ should return false if the object value at the given path is not equivalent to srcValue (7 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        1.907 s
+Ran all test suites matching /projects\/lodash\/matchesProperty.test.ts/i.

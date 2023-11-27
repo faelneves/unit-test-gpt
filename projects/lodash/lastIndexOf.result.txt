@@ -1,0 +1,15 @@
+PASS projects/lodash/lastIndexOf.test.ts
+  lastIndexOf
+    ✓ should return the index of the last occurrence of a value in an array (3 ms)
+    ✓ should return the index of the last occurrence of a value in an array starting from a given index (1 ms)
+    ✓ should return -1 if the value is not found in the array
+    ✓ should handle empty arrays by returning -1
+    ✓ should handle null arrays by returning -1 (1 ms)
+    ✓ should handle undefined arrays by returning -1 (1 ms)
+    ✓ should handle NaN values correctly
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        1.406 s
+Ran all test suites matching /projects\/lodash\/lastIndexOf.test.ts/i.

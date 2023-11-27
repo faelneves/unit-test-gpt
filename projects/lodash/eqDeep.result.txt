@@ -1,0 +1,10 @@
+PASS projects/lodash/eqDeep.test.ts
+  isEqual
+    ✓ should return true if the values are equivalent (5 ms)
+    ✓ should return false if the values are not equivalent (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        1.357 s
+Ran all test suites matching /projects\/lodash\/eqDeep.test.ts/i.

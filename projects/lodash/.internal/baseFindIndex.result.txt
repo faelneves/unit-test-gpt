@@ -1,0 +1,28 @@
+FAIL projects/lodash/.internal/baseFindIndex.test.ts
+  baseFindIndex
+    ✓ should return the index of the matched value (3 ms)
+    ✓ should return -1 if no match is found (1 ms)
+    ✕ should correctly iterate from the given index if fromRight is true (2 ms)
+
+  ● baseFindIndex › should correctly iterate from the given index if fromRight is true
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 5
+    Received: 2
+
+      32 |     const result = baseFindIndex(array, predicate, fromIndex, fromRight)
+      33 |
+    > 34 |     expect(result).toEqual(5)
+         |                    ^
+      35 |   })
+      36 | })
+      37 |
+
+      at Object.toEqual (projects/lodash/.internal/baseFindIndex.test.ts:34:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.495 s, estimated 1 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseFindIndex.test.ts/i.

@@ -1,0 +1,85 @@
+FAIL projects/lodash/.internal/basePullAt.test.ts
+  basePullAt
+    ✓ should remove elements at the specified indexes from the array (2 ms)
+    ✕ should remove elements at the specified indexes in reverse order (3 ms)
+    ✕ should remove elements at the specified indexes with duplicate indexes
+    ✕ should remove elements at the specified indexes with negative indexes (1 ms)
+    ✓ should remove elements at the specified indexes with invalid indexes (1 ms)
+
+  ● basePullAt › should remove elements at the specified indexes in reverse order
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Array [
+        1,
+        3,
+    -   5,
+    +   4,
+      ]
+
+      15 |     const indexes = [3, 1];
+      16 |     basePullAt(array, indexes);
+    > 17 |     expect(array).toEqual([1, 3, 5]);
+         |                   ^
+      18 |   });
+      19 |
+      20 |   it('should remove elements at the specified indexes with duplicate indexes', () => {
+
+      at Object.toEqual (projects/lodash/.internal/basePullAt.test.ts:17:19)
+
+  ● basePullAt › should remove elements at the specified indexes with duplicate indexes
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        1,
+    -   3,
+        5,
+      ]
+
+      22 |     const indexes = [1, 1, 3];
+      23 |     basePullAt(array, indexes);
+    > 24 |     expect(array).toEqual([1, 3, 5]);
+         |                   ^
+      25 |   });
+      26 |
+      27 |   it('should remove elements at the specified indexes with negative indexes', () => {
+
+      at Object.toEqual (projects/lodash/.internal/basePullAt.test.ts:24:19)
+
+  ● basePullAt › should remove elements at the specified indexes with negative indexes
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 2
+
+      Array [
+        1,
+        2,
+    +   3,
+    +   4,
+        5,
+      ]
+
+      29 |     const indexes = [-2, -4];
+      30 |     basePullAt(array, indexes);
+    > 31 |     expect(array).toEqual([1, 2, 5]);
+         |                   ^
+      32 |   });
+      33 |
+      34 |   it('should remove elements at the specified indexes with invalid indexes', () => {
+
+      at Object.toEqual (projects/lodash/.internal/basePullAt.test.ts:31:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 2 passed, 5 total
+Snapshots:   0 total
+Time:        0.746 s
+Ran all test suites matching /projects\/lodash\/.internal\/basePullAt.test.ts/i.

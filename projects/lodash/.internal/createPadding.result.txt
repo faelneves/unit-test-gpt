@@ -1,0 +1,50 @@
+FAIL projects/lodash/.internal/createPadding.test.ts
+  createPadding
+    ✓ should return a string with the specified length and default padding character if no character is provided (2 ms)
+    ✓ should return a string with the specified length and padding character
+    ✓ should truncate the padding character string if its length exceeds the specified length (1 ms)
+    ✓ should return an empty string if the specified length is zero
+    ✕ should handle unicode characters correctly (1 ms)
+    ✕ should handle multi-byte unicode characters correctly
+
+  ● createPadding › should handle unicode characters correctly
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 5
+    Received length: 10
+    Received string: "😄😄😄😄😄"
+
+      28 |   it('should handle unicode characters correctly', () => {
+      29 |     const result = createPadding(5, '😄')
+    > 30 |     expect(result).toHaveLength(5)
+         |                    ^
+      31 |     expect(result).toEqual('😄😄😄')
+      32 |   })
+      33 |
+
+      at Object.toHaveLength (projects/lodash/.internal/createPadding.test.ts:30:20)
+
+  ● createPadding › should handle multi-byte unicode characters correctly
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 5
+    Received length: 10
+    Received string: "🌍🌍🌍🌍🌍"
+
+      34 |   it('should handle multi-byte unicode characters correctly', () => {
+      35 |     const result = createPadding(5, '🌍')
+    > 36 |     expect(result).toHaveLength(5)
+         |                    ^
+      37 |     expect(result).toEqual('🌍🌍')
+      38 |   })
+      39 | });
+
+      at Object.toHaveLength (projects/lodash/.internal/createPadding.test.ts:36:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 4 passed, 6 total
+Snapshots:   0 total
+Time:        0.703 s
+Ran all test suites matching /projects\/lodash\/.internal\/createPadding.test.ts/i.

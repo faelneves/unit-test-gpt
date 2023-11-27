@@ -1,0 +1,14 @@
+PASS projects/lodash/toArray.test.ts
+  toArray
+    ✓ should return an empty array for falsy values (5 ms)
+    ✓ should convert an object to an array
+    ✓ should convert a string to an array (1 ms)
+    ✓ should convert a Set object to an array
+    ✓ should convert a Map object to an array (1 ms)
+    ✓ should convert an iterable object to an array (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        2.515 s
+Ran all test suites matching /projects\/lodash\/toArray.test.ts/i.

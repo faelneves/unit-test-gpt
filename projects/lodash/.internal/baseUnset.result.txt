@@ -1,0 +1,49 @@
+FAIL projects/lodash/.internal/baseUnset.test.ts
+  baseUnset
+    ✓ should unset the property at the given path in the object and return true (3 ms)
+    ✓ should unset the property at the given path in the object and return true, even if the property is null
+    ✓ should unset the property at the given path in the object and return true, even if the property is an array
+    ✓ should unset the property at the given path in the object and return true, even if the property is a nested object
+    ✕ should unset the property at the given path in the object and return false if the property does not exist (3 ms)
+    ✓ should unset the property at the given path in the object and return true when the path is an array (3 ms)
+    ✕ should unset the property at the given path in the object and return false when the path is an array and the property does not exist (4 ms)
+
+  ● baseUnset › should unset the property at the given path in the object and return false if the property does not exist
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      65 |     };
+      66 |     const path = 'foo.bar.qux';
+    > 67 |     expect(baseUnset(object, path)).toBe(false);
+         |                                     ^
+      68 |     expect(object.foo.bar.baz).toBe(42);
+      69 |   });
+      70 |
+
+      at Object.toBe (projects/lodash/.internal/baseUnset.test.ts:67:37)
+
+  ● baseUnset › should unset the property at the given path in the object and return false when the path is an array and the property does not exist
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      91 |     };
+      92 |     const path = ['foo', 'bar', 'qux'];
+    > 93 |     expect(baseUnset(object, path)).toBe(false);
+         |                                     ^
+      94 |     expect(object.foo.bar.baz).toBe(42);
+      95 |   });
+      96 | });
+
+      at Object.toBe (projects/lodash/.internal/baseUnset.test.ts:93:37)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        0.862 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseUnset.test.ts/i.

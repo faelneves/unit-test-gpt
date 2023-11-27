@@ -1,0 +1,19 @@
+PASS projects/lodash/isRegExp.test.ts
+  isRegExp
+    ✓ should return true for a RegExp object (5 ms)
+    ✓ should return false for a string (12 ms)
+    ✓ should return false for a number
+    ✓ should return false for an array (15 ms)
+    ✓ should return false for an object (1 ms)
+    ✓ should return false for null
+    ✓ should return false for undefined
+    ✓ should return false for a function
+    ✓ should return false for a boolean
+    ✓ should return false for a symbol
+    ✓ should return false for a date
+
+Test Suites: 1 passed, 1 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        0.819 s
+Ran all test suites matching /projects\/lodash\/isRegExp.test.ts/i.

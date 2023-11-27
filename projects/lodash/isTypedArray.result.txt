@@ -1,0 +1,15 @@
+PASS projects/lodash/isTypedArray.test.ts
+  isTypedArray
+    ✓ should return true for a typed array (4 ms)
+    ✓ should return false for an array
+    ✓ should return false for a regular object (1 ms)
+    ✓ should return false for null
+    ✓ should return false for undefined (1 ms)
+    ✓ should return false for a string
+    ✓ should return false for a number (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        1.158 s
+Ran all test suites matching /projects\/lodash\/isTypedArray.test.ts/i.

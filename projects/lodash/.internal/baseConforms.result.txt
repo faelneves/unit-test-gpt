@@ -1,0 +1,12 @@
+PASS projects/lodash/.internal/baseConforms.test.ts
+  baseConforms
+    ✓ should return a function (1 ms)
+    ✓ should return a function that returns true when object conforms to source (1 ms)
+    ✓ should return a function that returns false when object does not conform to source
+    ✓ should return a function that returns false when object does not have all properties required by source (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.613 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseConforms.test.ts/i.

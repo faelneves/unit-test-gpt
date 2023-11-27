@@ -1,0 +1,33 @@
+FAIL projects/lodash/findLast.test.ts
+  findLast
+    when collection is an array
+      ✓ should return the last element that satisfies the predicate (2 ms)
+      ✓ should return undefined if no element satisfies the predicate
+      ✓ should start searching from the specified index
+    when collection is an object
+      ✓ should return the last element that satisfies the predicate
+      ✓ should return undefined if no element satisfies the predicate
+    when collection is not an array or object
+      ✕ should return undefined (1 ms)
+
+  ● findLast › when collection is not an array or object › should return undefined
+
+    expect(received).toBeUndefined()
+
+    Received: "3"
+
+      49 |       const predicate = (n) => n % 2 === 1;
+      50 |       const result = findLast(collection, predicate);
+    > 51 |       expect(result).toBeUndefined();
+         |                      ^
+      52 |     });
+      53 |   });
+      54 | });
+
+      at Object.toBeUndefined (projects/lodash/findLast.test.ts:51:22)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        0.591 s
+Ran all test suites matching /projects\/lodash\/findLast.test.ts/i.

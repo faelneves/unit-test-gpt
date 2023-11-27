@@ -1,0 +1,39 @@
+FAIL projects/lodash/dropWhile.test.ts
+  dropWhile
+    ✓ should return an empty array if the input array is empty (2 ms)
+    ✕ should return the input array if the predicate function returns truthy for all elements (4 ms)
+    ✓ should drop elements from the beginning until the predicate function returns falsey
+    ✓ should not drop any elements if the predicate function returns falsey for the first element
+    ✓ should drop all elements if the predicate function returns truthy for all elements
+    ✓ should drop elements until the predicate function returns falsey for an element (1 ms)
+
+  ● dropWhile › should return the input array if the predicate function returns truthy for all elements
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 6
+    + Received  + 1
+
+    - Array [
+    -   1,
+    -   2,
+    -   3,
+    -   4,
+    - ]
+    + Array []
+
+      10 |     const array = [1, 2, 3, 4];
+      11 |     const result = dropWhile(array, () => true);
+    > 12 |     expect(result).toEqual(array);
+         |                    ^
+      13 |   });
+      14 |
+      15 |   it('should drop elements from the beginning until the predicate function returns falsey', () => {
+
+      at Object.toEqual (projects/lodash/dropWhile.test.ts:12:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        0.524 s
+Ran all test suites matching /projects\/lodash\/dropWhile.test.ts/i.

@@ -1,0 +1,29 @@
+FAIL projects/lodash/padStart.test.ts
+  padStart
+    ✓ should pad the string on the left if it is shorter than length using default padding characters (2 ms)
+    ✓ should pad the string on the left if it is shorter than length using custom padding characters (1 ms)
+    ✓ should return the string if its length is greater than or equal to length
+    ✕ should return an empty string if the string is falsy (2 ms)
+
+  ● padStart › should return an empty string if the string is falsy
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "     "
+
+      16 |
+      17 |   it('should return an empty string if the string is falsy', () => {
+    > 18 |     expect(padStart('', 5)).toBe('');
+         |                             ^
+      19 |     expect(padStart(null, 5)).toBe('');
+      20 |     expect(padStart(undefined, 5)).toBe('');
+      21 |     expect(padStart(false, 5)).toBe('');
+
+      at Object.toBe (projects/lodash/padStart.test.ts:18:29)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        0.52 s
+Ran all test suites matching /projects\/lodash\/padStart.test.ts/i.

@@ -1,0 +1,13 @@
+PASS projects/lodash/.internal/baseForOwn.test.ts
+  baseForOwn
+    ✓ should iterate over all properties of an object and invoke the iteratee function (4 ms)
+    ✓ should return the original object (1 ms)
+    ✓ should handle empty objects
+    ✓ should handle null and undefined objects
+    ✓ should handle objects with prototype properties (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.518 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseForOwn.test.ts/i.

@@ -1,0 +1,48 @@
+FAIL projects/lodash/lowerFirst.test.ts
+  lowerFirst
+    ✓ should convert the first character of a string to lower case (2 ms)
+    ✓ should return an empty string if input is empty (1 ms)
+    ✓ should return the same string if first character is already lower case (6 ms)
+    ✕ should handle special characters and symbols as the first character (3 ms)
+    ✓ should handle numbers as the first character (1 ms)
+    ✕ should handle non-alphabetic characters as the first character
+
+  ● lowerFirst › should handle special characters and symbols as the first character
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "_hello"
+    Received: "_Hello"
+
+      16 |
+      17 |   it('should handle special characters and symbols as the first character', () => {
+    > 18 |     expect(lowerFirst('_Hello')).toBe('_hello');
+         |                                  ^
+      19 |     expect(lowerFirst('$Money')).toBe('$money');
+      20 |     expect(lowerFirst('5Star')).toBe('5star');
+      21 |   });
+
+      at Object.toBe (projects/lodash/lowerFirst.test.ts:18:34)
+
+  ● lowerFirst › should handle non-alphabetic characters as the first character
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "!hello"
+    Received: "!Hello"
+
+      26 |
+      27 |   it('should handle non-alphabetic characters as the first character', () => {
+    > 28 |     expect(lowerFirst('!Hello')).toBe('!hello');
+         |                                  ^
+      29 |   });
+      30 | });
+      31 |
+
+      at Object.toBe (projects/lodash/lowerFirst.test.ts:28:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 4 passed, 6 total
+Snapshots:   0 total
+Time:        1.397 s
+Ran all test suites matching /projects\/lodash\/lowerFirst.test.ts/i.

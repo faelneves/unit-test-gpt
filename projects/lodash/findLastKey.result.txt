@@ -1,0 +1,10 @@
+PASS projects/lodash/findLastKey.test.ts
+  findLastKey
+    ✓ should return the last key that matches the predicate (1 ms)
+    ✓ should return undefined if no key matches the predicate
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.536 s
+Ran all test suites matching /projects\/lodash\/findLastKey.test.ts/i.

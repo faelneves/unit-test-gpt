@@ -1,0 +1,13 @@
+PASS projects/lodash/.internal/basePick.test.ts
+  basePick
+    ✓ should return a new object with the picked properties (2 ms)
+    ✓ should return an empty object if the input object is empty (2 ms)
+    ✓ should return an empty object if the input object does not contain the specified properties (1 ms)
+    ✓ should return an object with properties that are present in the input object but not in the paths array
+    ✓ should not modify the input object (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.584 s
+Ran all test suites matching /projects\/lodash\/.internal\/basePick.test.ts/i.

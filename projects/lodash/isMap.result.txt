@@ -1,0 +1,16 @@
+PASS projects/lodash/isMap.test.ts
+  isMap
+    ✓ should return true for a Map object (4 ms)
+    ✓ should return false for a WeakMap object (1 ms)
+    ✓ should return false for a regular object (1 ms)
+    ✓ should return false for an array (1 ms)
+    ✓ should return false for a string
+    ✓ should return false for a number
+    ✓ should return false for null
+    ✓ should return false for undefined (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        1.709 s
+Ran all test suites matching /projects\/lodash\/isMap.test.ts/i.

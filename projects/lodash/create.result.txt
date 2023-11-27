@@ -1,0 +1,11 @@
+PASS projects/lodash/create.test.ts
+  create
+    ✓ should return an object with the given prototype (2 ms)
+    ✓ should assign properties to the created object
+    ✓ should create an object inheriting from null if the prototype is null
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.475 s
+Ran all test suites matching /projects\/lodash\/create.test.ts/i.

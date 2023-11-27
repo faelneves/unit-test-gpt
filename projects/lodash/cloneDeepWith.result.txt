@@ -1,0 +1,44 @@
+FAIL projects/lodash/cloneDeepWith.test.ts
+  cloneDeepWith
+    ✓ should deep clone an object (3 ms)
+    ✓ should deep clone an array
+    ✕ should deep clone an object with customizer (2 ms)
+    ✕ should deep clone an array with customizer
+
+  ● cloneDeepWith › should deep clone an object with customizer
+
+    expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not {"c": 2}
+
+      28 |     expect(clonedObj).toEqual(obj);
+      29 |     expect(clonedObj).not.toBe(obj);
+    > 30 |     expect(clonedObj.b).not.toBe(obj.b);
+         |                             ^
+      31 |   });
+      32 |
+      33 |   it('should deep clone an array with customizer', () => {
+
+      at Object.toBe (projects/lodash/cloneDeepWith.test.ts:30:29)
+
+  ● cloneDeepWith › should deep clone an array with customizer
+
+    expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not [2, 3]
+
+      41 |     expect(clonedArr).toEqual(arr);
+      42 |     expect(clonedArr).not.toBe(arr);
+    > 43 |     expect(clonedArr[1]).not.toBe(arr[1]);
+         |                              ^
+      44 |   });
+      45 | });
+      46 |
+
+      at Object.toBe (projects/lodash/cloneDeepWith.test.ts:43:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 passed, 4 total
+Snapshots:   0 total
+Time:        0.602 s
+Ran all test suites matching /projects\/lodash\/cloneDeepWith.test.ts/i.

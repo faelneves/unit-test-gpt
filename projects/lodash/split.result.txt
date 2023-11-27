@@ -1,0 +1,63 @@
+FAIL projects/lodash/split.test.ts
+  split
+    ✕ should return an empty array when string is empty (20 ms)
+    ✓ should split the string into segments based on the separator
+    ✓ should split the string into segments based on the separator with a limit (29 ms)
+    ✓ should return an empty array when limit is 0 (12 ms)
+    ✓ should handle separator pattern as a regular expression (1 ms)
+    ✕ should handle separator pattern as an empty string (2 ms)
+    ✓ should handle string with in Unicode characters (1 ms)
+
+  ● split › should return an empty array when string is empty
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "",
+    + ]
+
+      3 | describe('split', () => {
+      4 |   it('should return an empty array when string is empty', () => {
+    > 5 |     expect(split('')).toEqual([]);
+        |                       ^
+      6 |   });
+      7 |
+      8 |   it('should split the string into segments based on the separator', () => {
+
+      at Object.toEqual (projects/lodash/split.test.ts:5:23)
+
+  ● split › should handle separator pattern as an empty string
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 5
+
+      Array [
+    -   "a-b-c",
+    +   "a",
+    +   "-",
+    +   "b",
+    +   "-",
+    +   "c",
+      ]
+
+      23 |
+      24 |   it('should handle separator pattern as an empty string', () => {
+    > 25 |     expect(split('a-b-c', '')).toEqual(['a-b-c']);
+         |                                ^
+      26 |   });
+      27 |
+      28 |   it('should handle string with in Unicode characters', () => {
+
+      at Object.toEqual (projects/lodash/split.test.ts:25:32)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        4.659 s
+Ran all test suites matching /projects\/lodash\/split.test.ts/i.

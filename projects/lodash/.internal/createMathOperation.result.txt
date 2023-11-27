@@ -1,0 +1,71 @@
+FAIL projects/lodash/.internal/createMathOperation.test.ts
+  createMathOperation
+    ✓ should return defaultValue when both value and other are undefined (3 ms)
+    ✓ should return value when other is undefined (1 ms)
+    ✓ should return other when value is undefined
+    ✕ should convert string values to numbers before performing the operation (1 ms)
+    ✕ should convert values to strings before performing the operation
+    ✕ should call the operator function with the converted values
+    ✕ should return the result of the operator function
+
+  ● createMathOperation › should convert string values to numbers before performing the operation
+
+    TypeError: _baseToNumber.default.mockReturnValueOnce is not a function
+
+      42 |     const value = '5'
+      43 |     const other = '10'
+    > 44 |     baseToNumber.mockReturnValueOnce(5)
+         |                  ^
+      45 |     baseToNumber.mockReturnValueOnce(10)
+      46 |
+      47 |     mathOperation(value, other)
+
+      at Object.mockReturnValueOnce (projects/lodash/.internal/createMathOperation.test.ts:44:18)
+
+  ● createMathOperation › should convert values to strings before performing the operation
+
+    TypeError: _baseToString.default.mockReturnValueOnce is not a function
+
+      58 |     const value = 5
+      59 |     const other = 10
+    > 60 |     baseToString.mockReturnValueOnce('5')
+         |                  ^
+      61 |     baseToString.mockReturnValueOnce('10')
+      62 |
+      63 |     mathOperation(value, other)
+
+      at Object.mockReturnValueOnce (projects/lodash/.internal/createMathOperation.test.ts:60:18)
+
+  ● createMathOperation › should call the operator function with the converted values
+
+    TypeError: _baseToNumber.default.mockReturnValueOnce is not a function
+
+      74 |     const value = 5
+      75 |     const other = 10
+    > 76 |     baseToNumber.mockReturnValueOnce(5)
+         |                  ^
+      77 |     baseToNumber.mockReturnValueOnce(10)
+      78 |
+      79 |     mathOperation(value, other)
+
+      at Object.mockReturnValueOnce (projects/lodash/.internal/createMathOperation.test.ts:76:18)
+
+  ● createMathOperation › should return the result of the operator function
+
+    TypeError: _baseToNumber.default.mockReturnValueOnce is not a function
+
+      88 |     const value = 5
+      89 |     const other = 10
+    > 90 |     baseToNumber.mockReturnValueOnce(5)
+         |                  ^
+      91 |     baseToNumber.mockReturnValueOnce(10)
+      92 |
+      93 |     const result = mathOperation(value, other)
+
+      at Object.mockReturnValueOnce (projects/lodash/.internal/createMathOperation.test.ts:90:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 3 passed, 7 total
+Snapshots:   0 total
+Time:        0.612 s
+Ran all test suites matching /projects\/lodash\/.internal\/createMathOperation.test.ts/i.

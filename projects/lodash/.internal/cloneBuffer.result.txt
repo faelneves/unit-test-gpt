@@ -1,0 +1,10 @@
+PASS projects/lodash/.internal/cloneBuffer.test.ts
+  cloneBuffer
+    ✓ should clone the buffer (4 ms)
+    ✓ should clone the buffer deeply (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.463 s
+Ran all test suites matching /projects\/lodash\/.internal\/cloneBuffer.test.ts/i.

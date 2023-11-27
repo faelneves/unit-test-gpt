@@ -1,0 +1,13 @@
+PASS projects/lodash/parseInt.test.ts
+  parseInt
+    ✓ should convert string to integer with specified radix (2 ms)
+    ✓ should convert string to integer with default radix
+    ✓ should handle whitespace characters
+    ✓ should correctly handle hexadecimal input (1 ms)
+    ✓ should correctly handle non-string input (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.5 s
+Ran all test suites matching /projects\/lodash\/parseInt.test.ts/i.

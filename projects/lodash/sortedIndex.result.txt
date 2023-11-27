@@ -1,0 +1,11 @@
+PASS projects/lodash/sortedIndex.test.ts
+  sortedIndex
+    ✓ should return the correct index for values in a sorted array (3 ms)
+    ✓ should return the correct index when array contains duplicate values (1 ms)
+    ✓ should return the correct index when array is empty (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.956 s
+Ran all test suites matching /projects\/lodash\/sortedIndex.test.ts/i.

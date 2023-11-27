@@ -1,0 +1,10 @@
+PASS projects/lodash/isSet.test.ts
+  isSet
+    ✓ should return true if value is a Set object (2 ms)
+    ✓ should return false if value is not a Set object (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        1.372 s
+Ran all test suites matching /projects\/lodash\/isSet.test.ts/i.

@@ -1,0 +1,57 @@
+FAIL projects/lodash/.internal/createAssigner.test.ts
+  createAssigner
+    ✓ should return a function (3 ms)
+    ✓ should assign values to the object using the assigner function (2 ms)
+    ✓ should handle multiple sources (1 ms)
+    ✕ should handle customizer function (2 ms)
+    ✓ should handle guard argument (1 ms)
+    ✕ should handle isIterateeCall function with guard argument
+
+  ● createAssigner › should handle customizer function
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: {"a": 1, "b": 2}, {"c": 3}, 0, [Function mockConstructor]
+    Received
+           1
+              {"a": 1, "b": 2},
+              {"c": 3},
+              0,
+              undefined,
+           2
+              {"a": 1, "b": 2},
+              [Function mockConstructor],
+              1,
+              undefined,
+
+    Number of calls: 2
+
+      43 |     assign(object, source, customizer);
+      44 |     
+    > 45 |     expect(assigner).toHaveBeenCalledWith(object, source, 0, customizer);
+         |                      ^
+      46 |   });
+      47 |
+      48 |   it('should handle guard argument', () => {
+
+      at Object.toHaveBeenCalledWith (projects/lodash/.internal/createAssigner.test.ts:45:22)
+
+  ● createAssigner › should handle isIterateeCall function with guard argument
+
+    TypeError: _isIterateeCall.default.mockReturnValue is not a function
+
+      61 |   it('should handle isIterateeCall function with guard argument', () => {
+      62 |     // Mock isIterateeCall function to return true
+    > 63 |     isIterateeCall.mockReturnValue(true);
+         |                    ^
+      64 |
+      65 |     const assigner = jest.fn();
+      66 |     const object = { a: 1, b: 2 };
+
+      at Object.mockReturnValue (projects/lodash/.internal/createAssigner.test.ts:63:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 4 passed, 6 total
+Snapshots:   0 total
+Time:        0.693 s
+Ran all test suites matching /projects\/lodash\/.internal\/createAssigner.test.ts/i.

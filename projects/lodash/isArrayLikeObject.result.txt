@@ -1,0 +1,27 @@
+FAIL projects/lodash/isArrayLikeObject.test.ts
+  isArrayLikeObject
+    ✕ should return true for array-like objects (4 ms)
+    ✓ should return false for non-array-like objects (1 ms)
+
+  ● isArrayLikeObject › should return true for array-like objects
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+       5 |     expect(isArrayLikeObject([1, 2, 3])).toBe(true);
+       6 |     expect(isArrayLikeObject({ length: 2 })).toBe(true);
+    >  7 |     expect(isArrayLikeObject('abc')).toBe(true);
+         |                                      ^
+       8 |     expect(isArrayLikeObject(document.body.children)).toBe(true);
+       9 |   });
+      10 |
+
+      at Object.toBe (projects/lodash/isArrayLikeObject.test.ts:7:38)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.773 s
+Ran all test suites matching /projects\/lodash\/isArrayLikeObject.test.ts/i.

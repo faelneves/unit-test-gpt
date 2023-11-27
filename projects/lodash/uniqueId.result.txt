@@ -1,0 +1,11 @@
+PASS projects/lodash/uniqueId.test.ts
+  uniqueId
+    ✓ should generate a unique ID with no prefix (14 ms)
+    ✓ should generate a unique ID with a prefix (6 ms)
+    ✓ should generate a unique ID with the default prefix (4 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        2.665 s
+Ran all test suites matching /projects\/lodash\/uniqueId.test.ts/i.

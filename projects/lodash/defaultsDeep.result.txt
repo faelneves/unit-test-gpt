@@ -1,0 +1,11 @@
+PASS projects/lodash/defaultsDeep.test.ts
+  defaultsDeep
+    ✓ should assign default properties recursively (17 ms)
+    ✓ should correctly handle multiple source objects (1 ms)
+    ✓ should handle undefined source objects (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        1.17 s
+Ran all test suites matching /projects\/lodash\/defaultsDeep.test.ts/i.

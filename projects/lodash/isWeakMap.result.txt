@@ -1,0 +1,27 @@
+FAIL projects/lodash/isWeakMap.test.ts
+  isWeakMap
+    ✓ should return true if value is a weak map (7 ms)
+    ✕ should return false if value is not a weak map (4 ms)
+
+  ● isWeakMap › should return false if value is not a weak map
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      23 |     class CustomWeakMap extends WeakMap {}
+      24 |     const customWeakMap = new CustomWeakMap();
+    > 25 |     expect(isWeakMap(customWeakMap)).toBe(false);
+         |                                      ^
+      26 |
+      27 |     class CustomMap extends Map {}
+      28 |     const customMap = new CustomMap();
+
+      at Object.toBe (projects/lodash/isWeakMap.test.ts:25:38)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        1.986 s
+Ran all test suites matching /projects\/lodash\/isWeakMap.test.ts/i.

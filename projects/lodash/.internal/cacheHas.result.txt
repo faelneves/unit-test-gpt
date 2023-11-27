@@ -1,0 +1,11 @@
+PASS projects/lodash/.internal/cacheHas.test.ts
+  cacheHas
+    ✓ should return true if cache value for key exists (2 ms)
+    ✓ should return false if cache value for key does not exist
+    ✓ should return false if cache is empty
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.627 s
+Ran all test suites matching /projects\/lodash\/.internal\/cacheHas.test.ts/i.

@@ -1,0 +1,27 @@
+FAIL projects/lodash/.internal/baseIsNaN.test.ts
+  baseIsNaN
+    ✕ should return true if value is NaN (5 ms)
+    ✓ should return false if value is not NaN (1 ms)
+
+  ● baseIsNaN › should return true if value is NaN
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+       7 |     expect(baseIsNaN(Number.NaN)).toBe(true);
+       8 |     expect(baseIsNaN(Infinity / Infinity)).toBe(true);
+    >  9 |     expect(baseIsNaN(undefined)).toBe(true);
+         |                                  ^
+      10 |     expect(baseIsNaN('NaN')).toBe(true);
+      11 |   });
+      12 |
+
+      at Object.toBe (projects/lodash/.internal/baseIsNaN.test.ts:9:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.78 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseIsNaN.test.ts/i.

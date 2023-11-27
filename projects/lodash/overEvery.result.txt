@@ -1,0 +1,12 @@
+PASS projects/lodash/overEvery.test.ts
+  overEvery
+    ✓ should return a function (2 ms)
+    ✓ should return true when all predicates return truthy
+    ✓ should return false when any predicate returns falsy
+    ✓ should pass arguments to predicates correctly (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.871 s
+Ran all test suites matching /projects\/lodash\/overEvery.test.ts/i.

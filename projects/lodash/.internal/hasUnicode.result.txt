@@ -1,0 +1,10 @@
+PASS projects/lodash/.internal/hasUnicode.test.ts
+  hasUnicode
+    ✓ should return true if the string contains Unicode symbols (1 ms)
+    ✓ should return false if the string does not contain Unicode symbols
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.492 s
+Ran all test suites matching /projects\/lodash\/.internal\/hasUnicode.test.ts/i.

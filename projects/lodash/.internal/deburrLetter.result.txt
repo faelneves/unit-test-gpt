@@ -1,0 +1,26 @@
+FAIL projects/lodash/.internal/deburrLetter.test.ts
+  deburrLetter
+    ✕ should return deburred letter (4 ms)
+
+  ● deburrLetter › should return deburred letter
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "a"
+    Received: undefined
+
+      12 |     expect(deburrLetter('\u017f')).toBe('s');
+      13 |     // additional edge cases
+    > 14 |     expect(deburrLetter('\uD834\uDF06')).toBe('a');
+         |                                          ^
+      15 |     expect(deburrLetter('\uD835\uDC00')).toBe('h');
+      16 |     expect(deburrLetter('\uD835\uDC34')).toBe('y');
+      17 |   });
+
+      at Object.toBe (projects/lodash/.internal/deburrLetter.test.ts:14:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.561 s
+Ran all test suites matching /projects\/lodash\/.internal\/deburrLetter.test.ts/i.

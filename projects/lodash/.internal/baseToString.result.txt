@@ -1,0 +1,12 @@
+PASS projects/lodash/.internal/baseToString.test.ts
+  baseToString
+    ✓ should convert a string value to the same string (2 ms)
+    ✓ should convert an array value to a string representation
+    ✓ should convert a symbol value to a string representation
+    ✓ should convert a non-string, non-array, non-symbol value to a string (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.523 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseToString.test.ts/i.

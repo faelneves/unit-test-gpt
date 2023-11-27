@@ -1,0 +1,33 @@
+FAIL projects/lodash/.internal/initCloneObject.test.ts
+  initCloneObject
+    ✓ should return an empty object if the object constructor is not a function (2 ms)
+    ✕ should return a clone of the object if the object constructor is a function and not a prototype (3 ms)
+    ✓ should return an empty object if the object constructor is a prototype
+
+  ● initCloneObject › should return a clone of the object if the object constructor is a function and not a prototype
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Object {
+    -   "a": 1,
+    - }
+    + Object {}
+
+      11 |     const clone = initCloneObject(object)
+      12 |     expect(clone).not.toBe(object)
+    > 13 |     expect(clone).toEqual(object)
+         |                   ^
+      14 |   })
+      15 |
+      16 |   it('should return an empty object if the object constructor is a prototype', () => {
+
+      at Object.toEqual (projects/lodash/.internal/initCloneObject.test.ts:13:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.505 s
+Ran all test suites matching /projects\/lodash\/.internal\/initCloneObject.test.ts/i.

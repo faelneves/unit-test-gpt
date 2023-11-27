@@ -1,0 +1,46 @@
+FAIL projects/lodash/lt.test.ts
+  lt
+    ✕ should return true when value is less than other (12 ms)
+    ✓ should return false when value is not less than other (1 ms)
+    ✕ should handle string comparisons correctly (1 ms)
+    ✓ should handle NaN correctly (1 ms)
+
+  ● lt › should return true when value is less than other
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+       7 |     expect(lt('1', '10')).toBe(true);
+       8 |     expect(lt([1], [2])).toBe(true);
+    >  9 |     expect(lt({ a: 1 }, { a: 2 })).toBe(true);
+         |                                    ^
+      10 |   });
+      11 |
+      12 |   it('should return false when value is not less than other', () => {
+
+      at Object.toBe (projects/lodash/lt.test.ts:9:36)
+
+  ● lt › should handle string comparisons correctly
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      19 |
+      20 |   it('should handle string comparisons correctly', () => {
+    > 21 |     expect(lt('10', '2')).toBe(false);
+         |                           ^
+      22 |     expect(lt('2', '10')).toBe(true);
+      23 |     expect(lt('10', '10')).toBe(false);
+      24 |     expect(lt('a', 'b')).toBe(true);
+
+      at Object.toBe (projects/lodash/lt.test.ts:21:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 passed, 4 total
+Snapshots:   0 total
+Time:        1.687 s
+Ran all test suites matching /projects\/lodash\/lt.test.ts/i.

@@ -1,0 +1,31 @@
+FAIL projects/lodash/.internal/stringToPath.test.ts
+  stringToPath
+    ✕ should convert string to a property path array (6 ms)
+
+  ● stringToPath › should convert string to a property path array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   "",
+    - ]
+    + Array []
+
+      3 | describe('stringToPath', () => {
+      4 |   it('should convert string to a property path array', () => {
+    > 5 |     expect(stringToPath('')).toEqual([''])
+        |                              ^
+      6 |     expect(stringToPath('.property')).toEqual(['', 'property'])
+      7 |     expect(stringToPath('[0]')).toEqual(['[0]'])
+      8 |     expect(stringToPath('[0][1]')).toEqual(['[0]', '[1]'])
+
+      at Object.toEqual (projects/lodash/.internal/stringToPath.test.ts:5:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.526 s
+Ran all test suites matching /projects\/lodash\/.internal\/stringToPath.test.ts/i.

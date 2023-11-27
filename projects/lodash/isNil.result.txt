@@ -1,0 +1,11 @@
+PASS projects/lodash/isNil.test.ts
+  isNil
+    ✓ should return true if value is null (2 ms)
+    ✓ should return true if value is undefined
+    ✓ should return false if value is not nullish (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.616 s
+Ran all test suites matching /projects\/lodash\/isNil.test.ts/i.

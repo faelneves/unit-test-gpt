@@ -1,0 +1,12 @@
+PASS projects/lodash/keysIn.test.ts
+  keysIn
+    ✓ should return an array of property names for an object with own and inherited enumerable properties (4 ms)
+    ✓ should return an empty array for an empty object (1 ms)
+    ✓ should return an array of property names for an object with only own properties (1 ms)
+    ✓ should not include non-enumerable properties (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        1.069 s
+Ran all test suites matching /projects\/lodash\/keysIn.test.ts/i.

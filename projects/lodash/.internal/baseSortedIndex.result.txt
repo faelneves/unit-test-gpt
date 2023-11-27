@@ -1,0 +1,30 @@
+FAIL projects/lodash/.internal/baseSortedIndex.test.ts
+  baseSortedIndex
+    ✓ should return the index at which value should be inserted into array (2 ms)
+    ✓ should return 0 if the value is smaller than the first element in the array
+    ✓ should return the length of the array if the value is greater than the last element (1 ms)
+    ✓ should return the index at which value should be inserted into the empty array
+    ✕ should return the index at which value should be inserted into the array of symbols (13 ms)
+
+  ● baseSortedIndex › should return the index at which value should be inserted into the array of symbols
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 3
+    Received: 0
+
+      34 |     const value = Symbol('d')
+      35 |     const result = baseSortedIndex(array, value)
+    > 36 |     expect(result).toEqual(3)
+         |                    ^
+      37 |   })
+      38 | })
+      39 |
+
+      at Object.toEqual (projects/lodash/.internal/baseSortedIndex.test.ts:36:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.886 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseSortedIndex.test.ts/i.

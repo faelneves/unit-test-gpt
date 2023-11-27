@@ -1,0 +1,12 @@
+PASS projects/lodash/findLastIndex.test.ts
+  findLastIndex
+    ✓ should return the index of the found element (4 ms)
+    ✓ should return -1 if no element is found (1 ms)
+    ✓ should start searching from the specified index (1 ms)
+    ✓ should handle negative `fromIndex` values correctly (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        1.453 s
+Ran all test suites matching /projects\/lodash\/findLastIndex.test.ts/i.

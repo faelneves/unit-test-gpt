@@ -1,0 +1,10 @@
+PASS projects/lodash/reduce.test.ts
+  reduce
+    ✓ should reduce an array of numbers (2 ms)
+    ✓ should reduce an object with key-value pairs (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.836 s
+Ran all test suites matching /projects\/lodash\/reduce.test.ts/i.

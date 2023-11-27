@@ -1,0 +1,12 @@
+PASS projects/lodash/add.test.ts
+  add
+    ✓ should add two numbers (2 ms)
+    ✓ should return the sum of zero and a number
+    ✓ should return the sum of a number and zero
+    ✓ should return zero when both numbers are zero
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.712 s
+Ran all test suites matching /projects\/lodash\/add.test.ts/i.

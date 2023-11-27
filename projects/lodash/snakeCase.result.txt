@@ -1,0 +1,30 @@
+FAIL projects/lodash/snakeCase.test.ts
+  snakeCase
+    ✓ should convert string to snake case (3 ms)
+    ✓ should handle empty string (1 ms)
+    ✓ should handle string with no spaces or special characters (1 ms)
+    ✕ should handle string with apostrophes (3 ms)
+    ✓ should handle string with non-alphanumeric characters
+
+  ● snakeCase › should handle string with apostrophes
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "i_m_a_string"
+    Received: "im_a_string"
+
+      20 |
+      21 |   it('should handle string with apostrophes', () => {
+    > 22 |     expect(snakeCase("I'm a string")).toBe('i_m_a_string');
+         |                                       ^
+      23 |     expect(snakeCase("I'm a string with apostrophes")).toBe('i_m_a_string_with_apostrophes');
+      24 |   });
+      25 |
+
+      at Object.toBe (projects/lodash/snakeCase.test.ts:22:39)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.531 s
+Ran all test suites matching /projects\/lodash\/snakeCase.test.ts/i.

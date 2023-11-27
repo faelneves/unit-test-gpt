@@ -1,0 +1,44 @@
+FAIL projects/lodash/.internal/baseMerge.test.ts
+  baseMerge
+    ✓ should merge the source object into the destination object (2 ms)
+    ✓ should merge nested objects (1 ms)
+    ✓ should handle customizer function (1 ms)
+    ✕ should handle circular references (4 ms)
+
+  ● baseMerge › should handle circular references
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 6
+
+      Object {
+        "a": Object {
+    -     "b": Object {},
+    +     "b": Object {
+    +       "a": [Circular],
+    +     },
+        },
+        "b": Object {
+    -     "a": Object {},
+    +     "a": Object {
+    +       "b": [Circular],
+    +     },
+        },
+      }
+
+      36 |     source.b.a = object.a
+      37 |     baseMerge(object, source)
+    > 38 |     expect(object).toEqual({ a: { b: {} }, b: { a: {} } })
+         |                    ^
+      39 |   })
+      40 | })
+      41 |
+
+      at Object.toEqual (projects/lodash/.internal/baseMerge.test.ts:38:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        0.662 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseMerge.test.ts/i.

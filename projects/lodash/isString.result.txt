@@ -1,0 +1,11 @@
+PASS projects/lodash/isString.test.ts
+  isString
+    ✓ should return true for string primitive (2 ms)
+    ✓ should return true for String object
+    ✓ should return false for non-string values (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.519 s
+Ran all test suites matching /projects\/lodash\/isString.test.ts/i.

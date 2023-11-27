@@ -1,0 +1,27 @@
+FAIL projects/lodash/isElement.test.ts
+  isElement
+    ✕ should return true when value is a DOM element (1 ms)
+    ✓ should return false when value is not a DOM element (3 ms)
+
+  ● isElement › should return true when value is a DOM element
+
+    The error below may be caused by using the wrong test environment, see https://jestjs.io/docs/configuration#testenvironment-string.
+    Consider using the "jsdom" test environment.
+
+    ReferenceError: document is not defined
+
+      3 | describe('isElement', () => {
+      4 |   it('should return true when value is a DOM element', () => {
+    > 5 |     const element = document.createElement('div');
+        |                     ^
+      6 |     expect(isElement(element)).toBe(true);
+      7 |   });
+      8 |
+
+      at Object.document (projects/lodash/isElement.test.ts:5:21)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.529 s
+Ran all test suites matching /projects\/lodash\/isElement.test.ts/i.

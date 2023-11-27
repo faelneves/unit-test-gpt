@@ -1,0 +1,9 @@
+PASS projects/lodash/first.test.ts
+  first
+    ✓ should export the default function from ./head (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.487 s
+Ran all test suites matching /projects\/lodash\/first.test.ts/i.

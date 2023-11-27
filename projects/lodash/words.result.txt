@@ -1,0 +1,35 @@
+FAIL projects/lodash/words.test.ts
+  words
+    ✓ should split a string into an array of words (13 ms)
+    ✓ should split a string into an array of words using a custom pattern
+    ✓ should return an empty array for an empty string (1 ms)
+    ✕ should return an empty array for a string without words (10 ms)
+    ✓ should split a string with Unicode words into an array (1 ms)
+
+  ● words › should return an empty array for a string without words
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "1234",
+    + ]
+
+      24 |     const input = '1234 !@#$';
+      25 |     const expected = [];
+    > 26 |     expect(words(input)).toEqual(expected);
+         |                          ^
+      27 |   });
+      28 |
+      29 |   it('should split a string with Unicode words into an array', () => {
+
+      at Object.toEqual (projects/lodash/words.test.ts:26:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.435 s
+Ran all test suites matching /projects\/lodash\/words.test.ts/i.

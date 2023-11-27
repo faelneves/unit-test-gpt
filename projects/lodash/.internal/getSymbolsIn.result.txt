@@ -1,0 +1,11 @@
+PASS projects/lodash/.internal/getSymbolsIn.test.ts
+  getSymbolsIn
+    ✓ should return an array of symbols from the given object and its prototypes (2 ms)
+    ✓ should exclude symbols from non-enumerable properties
+    ✓ should return an empty array if the object has no symbols (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.567 s
+Ran all test suites matching /projects\/lodash\/.internal\/getSymbolsIn.test.ts/i.

@@ -1,0 +1,32 @@
+FAIL projects/lodash/.internal/baseSet.test.ts
+  baseSet
+    ✓ should set a value at a shallow path (3 ms)
+    ✓ should set a value at a deep path (1 ms)
+    ✓ should create missing intermediate objects (1 ms)
+    ✓ should replace arrays with new objects when necessary
+    ✕ should call the customizer function when provided (2 ms)
+    ✓ should return the modified object
+    ✓ should not modify the object if it is not an object
+
+  ● baseSet › should call the customizer function when provided
+
+    expect(jest.fn()).toHaveBeenCalledTimes(expected)
+
+    Expected number of calls: 1
+    Received number of calls: 2
+
+      39 |     baseSet(object, 'foo.bar.baz', 'newValue', customizer)
+      40 |
+    > 41 |     expect(customizer).toHaveBeenCalledTimes(1)
+         |                        ^
+      42 |     expect(customizer).toHaveBeenCalledWith('oldValue', 'baz', object.foo.bar)
+      43 |   })
+      44 |
+
+      at Object.toHaveBeenCalledTimes (projects/lodash/.internal/baseSet.test.ts:41:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.656 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseSet.test.ts/i.

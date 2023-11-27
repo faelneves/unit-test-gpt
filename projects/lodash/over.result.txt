@@ -1,0 +1,36 @@
+FAIL projects/lodash/over.test.ts
+  over
+    ✓ should return a function that invokes the iteratees with the given arguments (3 ms)
+    ✓ should return an empty array if no iteratees are provided (1 ms)
+    ✕ should return an empty array if the given arguments are empty (3 ms)
+    ✓ should handle NaN values correctly (1 ms)
+    ✓ should handle functions that throw errors (4 ms)
+
+  ● over › should return an empty array if the given arguments are empty
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 4
+
+    - Array []
+    + Array [
+    +   -Infinity,
+    +   Infinity,
+    + ]
+
+      14 |   it('should return an empty array if the given arguments are empty', () => {
+      15 |     const func = over([Math.max, Math.min]);
+    > 16 |     expect(func()).toEqual([]);
+         |                    ^
+      17 |   });
+      18 |
+      19 |   it('should handle NaN values correctly', () => {
+
+      at Object.toEqual (projects/lodash/over.test.ts:16:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.544 s
+Ran all test suites matching /projects\/lodash\/over.test.ts/i.

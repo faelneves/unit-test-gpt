@@ -1,0 +1,31 @@
+FAIL projects/lodash/isMatch.test.ts
+  isMatch
+    ✓ should return true if object is a match (44 ms)
+    ✓ should return false if object is not a match (1 ms)
+    ✓ should return true if object and source are empty (1 ms)
+    ✓ should return true if source is an empty array and object is an array (1 ms)
+    ✕ should return false if source is an empty object and object is not an object (4 ms)
+    ✓ should return false if object and source are different types (1 ms)
+
+  ● isMatch › should return false if source is an empty object and object is not an object
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      29 |     const object = 42;
+      30 |     const source = {};
+    > 31 |     expect(isMatch(object, source)).toBe(false);
+         |                                     ^
+      32 |   });
+      33 |
+      34 |   it('should return false if object and source are different types', () => {
+
+      at Object.toBe (projects/lodash/isMatch.test.ts:31:37)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        1.641 s
+Ran all test suites matching /projects\/lodash\/isMatch.test.ts/i.

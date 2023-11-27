@@ -1,0 +1,10 @@
+PASS projects/lodash/.internal/baseAssignValue.test.ts
+  baseAssignValue
+    ✓ should assign value to the object property (1 ms)
+    ✓ should define __proto__ property if key is __proto__ (6 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.489 s, estimated 1 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseAssignValue.test.ts/i.

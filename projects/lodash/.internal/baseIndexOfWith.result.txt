@@ -1,0 +1,11 @@
+PASS projects/lodash/.internal/baseIndexOfWith.test.ts
+  baseIndexOfWith
+    ✓ should return the index of the matched value (2 ms)
+    ✓ should return -1 if no value is matched
+    ✓ should start searching from the specified index (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.504 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseIndexOfWith.test.ts/i.

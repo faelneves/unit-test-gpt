@@ -1,0 +1,13 @@
+PASS projects/lodash/dropRight.test.ts
+  dropRight
+    ✓ should drop the last element by default (5 ms)
+    ✓ should drop the specified number of elements from the end (5 ms)
+    ✓ should return an empty array if number of elements to drop is greater than array length
+    ✓ should return the original array if number of elements to drop is 0 (1 ms)
+    ✓ should return an empty array if input array is null or undefined (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        1.388 s
+Ran all test suites matching /projects\/lodash\/dropRight.test.ts/i.

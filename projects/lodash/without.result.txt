@@ -1,0 +1,13 @@
+PASS projects/lodash/without.test.ts
+  without
+    ✓ should return a new array excluding the given values (3 ms)
+    ✓ should return an empty array if the input array is not an array-like object (1 ms)
+    ✓ should handle empty values
+    ✓ should handle empty input array
+    ✓ should handle negative numbers
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        1.042 s
+Ran all test suites matching /projects\/lodash\/without.test.ts/i.

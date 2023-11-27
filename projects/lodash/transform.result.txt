@@ -1,0 +1,40 @@
+FAIL projects/lodash/transform.test.ts
+  transform
+    ✓ should iterate over an array and accumulate values based on the iteratee function (2 ms)
+    ✓ should iterate over an object and accumulate values based on the iteratee function (1 ms)
+    ✕ should create a new object with the same prototype if accumulator is not provided (14 ms)
+    ✕ should create a new array if the object is an array-like object (1 ms)
+
+  ● transform › should create a new object with the same prototype if accumulator is not provided
+
+    TypeError: Cannot read properties of undefined (reading '0')
+
+      29 |     transform(input, iteratee);
+      30 |     
+    > 31 |     expect(iteratee.mock.calls[0][0]).toEqual(Object.create(null));
+         |                                  ^
+      32 |   });
+      33 |   
+      34 |   it('should create a new array if the object is an array-like object', () => {
+
+      at Object.<anonymous> (projects/lodash/transform.test.ts:31:34)
+
+  ● transform › should create a new array if the object is an array-like object
+
+    TypeError: Cannot read properties of undefined (reading '0')
+
+      38 |     transform(input, iteratee);
+      39 |     
+    > 40 |     expect(iteratee.mock.calls[0][0]).toEqual([]);
+         |                                  ^
+      41 |   });
+      42 | });
+      43 |
+
+      at Object.<anonymous> (projects/lodash/transform.test.ts:40:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 passed, 4 total
+Snapshots:   0 total
+Time:        3.648 s
+Ran all test suites matching /projects\/lodash\/transform.test.ts/i.

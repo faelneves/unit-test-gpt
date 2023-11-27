@@ -1,0 +1,65 @@
+FAIL projects/lodash/isMatchWith.test.ts
+  isMatchWith
+    ✕ should return true if object is a match (4 ms)
+    ✕ should return false if object is not a match
+    ✓ should use customizer to customize comparisons (1 ms)
+    ✓ should return false if no customizer provided and object does not match (1 ms)
+    ✓ should handle deep comparison (1 ms)
+    ✕ should handle arrays in the object and source (1 ms)
+
+  ● isMatchWith › should return true if object is a match
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+       6 |     const source = { greeting: "hi" };
+       7 |
+    >  8 |     expect(isMatchWith(object, source)).toBe(true);
+         |                                         ^
+       9 |   });
+      10 |
+      11 |   it("should return false if object is not a match", () => {
+
+      at Object.toBe (projects/lodash/isMatchWith.test.ts:8:41)
+
+  ● isMatchWith › should return false if object is not a match
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      13 |     const source = { greeting: "hello" };
+      14 |
+    > 15 |     expect(isMatchWith(object, source)).toBe(false);
+         |                                         ^
+      16 |   });
+      17 |
+      18 |   it("should use customizer to customize comparisons", () => {
+
+      at Object.toBe (projects/lodash/isMatchWith.test.ts:15:41)
+
+  ● isMatchWith › should handle arrays in the object and source
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      47 |     const source = { names: ["Jane", "John"] };
+      48 |
+    > 49 |     expect(isMatchWith(object, source)).toBe(false);
+         |                                         ^
+      50 |   });
+      51 | });
+      52 |
+
+      at Object.toBe (projects/lodash/isMatchWith.test.ts:49:41)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 passed, 6 total
+Snapshots:   0 total
+Time:        0.672 s
+Ran all test suites matching /projects\/lodash\/isMatchWith.test.ts/i.

@@ -1,0 +1,93 @@
+FAIL projects/lodash/setWith.test.ts
+  setWith
+    ✕ should set a value at a specified path in the object using a customizer (6 ms)
+    ✕ should set a value at a specified path in the object if the customizer returns undefined (1 ms)
+    ✕ should set a value at a specified path in the object if the customizer is not provided (1 ms)
+    ✓ should not modify the object if the object is null or undefined
+
+  ● setWith › should set a value at a specified path in the object using a customizer
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 4
+
+      Object {
+    -   "0": Object {
+    -     "1": "a",
+    -   },
+    +   "0": Array [
+    +     undefined,
+    +     "a",
+    +   ],
+      }
+
+      12 |     setWith(object, '[0][1]', 'a', customizer);
+      13 |
+    > 14 |     expect(object).toEqual({ '0': { '1': 'a' } });
+         |                    ^
+      15 |   });
+      16 |
+      17 |   it('should set a value at a specified path in the object if the customizer returns undefined', () => {
+
+      at Object.toEqual (projects/lodash/setWith.test.ts:14:20)
+
+  ● setWith › should set a value at a specified path in the object if the customizer returns undefined
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 4
+
+      Object {
+    -   "0": Object {
+    -     "1": "a",
+    -   },
+    +   "0": Array [
+    +     undefined,
+    +     "a",
+    +   ],
+      }
+
+      25 |     setWith(object, '[0][1]', 'a', customizer);
+      26 |
+    > 27 |     expect(object).toEqual({ '0': { '1': 'a' } });
+         |                    ^
+      28 |   });
+      29 |
+      30 |   it('should set a value at a specified path in the object if the customizer is not provided', () => {
+
+      at Object.toEqual (projects/lodash/setWith.test.ts:27:20)
+
+  ● setWith › should set a value at a specified path in the object if the customizer is not provided
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 4
+
+      Object {
+    -   "0": Object {
+    -     "1": "a",
+    -   },
+    +   "0": Array [
+    +     undefined,
+    +     "a",
+    +   ],
+      }
+
+      33 |     setWith(object, '[0][1]', 'a');
+      34 |
+    > 35 |     expect(object).toEqual({ '0': { '1': 'a' } });
+         |                    ^
+      36 |   });
+      37 |
+      38 |   it('should not modify the object if the object is null or undefined', () => {
+
+      at Object.toEqual (projects/lodash/setWith.test.ts:35:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 1 passed, 4 total
+Snapshots:   0 total
+Time:        0.577 s
+Ran all test suites matching /projects\/lodash\/setWith.test.ts/i.

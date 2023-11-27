@@ -1,0 +1,10 @@
+PASS projects/lodash/once.test.ts
+  once
+    ✓ should invoke the function only once (2 ms)
+    ✓ should return the value of the first invocation (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.662 s
+Ran all test suites matching /projects\/lodash\/once.test.ts/i.

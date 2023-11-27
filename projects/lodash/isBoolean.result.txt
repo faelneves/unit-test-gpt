@@ -1,0 +1,11 @@
+PASS projects/lodash/isBoolean.test.ts
+  isBoolean
+    ✓ should return true for boolean values (2 ms)
+    ✓ should return true for boolean objects
+    ✓ should return false for non-boolean values (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.68 s
+Ran all test suites matching /projects\/lodash\/isBoolean.test.ts/i.

@@ -1,0 +1,29 @@
+FAIL projects/lodash/.internal/baseEachRight.test.ts
+  baseEachRight
+    ✓ should iterate over an array and invoke the iteratee function for each element (4 ms)
+    ✓ should iterate over an object and invoke the iteratee function for each property (1 ms)
+    ✓ should return the original collection if it is null or undefined
+    ✕ should return the result of baseForOwnRight if the collection is not array-like (3 ms)
+
+  ● baseEachRight › should return the result of baseForOwnRight if the collection is not array-like
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "baseForOwnRightResult"
+    Received: "abc"
+
+      52 |     const result = baseEachRight(collection, iteratee)
+      53 |
+    > 54 |     expect(result).toBe(baseForOwnRightResult)
+         |                    ^
+      55 |     expect(iteratee).not.toHaveBeenCalled()
+      56 |   })
+      57 | })
+
+      at Object.toBe (projects/lodash/.internal/baseEachRight.test.ts:54:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        0.573 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseEachRight.test.ts/i.

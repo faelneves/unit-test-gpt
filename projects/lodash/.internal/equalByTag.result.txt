@@ -1,0 +1,10 @@
+PASS projects/lodash/.internal/equalByTag.test.ts
+  equalByTag
+    ✓ should return true for equal boolean values (2 ms)
+    ✓ should return false for different boolean values
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.486 s
+Ran all test suites matching /projects\/lodash\/.internal\/equalByTag.test.ts/i.

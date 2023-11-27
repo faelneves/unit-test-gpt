@@ -1,0 +1,23 @@
+FAIL projects/lodash/.internal/metaMap.test.ts
+  metaMap
+    ✕ should be an instance of WeakMap (2 ms)
+
+  ● metaMap › should be an instance of WeakMap
+
+    ReferenceError: metaMap is not defined
+
+      1 | describe('metaMap', () => {
+      2 |   it('should be an instance of WeakMap', () => {
+    > 3 |     expect(metaMap).toBeInstanceOf(WeakMap);
+        |            ^
+      4 |   });
+      5 | });
+      6 |
+
+      at Object.metaMap (projects/lodash/.internal/metaMap.test.ts:3:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.475 s
+Ran all test suites matching /projects\/lodash\/.internal\/metaMap.test.ts/i.

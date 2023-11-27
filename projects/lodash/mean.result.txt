@@ -1,0 +1,48 @@
+FAIL projects/lodash/mean.test.ts
+  mean
+    ✕ should return 0 if the array is empty (12 ms)
+    ✓ should return the mean of the values in the array (5 ms)
+    ✓ should handle negative numbers
+    ✓ should handle floating point numbers
+    ✓ should handle arrays with duplicate values
+    ✕ should handle arrays with string values (1 ms)
+
+  ● mean › should return 0 if the array is empty
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: NaN
+
+      3 | describe('mean', () => {
+      4 |   it('should return 0 if the array is empty', () => {
+    > 5 |     expect(mean([])).toBe(0);
+        |                      ^
+      6 |   });
+      7 |
+      8 |   it('should return the mean of the values in the array', () => {
+
+      at Object.toBe (projects/lodash/mean.test.ts:5:22)
+
+  ● mean › should handle arrays with string values
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 5
+    Received: 1071.5
+
+      23 |
+      24 |   it('should handle arrays with string values', () => {
+    > 25 |     expect(mean(['4', '2', '8', '6'])).toBe(5);
+         |                                        ^
+      26 |   });
+      27 | });
+      28 |
+
+      at Object.toBe (projects/lodash/mean.test.ts:25:40)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 4 passed, 6 total
+Snapshots:   0 total
+Time:        1.555 s
+Ran all test suites matching /projects\/lodash\/mean.test.ts/i.

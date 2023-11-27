@@ -1,0 +1,29 @@
+FAIL projects/lodash/forOwn.test.ts
+  forOwn
+    ✓ should invoke iteratee function for each own enumerable property (5 ms)
+    ✓ should invoke iteratee function with different objects
+    ✕ should exit iteration early when iteratee returns false (1 ms)
+    ✓ should not invoke iteratee function on prototype properties (1 ms)
+
+  ● forOwn › should exit iteration early when iteratee returns false
+
+    expect(jest.fn()).toHaveBeenCalledTimes(expected)
+
+    Expected number of calls: 2
+    Received number of calls: 3
+
+      49 |     forOwn(object, mockIteratee);
+      50 |
+    > 51 |     expect(mockIteratee).toHaveBeenCalledTimes(2);
+         |                          ^
+      52 |     expect(mockIteratee).toHaveBeenNthCalledWith(1, 1, 'a', object);
+      53 |     expect(mockIteratee).toHaveBeenNthCalledWith(2, 2, 'b', object);
+      54 |   });
+
+      at Object.toHaveBeenCalledTimes (projects/lodash/forOwn.test.ts:51:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        0.529 s
+Ran all test suites matching /projects\/lodash\/forOwn.test.ts/i.

@@ -1,0 +1,58 @@
+FAIL projects/lodash/intersection.test.ts
+  intersection
+    ✓ should return an array of intersecting values (5 ms)
+    ✓ should return an empty array if no intersecting values are found (1 ms)
+    ✕ should handle multiple arrays (4 ms)
+    ✓ should handle arrays with different lengths
+    ✕ should handle arrays with duplicate values (1 ms)
+
+  ● intersection › should handle multiple arrays
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   1,
+    - ]
+    + Array []
+
+      12 |   it('should handle multiple arrays', () => {
+      13 |     expect(intersection([1, 2], [2, 3], [3, 4])).toEqual([]);
+    > 14 |     expect(intersection([1, 2], [2, 3], [1, 4])).toEqual([1]);
+         |                                                  ^
+      15 |     expect(intersection([1, 2, 3, 4], [2, 3], [1, 4])).toEqual([1, 2, 3, 4]);
+      16 |   });
+      17 |
+
+      at Object.toEqual (projects/lodash/intersection.test.ts:14:50)
+
+  ● intersection › should handle arrays with duplicate values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 0
+
+      Array [
+    -   2,
+        3,
+    -   4,
+      ]
+
+      22 |
+      23 |   it('should handle arrays with duplicate values', () => {
+    > 24 |     expect(intersection([1, 2, 3, 4, 4], [2, 3], [3, 4, 5])).toEqual([2, 3, 4]);
+         |                                                              ^
+      25 |     expect(intersection([1, 2, 3], [2, 2, 2], [3, 3, 3])).toEqual([]);
+      26 |   });
+      27 | });
+
+      at Object.toEqual (projects/lodash/intersection.test.ts:24:62)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        1.097 s
+Ran all test suites matching /projects\/lodash\/intersection.test.ts/i.

@@ -1,0 +1,12 @@
+PASS projects/lodash/.internal/isFlattenable.test.ts
+  isFlattenable
+    ✓ should return true if value is an array (2 ms)
+    ✓ should return true if value is an arguments object (1 ms)
+    ✓ should return true if value is a spreadable object (1 ms)
+    ✓ should return false if value is not an array, arguments object, or spreadable object (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        1.526 s
+Ran all test suites matching /projects\/lodash\/.internal\/isFlattenable.test.ts/i.

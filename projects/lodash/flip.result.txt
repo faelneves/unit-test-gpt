@@ -1,0 +1,11 @@
+PASS projects/lodash/flip.test.ts
+  flip
+    ✓ should return a new function (2 ms)
+    ✓ should invoke the original function with reversed arguments (1 ms)
+    ✓ should throw a TypeError if not passed a function (6 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.511 s
+Ran all test suites matching /projects\/lodash\/flip.test.ts/i.

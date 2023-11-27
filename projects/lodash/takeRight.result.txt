@@ -1,0 +1,86 @@
+FAIL projects/lodash/takeRight.test.ts
+  takeRight
+    ✓ should return a slice of array with n elements taken from the end (3 ms)
+    ✓ should return an empty array if the input array is empty (1 ms)
+    ✕ should return an empty array if n is greater than or equal to the length of the array (3 ms)
+    ✕ should return the original array if n is 0 (1 ms)
+    ✕ should return the original array if n is negative (1 ms)
+    ✓ should return the entire array if n is greater than the length of the array (1 ms)
+
+  ● takeRight › should return an empty array if n is greater than or equal to the length of the array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 5
+
+    - Array []
+    + Array [
+    +   1,
+    +   2,
+    +   3,
+    + ]
+
+      17 |
+      18 |   it('should return an empty array if n is greater than or equal to the length of the array', () => {
+    > 19 |     expect(takeRight([1, 2, 3], 3)).toEqual([]);
+         |                                     ^
+      20 |     expect(takeRight([1, 2, 3], 4)).toEqual([]);
+      21 |     expect(takeRight([1, 2, 3], 100)).toEqual([]);
+      22 |   });
+
+      at Object.toEqual (projects/lodash/takeRight.test.ts:19:37)
+
+  ● takeRight › should return the original array if n is 0
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 5
+    + Received  + 1
+
+    - Array [
+    -   1,
+    -   2,
+    -   3,
+    - ]
+    + Array []
+
+      23 |
+      24 |   it('should return the original array if n is 0', () => {
+    > 25 |     expect(takeRight([1, 2, 3], 0)).toEqual([1, 2, 3]);
+         |                                     ^
+      26 |     expect(takeRight(['a', 'b', 'c'], 0)).toEqual(['a', 'b', 'c']);
+      27 |     expect(takeRight(['a'], 0)).toEqual(['a']);
+      28 |   });
+
+      at Object.toEqual (projects/lodash/takeRight.test.ts:25:37)
+
+  ● takeRight › should return the original array if n is negative
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 5
+    + Received  + 1
+
+    - Array [
+    -   1,
+    -   2,
+    -   3,
+    - ]
+    + Array []
+
+      29 |
+      30 |   it('should return the original array if n is negative', () => {
+    > 31 |     expect(takeRight([1, 2, 3], -1)).toEqual([1, 2, 3]);
+         |                                      ^
+      32 |     expect(takeRight(['a', 'b', 'c'], -2)).toEqual(['a', 'b', 'c']);
+      33 |     expect(takeRight(['a'], -3)).toEqual(['a']);
+      34 |   });
+
+      at Object.toEqual (projects/lodash/takeRight.test.ts:31:38)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 passed, 6 total
+Snapshots:   0 total
+Time:        0.55 s
+Ran all test suites matching /projects\/lodash\/takeRight.test.ts/i.

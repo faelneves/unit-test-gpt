@@ -35,13 +35,13 @@ function addTestOnPath(originalPath: string): string {
   return `${pathWithoutExtensao}.test${extension}`;
 }
 
-function appendLineToCSV(fileName: string, passed: string, failed: string): void {
-  const line = `${fileName},${passed},${failed}\n`;
+function appendLineToCSV(fileName: string, passed: string, failed: string, total: string): void {
+  const line = `${fileName},${passed},${failed},${total}\n`;
 
   if (fs.existsSync(resultPath)) {
     fs.appendFileSync(resultPath, line);
   } else {
-    const header = 'Arquivo,Passou,Falhou\n';
+    const header = 'Arquivo,Passou,Falhou,Total\n';
     fs.writeFileSync(resultPath, header);
     fs.appendFileSync(resultPath, line);
   }
@@ -53,16 +53,17 @@ function analyzeTests(testResult: string) {
   const regexFailPass = /Tests: +(\d+) failed, (\d+) passed, (\d+) total/;
   let failed = 0;
   let passed = 0;
+  let total = 0;
 
   const matchFail = testResult.match(regexFail);
   const matchPass = testResult.match(regexPass);
   const matchFailPass = testResult.match(regexFailPass);
 
-  if (matchFail) [failed,] = matchFail.slice(1).map(Number);
-  if (matchPass) [passed,] = matchPass.slice(1).map(Number);
-  if (matchFailPass) [failed, passed,] = matchFailPass.slice(1).map(Number);
+  if (matchFail) [failed, total] = matchFail.slice(1).map(Number);
+  if (matchPass) [passed, total] = matchPass.slice(1).map(Number);
+  if (matchFailPass) [failed, passed, total] = matchFailPass.slice(1).map(Number);
 
-  return { passed, failed };
+  return { passed, failed, total };
 }
 
 function runTests(filePath: string) {
@@ -71,8 +72,8 @@ function runTests(filePath: string) {
     let arrayPath = filePath.split('/');
     const [filename] = arrayPath.at(-1).split('.');
     arrayPath.pop();
-    const { passed, failed } = analyzeTests(stderr);
-    appendLineToCSV(filename, passed.toString(), failed.toString())
+    const { passed, failed, total } = analyzeTests(stderr);
+    appendLineToCSV(filename, passed.toString(), failed.toString(), total.toString())
     createFile(`${arrayPath.join('/')}/${filename}.result.txt`, stderr);
   })
 }

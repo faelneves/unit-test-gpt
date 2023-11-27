@@ -1,0 +1,29 @@
+FAIL projects/lodash/overSome.test.ts
+  overSome
+    ✕ should return a function that returns true if any of the predicates return truthy (4 ms)
+    ✓ should return a function that returns false if none of the predicates return truthy (1 ms)
+    ✓ should return a function that returns false if no predicates are given
+    ✓ should call the predicates with the arguments it receives (2 ms)
+
+  ● overSome › should return a function that returns true if any of the predicates return truthy
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+       7 |     expect(func('1')).toBe(true);
+       8 |     expect(func(5)).toBe(true);
+    >  9 |     expect(func(null)).toBe(true);
+         |                        ^
+      10 |     expect(func(NaN)).toBe(false);
+      11 |   });
+      12 |
+
+      at Object.toBe (projects/lodash/overSome.test.ts:9:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        0.55 s
+Ran all test suites matching /projects\/lodash\/overSome.test.ts/i.

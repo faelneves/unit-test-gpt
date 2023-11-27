@@ -1,0 +1,53 @@
+FAIL projects/lodash/.internal/copySymbolsIn.test.ts
+  copySymbolsIn
+    ✕ should copy symbols from source object to the target object (1 ms)
+    ✕ should copy own and inherited symbols from source object (1 ms)
+    ✕ should not overwrite existing symbols in the target object
+
+  ● copySymbolsIn › should copy symbols from source object to the target object
+
+    ReferenceError: copySymbolsIn is not defined
+
+       6 |     const source = { [Symbol('key1')]: 'value1', [Symbol('key2')]: 'value2' };
+       7 |     const target = {};
+    >  8 |     const result = copySymbolsIn(source, target);
+         |                    ^
+       9 |     
+      10 |     expect(target[Symbol('key1')]).toEqual('value1');
+      11 |     expect(target[Symbol('key2')]).toEqual('value2');
+
+      at Object.copySymbolsIn (projects/lodash/.internal/copySymbolsIn.test.ts:8:20)
+
+  ● copySymbolsIn › should copy own and inherited symbols from source object
+
+    ReferenceError: copySymbolsIn is not defined
+
+      24 |     const source = new Child();
+      25 |     const target = {};
+    > 26 |     const result = copySymbolsIn(source, target);
+         |                    ^
+      27 |
+      28 |     expect(target[source.childSymbol]).toEqual('child');
+      29 |     expect(target[source.parentSymbol]).toEqual('parent');
+
+      at Object.copySymbolsIn (projects/lodash/.internal/copySymbolsIn.test.ts:26:20)
+
+  ● copySymbolsIn › should not overwrite existing symbols in the target object
+
+    ReferenceError: copySymbolsIn is not defined
+
+      34 |     const source = { [Symbol('key1')]: 'value1', [Symbol('key2')]: 'value2' };
+      35 |     const target = { [Symbol('key1')]: 'existingValue' };
+    > 36 |     const result = copySymbolsIn(source, target);
+         |                    ^
+      37 |
+      38 |     expect(target[Symbol('key1')]).toEqual('existingValue');
+      39 |     expect(target[Symbol('key2')]).toEqual('value2');
+
+      at Object.copySymbolsIn (projects/lodash/.internal/copySymbolsIn.test.ts:36:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 total
+Snapshots:   0 total
+Time:        0.623 s
+Ran all test suites matching /projects\/lodash\/.internal\/copySymbolsIn.test.ts/i.

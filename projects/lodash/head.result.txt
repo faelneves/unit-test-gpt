@@ -1,0 +1,13 @@
+PASS projects/lodash/head.test.ts
+  head
+    ✓ should return the first element of the array (16 ms)
+    ✓ should return undefined if the array is empty (1 ms)
+    ✓ should return undefined if the array is null or undefined
+    ✓ should return the first character of a string (1 ms)
+    ✓ should return the first element of an array-like object
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        1.468 s
+Ran all test suites matching /projects\/lodash\/head.test.ts/i.

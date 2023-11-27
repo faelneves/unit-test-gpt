@@ -1,0 +1,12 @@
+PASS projects/lodash/initial.test.ts
+  initial
+    ✓ should return an empty array if input array is empty (2 ms)
+    ✓ should return all but the last element of the input array
+    ✓ should return an empty array if length of input array is 1
+    ✓ should return an empty array if input array is null or undefined (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        1.002 s
+Ran all test suites matching /projects\/lodash\/initial.test.ts/i.

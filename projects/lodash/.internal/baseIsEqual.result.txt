@@ -1,0 +1,102 @@
+FAIL projects/lodash/.internal/baseIsEqual.test.ts
+  baseIsEqual
+    ✕ should return true if the values are equal (2 ms)
+    ✕ should return false if the values are not equal
+    ✓ should return true if the values are both null or undefined (2 ms)
+    ✓ should return true if the values are both NaN
+    ✓ should return false if one value is NaN and the other is not NaN
+    ✕ should return true if the values are both objects and have the same properties
+    ✓ should return false if the values are both objects but have different properties (1 ms)
+    ✕ should return true if the values are both arrays and have the same elements
+    ✕ should return false if the values are both arrays but have different elements (1 ms)
+
+  ● baseIsEqual › should return true if the values are equal
+
+    TypeError: stack.get is not a function
+
+      39 |   }
+      40 |   // Assume cyclic values are equal.
+    > 41 |   const stacked = stack.get(object)
+         |                         ^
+      42 |   if (stacked && stack.get(other)) {
+      43 |     return stacked === other
+      44 |   }
+
+      at get (projects/lodash/.internal/equalObjects.ts:41:25)
+      at baseIsEqualDeep (projects/lodash/.internal/baseIsEqualDeep.ts:76:22)
+      at baseIsEqual (projects/lodash/.internal/baseIsEqual.ts:25:25)
+      at Object.<anonymous> (projects/lodash/.internal/baseIsEqual.test.ts:9:31)
+
+  ● baseIsEqual › should return false if the values are not equal
+
+    TypeError: stack.get is not a function
+
+      29 |   }
+      30 |   // Assume cyclic values are equal.
+    > 31 |   const stacked = stack.get(array)
+         |                         ^
+      32 |   if (stacked && stack.get(other)) {
+      33 |     return stacked === other
+      34 |   }
+
+      at get (projects/lodash/.internal/equalArrays.ts:31:25)
+      at baseIsEqualDeep (projects/lodash/.internal/baseIsEqualDeep.ts:57:20)
+      at baseIsEqual (projects/lodash/.internal/baseIsEqual.ts:25:25)
+      at Object.<anonymous> (projects/lodash/.internal/baseIsEqual.test.ts:16:31)
+
+  ● baseIsEqual › should return true if the values are both objects and have the same properties
+
+    TypeError: stack.get is not a function
+
+      39 |   }
+      40 |   // Assume cyclic values are equal.
+    > 41 |   const stacked = stack.get(object)
+         |                         ^
+      42 |   if (stacked && stack.get(other)) {
+      43 |     return stacked === other
+      44 |   }
+
+      at get (projects/lodash/.internal/equalObjects.ts:41:25)
+      at baseIsEqualDeep (projects/lodash/.internal/baseIsEqualDeep.ts:76:22)
+      at baseIsEqual (projects/lodash/.internal/baseIsEqual.ts:25:25)
+      at Object.<anonymous> (projects/lodash/.internal/baseIsEqual.test.ts:44:31)
+
+  ● baseIsEqual › should return true if the values are both arrays and have the same elements
+
+    TypeError: stack.get is not a function
+
+      29 |   }
+      30 |   // Assume cyclic values are equal.
+    > 31 |   const stacked = stack.get(array)
+         |                         ^
+      32 |   if (stacked && stack.get(other)) {
+      33 |     return stacked === other
+      34 |   }
+
+      at get (projects/lodash/.internal/equalArrays.ts:31:25)
+      at baseIsEqualDeep (projects/lodash/.internal/baseIsEqualDeep.ts:57:20)
+      at baseIsEqual (projects/lodash/.internal/baseIsEqual.ts:25:25)
+      at Object.<anonymous> (projects/lodash/.internal/baseIsEqual.test.ts:58:31)
+
+  ● baseIsEqual › should return false if the values are both arrays but have different elements
+
+    TypeError: stack.get is not a function
+
+      29 |   }
+      30 |   // Assume cyclic values are equal.
+    > 31 |   const stacked = stack.get(array)
+         |                         ^
+      32 |   if (stacked && stack.get(other)) {
+      33 |     return stacked === other
+      34 |   }
+
+      at get (projects/lodash/.internal/equalArrays.ts:31:25)
+      at baseIsEqualDeep (projects/lodash/.internal/baseIsEqualDeep.ts:57:20)
+      at baseIsEqual (projects/lodash/.internal/baseIsEqual.ts:25:25)
+      at Object.<anonymous> (projects/lodash/.internal/baseIsEqual.test.ts:65:31)
+
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 4 passed, 9 total
+Snapshots:   0 total
+Time:        0.601 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseIsEqual.test.ts/i.

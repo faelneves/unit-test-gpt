@@ -1,0 +1,27 @@
+PASS projects/lodash/.internal/ListCache.test.ts
+  ListCache
+    constructor
+      ✓ should create an empty list cache when no entries are provided (3 ms)
+      ✓ should create a list cache with the provided entries (1 ms)
+    clear
+      ✓ should remove all key-value entries from the list cache
+    delete
+      ✓ should remove the key-value entry from the list cache (1 ms)
+      ✓ should return true if the entry was removed
+      ✓ should return false if the entry was not found (1 ms)
+    get
+      ✓ should return the value for the key in the list cache
+      ✓ should return undefined if the key is not found in the list cache (1 ms)
+    has
+      ✓ should return true if the key exists in the list cache
+      ✓ should return false if the key does not exist in the list cache (1 ms)
+    set
+      ✓ should set the key-value pair in the list cache
+      ✓ should update the value if the key already exists in the list cache (1 ms)
+      ✓ should return the list cache instance
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        0.551 s
+Ran all test suites matching /projects\/lodash\/.internal\/ListCache.test.ts/i.

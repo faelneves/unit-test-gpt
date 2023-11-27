@@ -1,0 +1,12 @@
+PASS projects/lodash/fromEntries.test.ts
+  fromEntries
+    ✓ should return an empty object when pairs is null (2 ms)
+    ✓ should return an empty object when pairs is an empty array (1 ms)
+    ✓ should return an object with key-value pairs
+    ✓ should handle duplicate keys by using the last value (6 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        1.222 s
+Ran all test suites matching /projects\/lodash\/fromEntries.test.ts/i.

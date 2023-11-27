@@ -1,0 +1,13 @@
+PASS projects/lodash/isLength.test.ts
+  isLength
+    ✓ should return true if value is a valid length (8 ms)
+    ✓ should return false if value is not a number (1 ms)
+    ✓ should return false if value is less than 0
+    ✓ should return false if value is a decimal number (4 ms)
+    ✓ should return false if value exceeds maximum safe integer (4 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.84 s
+Ran all test suites matching /projects\/lodash\/isLength.test.ts/i.

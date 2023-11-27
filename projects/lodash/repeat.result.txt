@@ -1,0 +1,13 @@
+PASS projects/lodash/repeat.test.ts
+  repeat
+    ✓ should repeat the given string n times (11 ms)
+    ✓ should return an empty string when n is 0
+    ✓ should return an empty string when string is empty (1 ms)
+    ✓ should return an empty string when n is less than 1
+    ✓ should return an empty string when n is greater than Number.MAX_SAFE_INTEGER (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.765 s
+Ran all test suites matching /projects\/lodash\/repeat.test.ts/i.

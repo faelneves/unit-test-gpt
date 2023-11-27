@@ -1,0 +1,26 @@
+FAIL projects/lodash/.internal/matchesStrictComparable.test.ts
+  matchesStrictComparable
+    ✕ should return a function that compares values strictly (4 ms)
+
+  ● matchesStrictComparable › should return a function that compares values strictly
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      20 |
+      21 |     expect(matcher(object1)).toBe(true);
+    > 22 |     expect(matcher(object2)).toBe(false);
+         |                              ^
+      23 |     expect(matcher(object3)).toBe(false);
+      24 |     expect(matcher(object4)).toBe(false);
+      25 |   });
+
+      at Object.toBe (projects/lodash/.internal/matchesStrictComparable.test.ts:22:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.521 s
+Ran all test suites matching /projects\/lodash\/.internal\/matchesStrictComparable.test.ts/i.

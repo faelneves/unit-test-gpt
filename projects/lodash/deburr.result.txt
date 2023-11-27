@@ -1,0 +1,11 @@
+PASS projects/lodash/deburr.test.ts
+  deburr
+    ✓ should deburr the string by converting Latin-1 Supplement and Latin Extended-A letters to basic Latin letters and remove combining diacritical marks (2 ms)
+    ✓ should return an empty string if the input is an empty string
+    ✓ should return the same string if there are no Latin-1 Supplement or Latin Extended-A letters and no combining diacritical marks (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.488 s
+Ran all test suites matching /projects\/lodash\/deburr.test.ts/i.

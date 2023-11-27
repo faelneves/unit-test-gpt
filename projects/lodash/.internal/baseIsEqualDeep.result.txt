@@ -1,0 +1,27 @@
+FAIL projects/lodash/.internal/baseIsEqualDeep.test.ts
+  baseIsEqualDeep
+    ✓ should return true if objects are equivalent (7 ms)
+    ✕ should return false if objects are not equivalent (3 ms)
+
+  ● baseIsEqualDeep › should return false if objects are not equivalent
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      24 |     const result = baseIsEqualDeep(obj1, obj2, 0, () => true);
+      25 |
+    > 26 |     expect(result).toBe(false);
+         |                    ^
+      27 |   });
+      28 | });
+      29 |
+
+      at Object.toBe (projects/lodash/.internal/baseIsEqualDeep.test.ts:26:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.873 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseIsEqualDeep.test.ts/i.

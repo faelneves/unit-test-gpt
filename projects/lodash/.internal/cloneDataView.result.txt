@@ -1,0 +1,10 @@
+PASS projects/lodash/.internal/cloneDataView.test.ts
+  cloneDataView
+    ✓ should create a clone of a DataView object with a shallow clone (9 ms)
+    ✓ should create a clone of a DataView object with a deep clone
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.498 s
+Ran all test suites matching /projects\/lodash\/.internal\/cloneDataView.test.ts/i.

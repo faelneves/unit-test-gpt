@@ -1,0 +1,193 @@
+FAIL projects/lodash/.internal/createRange.test.ts
+  createRange
+    ✓ should return a function (2 ms)
+    ✕ should return an array of numbers starting from 0 (4 ms)
+    ✕ should return an array of numbers starting from the given start value (1 ms)
+    ✕ should return an array of numbers in the range from start to end (1 ms)
+    ✕ should return an array of numbers in the reverse range from end to start when fromRight is true (1 ms)
+    ✕ should return an empty array when start is greater than end
+    ✓ should return an array of numbers with the given step size
+    ✕ should return an array of numbers with the negative step size when start is greater than end (1 ms)
+    ✕ should return an array with a single element when step is 0 (1 ms)
+
+  ● createRange › should return an array of numbers starting from 0
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   0,
+    - ]
+    + Array []
+
+       9 |   it('should return an array of numbers starting from 0', () => {
+      10 |     const range = createRange()()
+    > 11 |     expect(range).toEqual([0])
+         |                   ^
+      12 |   })
+      13 |
+      14 |   it('should return an array of numbers starting from the given start value', () => {
+
+      at Object.toEqual (projects/lodash/.internal/createRange.test.ts:11:19)
+
+  ● createRange › should return an array of numbers starting from the given start value
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 2
+
+      Array [
+    -   2,
+    +   0,
+    +   1,
+      ]
+
+      14 |   it('should return an array of numbers starting from the given start value', () => {
+      15 |     const range = createRange()(2)
+    > 16 |     expect(range).toEqual([2])
+         |                   ^
+      17 |   })
+      18 |
+      19 |   it('should return an array of numbers in the range from start to end', () => {
+
+      at Object.toEqual (projects/lodash/.internal/createRange.test.ts:16:19)
+
+  ● createRange › should return an array of numbers in the range from start to end
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        1,
+        2,
+        3,
+        4,
+    -   5,
+      ]
+
+      19 |   it('should return an array of numbers in the range from start to end', () => {
+      20 |     const range = createRange()(1, 5)
+    > 21 |     expect(range).toEqual([1, 2, 3, 4, 5])
+         |                   ^
+      22 |   })
+      23 |
+      24 |   it('should return an array of numbers in the reverse range from end to start when fromRight is true', () => {
+
+      at Object.toEqual (projects/lodash/.internal/createRange.test.ts:21:19)
+
+  ● createRange › should return an array of numbers in the reverse range from end to start when fromRight is true
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+    -   5,
+        4,
+        3,
+        2,
+        1,
+      ]
+
+      24 |   it('should return an array of numbers in the reverse range from end to start when fromRight is true', () => {
+      25 |     const range = createRange(true)(1, 5)
+    > 26 |     expect(range).toEqual([5, 4, 3, 2, 1])
+         |                   ^
+      27 |   })
+      28 |
+      29 |   it('should return an empty array when start is greater than end', () => {
+
+      at Object.toEqual (projects/lodash/.internal/createRange.test.ts:26:19)
+
+  ● createRange › should return an empty array when start is greater than end
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 6
+
+    - Array []
+    + Array [
+    +   5,
+    +   4,
+    +   3,
+    +   2,
+    + ]
+
+      29 |   it('should return an empty array when start is greater than end', () => {
+      30 |     const range = createRange()(5, 1)
+    > 31 |     expect(range).toEqual([])
+         |                   ^
+      32 |   })
+      33 |
+      34 |   it('should return an array of numbers with the given step size', () => {
+
+      at Object.toEqual (projects/lodash/.internal/createRange.test.ts:31:19)
+
+  ● createRange › should return an array of numbers with the negative step size when start is greater than end
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 1
+
+    - Array [
+    -   10,
+    -   8,
+    -   6,
+    -   4,
+    -   2,
+    - ]
+    + Array []
+
+      39 |   it('should return an array of numbers with the negative step size when start is greater than end', () => {
+      40 |     const range = createRange()(10, 1, 2)
+    > 41 |     expect(range).toEqual([10, 8, 6, 4, 2])
+         |                   ^
+      42 |   })
+      43 |
+      44 |   it('should return an array with a single element when step is 0', () => {
+
+      at Object.toEqual (projects/lodash/.internal/createRange.test.ts:41:19)
+
+  ● createRange › should return an array with a single element when step is 0
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 9
+
+      Array [
+        0,
+    +   0,
+    +   0,
+    +   0,
+    +   0,
+    +   0,
+    +   0,
+    +   0,
+    +   0,
+    +   0,
+      ]
+
+      44 |   it('should return an array with a single element when step is 0', () => {
+      45 |     const range = createRange()(0, 10, 0)
+    > 46 |     expect(range).toEqual([0])
+         |                   ^
+      47 |   })
+      48 | })
+      49 |
+
+      at Object.toEqual (projects/lodash/.internal/createRange.test.ts:46:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       7 failed, 2 passed, 9 total
+Snapshots:   0 total
+Time:        0.613 s
+Ran all test suites matching /projects\/lodash\/.internal\/createRange.test.ts/i.

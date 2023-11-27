@@ -1,0 +1,28 @@
+FAIL projects/lodash/.internal/MapCache.test.ts
+  MapCache
+    ✕ should create an empty map cache (3 ms)
+    ✓ should set a key-value pair in the map cache (1 ms)
+    ✓ should get a value from the map cache (1 ms)
+    ✓ should check if a key exists in the map cache
+    ✓ should delete a key-value pair from the map cache (1 ms)
+    ✓ should clear all key-value pairs from the map cache (1 ms)
+
+  ● MapCache › should create an empty map cache
+
+    TypeError: mapCache.getAllData is not a function
+
+      11 |   it('should create an empty map cache', () => {
+      12 |     expect(mapCache.size).toBe(0)
+    > 13 |     expect(mapCache.getAllData()).toEqual({ hash: new Hash(), map: new Map(), string: new Hash() })
+         |                     ^
+      14 |   })
+      15 |
+      16 |   it('should set a key-value pair in the map cache', () => {
+
+      at Object.getAllData (projects/lodash/.internal/MapCache.test.ts:13:21)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        0.572 s
+Ran all test suites matching /projects\/lodash\/.internal\/MapCache.test.ts/i.

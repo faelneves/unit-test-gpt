@@ -1,0 +1,11 @@
+PASS projects/lodash/conforms.test.ts
+  conforms
+    ✓ should return true if all predicates return truthy (3 ms)
+    ✓ should return false if any predicate returns falsy
+    ✓ should return true if there are no predicates and source is an empty object
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.745 s
+Ran all test suites matching /projects\/lodash\/conforms.test.ts/i.

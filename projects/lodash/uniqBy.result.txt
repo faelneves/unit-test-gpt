@@ -1,0 +1,12 @@
+PASS projects/lodash/uniqBy.test.ts
+  uniqBy
+    ✓ should return a new duplicate free array (2 ms)
+    ✓ should return an empty array if the input array is empty
+    ✓ should return an empty array if the input array is null
+    ✓ should return an empty array if the input array is undefined
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.51 s
+Ran all test suites matching /projects\/lodash\/uniqBy.test.ts/i.

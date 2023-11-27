@@ -1,0 +1,14 @@
+PASS projects/lodash/size.test.ts
+  size
+    ✓ should return the correct size for arrays (18 ms)
+    ✓ should return the correct size for objects (1 ms)
+    ✓ should return the correct size for strings (1 ms)
+    ✓ should return the correct size for maps
+    ✓ should return the correct size for sets
+    ✓ should return 0 for null or undefined (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        1.748 s
+Ran all test suites matching /projects\/lodash\/size.test.ts/i.

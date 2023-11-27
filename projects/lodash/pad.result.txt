@@ -1,0 +1,30 @@
+FAIL projects/lodash/pad.test.ts
+  pad
+    ✓ should pad the string with spaces on both sides (2 ms)
+    ✓ should pad the string with custom characters on both sides (1 ms)
+    ✓ should return the string itself if it is already longer than the desired length (2 ms)
+    ✓ should pad an empty string with spaces
+    ✕ should pad an empty string with custom characters (7 ms)
+
+  ● pad › should pad an empty string with custom characters
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: "_-_-_-"
+    Received: "_-__-_"
+
+      19 |
+      20 |   it('should pad an empty string with custom characters', () => {
+    > 21 |     expect(pad('', 6, '_-')).toEqual('_-_-_-');
+         |                              ^
+      22 |   });
+      23 | });
+      24 |
+
+      at Object.toEqual (projects/lodash/pad.test.ts:21:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        1.068 s
+Ran all test suites matching /projects\/lodash\/pad.test.ts/i.

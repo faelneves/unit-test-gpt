@@ -1,0 +1,14 @@
+PASS projects/lodash/keys.test.ts
+  keys
+    ✓ should return an empty array when given an empty object (4 ms)
+    ✓ should return an array of keys for a plain object (1 ms)
+    ✓ should return an array of keys for an array-like object (1 ms)
+    ✓ should return an array of keys for a string (2 ms)
+    ✓ should return an array of keys for a custom object (1 ms)
+    ✓ should return an array of keys for a function object
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        1.173 s
+Ran all test suites matching /projects\/lodash\/keys.test.ts/i.

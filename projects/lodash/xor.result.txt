@@ -1,0 +1,14 @@
+PASS projects/lodash/xor.test.ts
+  xor
+    ✓ returns an array of unique values that is the symmetric difference of the given arrays (3 ms)
+    ✓ returns an empty array if no arrays are provided
+    ✓ supports arrays with non-integer keys
+    ✓ ignores non-array arguments
+    ✓ excludes duplicate values
+    ✓ returns an empty array if all arrays have the same values
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.542 s
+Ran all test suites matching /projects\/lodash\/xor.test.ts/i.

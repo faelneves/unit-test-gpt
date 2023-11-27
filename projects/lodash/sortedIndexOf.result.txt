@@ -1,0 +1,14 @@
+PASS projects/lodash/sortedIndexOf.test.ts
+  sortedIndexOf
+    ✓ should return the index of the matched value (2 ms)
+    ✓ should return -1 if value is not found
+    ✓ should return -1 if array is empty
+    ✓ should return -1 if array is null (1 ms)
+    ✓ should handle non-integer value
+    ✓ should handle negative numbers (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.899 s
+Ran all test suites matching /projects\/lodash\/sortedIndexOf.test.ts/i.

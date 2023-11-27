@@ -1,0 +1,29 @@
+FAIL projects/lodash/toNumber.test.ts
+  toNumber
+    ✓ should return the same number if input is a number (4 ms)
+    ✓ should return NaN if input is a symbol (1 ms)
+    ✕ should convert other objects to number (6 ms)
+    ✓ should handle extreme values (3 ms)
+
+  ● toNumber › should convert other objects to number
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: NaN
+    Received: 0
+
+      12 |   it('should convert other objects to number', () => {
+      13 |     expect(toNumber({})).toBe(NaN);
+    > 14 |     expect(toNumber([])).toBe(NaN);
+         |                          ^
+      15 |     expect(toNumber('')).toBe(0);
+      16 |     expect(toNumber('  ')).toBe(0);
+      17 |     expect(toNumber('3.2')).toBe(3.2);
+
+      at Object.toBe (projects/lodash/toNumber.test.ts:14:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        2.568 s
+Ran all test suites matching /projects\/lodash\/toNumber.test.ts/i.

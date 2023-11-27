@@ -1,0 +1,15 @@
+PASS projects/lodash/.internal/getTag.test.ts
+  getTag
+    ✓ should return "[object Undefined]" for undefined value (2 ms)
+    ✓ should return "[object Null]" for null value
+    ✓ should return "[object Object]" for object value
+    ✓ should return "[object Number]" for number value
+    ✓ should return "[object String]" for string value
+    ✓ should return "[object Boolean]" for boolean value (1 ms)
+    ✓ should return "[object Array]" for array value
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        0.497 s
+Ran all test suites matching /projects\/lodash\/.internal\/getTag.test.ts/i.

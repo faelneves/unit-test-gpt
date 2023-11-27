@@ -1,0 +1,10 @@
+PASS projects/lodash/.internal/baseFor.test.ts
+  baseFor
+    ✓ should iterate over object properties and invoke iteratee function for each property (3 ms)
+    ✓ should exit early when iteratee function returns false (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.524 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseFor.test.ts/i.

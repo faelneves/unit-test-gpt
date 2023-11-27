@@ -1,0 +1,35 @@
+FAIL projects/lodash/differenceBy.test.ts
+  differenceBy
+    ✓ returns the new array of filtered values based on the iteratee function (17 ms)
+    ✓ returns an empty array if the input array is empty (2 ms)
+    ✓ returns an empty array if all values are excluded (1 ms)
+    ✕ returns an empty array if no values to exclude are specified (8 ms)
+
+  ● differenceBy › returns an empty array if no values to exclude are specified
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 4
+
+    - Array []
+    + Array [
+    +   2.1,
+    +   1.2,
+    + ]
+
+      38 |     const result = differenceBy(array, iteratee);
+      39 |
+    > 40 |     expect(result).toEqual([]);
+         |                    ^
+      41 |   });
+      42 | });
+      43 |
+
+      at Object.toEqual (projects/lodash/differenceBy.test.ts:40:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        1.037 s
+Ran all test suites matching /projects\/lodash\/differenceBy.test.ts/i.

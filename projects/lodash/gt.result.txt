@@ -1,0 +1,65 @@
+FAIL projects/lodash/gt.test.ts
+  gt
+    ✕ should return true if value is greater than other (7 ms)
+    ✓ should return false if value is less than or equal to other (1 ms)
+    ✕ should handle string values (1 ms)
+    ✕ should handle numeric values in string format
+    ✓ should handle negative values
+    ✓ should handle non-numeric values (1 ms)
+
+  ● gt › should return true if value is greater than other
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+       5 |     expect(gt(3, 1)).toBe(true);
+       6 |     expect(gt(5, -2)).toBe(true);
+    >  7 |     expect(gt('10', '5')).toBe(true);
+         |                           ^
+       8 |     expect(gt('abc', 'aaa')).toBe(true);
+       9 |   });
+      10 |
+
+      at Object.toBe (projects/lodash/gt.test.ts:7:27)
+
+  ● gt › should handle string values
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      17 |
+      18 |   it('should handle string values', () => {
+    > 19 |     expect(gt('10', '2')).toBe(true);
+         |                           ^
+      20 |     expect(gt('2', '10')).toBe(false);
+      21 |     expect(gt('abc', 'aaa')).toBe(true);
+      22 |     expect(gt('aaa', 'abc')).toBe(false);
+
+      at Object.toBe (projects/lodash/gt.test.ts:19:27)
+
+  ● gt › should handle numeric values in string format
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      24 |
+      25 |   it('should handle numeric values in string format', () => {
+    > 26 |     expect(gt('10', '5')).toBe(true);
+         |                           ^
+      27 |     expect(gt('5', '10')).toBe(false);
+      28 |     expect(gt('-5', '5')).toBe(false);
+      29 |   });
+
+      at Object.toBe (projects/lodash/gt.test.ts:26:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 passed, 6 total
+Snapshots:   0 total
+Time:        0.878 s
+Ran all test suites matching /projects\/lodash\/gt.test.ts/i.

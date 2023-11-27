@@ -1,0 +1,28 @@
+FAIL projects/lodash/.internal/strictIndexOf.test.ts
+  strictIndexOf
+    ✓ should return the index of the matched value (5 ms)
+    ✓ should return -1 if the value is not found (1 ms)
+    ✕ should handle edge cases (11 ms)
+
+  ● strictIndexOf › should handle edge cases
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: -1
+
+      21 |     expect(strictIndexOf(array, undefined, 2)).toBe(3);
+      22 |     expect(strictIndexOf(array, '', 3)).toBe(5);
+    > 23 |     expect(strictIndexOf(array, true, 5)).toBe(0);
+         |                                           ^
+      24 |     expect(strictIndexOf(array, false, 5)).toBe(1);
+      25 |     expect(strictIndexOf(array, 0, 5)).toBe(4);
+      26 |   });
+
+      at Object.toBe (projects/lodash/.internal/strictIndexOf.test.ts:23:43)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        1.899 s
+Ran all test suites matching /projects\/lodash\/.internal\/strictIndexOf.test.ts/i.

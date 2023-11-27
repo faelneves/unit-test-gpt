@@ -1,0 +1,35 @@
+FAIL projects/lodash/.internal/copyObject.test.ts
+  copyObject
+    ✓ should copy properties from source to object (15 ms)
+    ✕ should copy properties from source to object with a customizer (14 ms)
+    ✓ should copy properties from source to a new object
+
+  ● copyObject › should copy properties from source to object with a customizer
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "prop1": "value1value1",
+    -   "prop2": "value2value2",
+    +   "prop1": "undefinedvalue1",
+    +   "prop2": "undefinedvalue2",
+      }
+
+      38 |     const result = copyObject(source, props, object, customizer);
+      39 |
+    > 40 |     expect(result).toEqual({
+         |                    ^
+      41 |       prop1: 'value1value1',
+      42 |       prop2: 'value2value2',
+      43 |     });
+
+      at Object.toEqual (projects/lodash/.internal/copyObject.test.ts:40:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.592 s
+Ran all test suites matching /projects\/lodash\/.internal\/copyObject.test.ts/i.

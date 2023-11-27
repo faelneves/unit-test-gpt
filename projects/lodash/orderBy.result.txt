@@ -1,0 +1,58 @@
+FAIL projects/lodash/orderBy.test.ts
+  orderBy
+    ✓ should return an empty array if the collection is null (2 ms)
+    ✕ should return an empty array if no iteratees are provided (4 ms)
+    ✕ should return a sorted array based on the iteratees and orders provided
+
+  ● orderBy › should return an empty array if no iteratees are provided
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 8
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "name": "John",
+    +   },
+    +   Object {
+    +     "name": "Alice",
+    +   },
+    + ]
+
+       8 |   it('should return an empty array if no iteratees are provided', () => {
+       9 |     const collection = [{ 'name': 'John' }, { 'name': 'Alice' }];
+    > 10 |     expect(orderBy(collection)).toEqual([]);
+         |                                 ^
+      11 |   });
+      12 |
+      13 |   it('should return a sorted array based on the iteratees and orders provided', () => {
+
+      at Object.toEqual (projects/lodash/orderBy.test.ts:10:33)
+
+  ● orderBy › should return a sorted array based on the iteratees and orders provided
+
+    TypeError: iteratee is not a function
+
+      35 |
+      36 |   baseEach(collection, (value) => {
+    > 37 |     const criteria = iteratees.map((iteratee) => iteratee(value))
+         |                                                  ^
+      38 |
+      39 |     result[++eachIndex] = {
+      40 |       criteria,
+
+      at iteratee (projects/lodash/.internal/baseOrderBy.ts:37:50)
+          at Array.map (<anonymous>)
+      at map (projects/lodash/.internal/baseOrderBy.ts:37:32)
+      at iteratee (projects/lodash/.internal/baseEach.ts:24:9)
+      at baseOrderBy (projects/lodash/.internal/baseOrderBy.ts:36:11)
+      at orderBy (projects/lodash/orderBy.ts:48:21)
+      at Object.<anonymous> (projects/lodash/orderBy.test.ts:22:39)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.58 s
+Ran all test suites matching /projects\/lodash\/orderBy.test.ts/i.

@@ -1,0 +1,27 @@
+FAIL projects/lodash/unset.test.ts
+  unset
+    ✓ should unset a property at a given path (5 ms)
+    ✕ should return false if the property cannot be unset (2 ms)
+
+  ● unset › should return false if the property cannot be unset
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      15 |     const object = { 'a': [{ 'b': { 'c': 7 } }] };
+      16 |
+    > 17 |     expect(unset(object, 'x.y')).toBe(false);
+         |                                  ^
+      18 |     expect(object).toEqual({ 'a': [{ 'b': { 'c': 7 } }] });
+      19 |
+      20 |     expect(unset(object, ['a', '0', 'b', 'x'])).toBe(false);
+
+      at Object.toBe (projects/lodash/unset.test.ts:17:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        3.195 s
+Ran all test suites matching /projects\/lodash\/unset.test.ts/i.

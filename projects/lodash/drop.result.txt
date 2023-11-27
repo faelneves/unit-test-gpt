@@ -1,0 +1,60 @@
+FAIL projects/lodash/drop.test.ts
+  drop
+    ✓ returns a new array with n elements dropped from the beginning (3 ms)
+    ✓ handles empty arrays (1 ms)
+    ✕ handles negative values of n (3 ms)
+    ✓ handles non-integer values of n (1 ms)
+    ✕ handles strings (1 ms)
+    ✓ handles arrays with null or undefined values (1 ms)
+
+  ● drop › handles negative values of n
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+    +   1,
+        2,
+        3,
+      ]
+
+      16 |
+      17 |   it('handles negative values of n', () => {
+    > 18 |     expect(drop([1, 2, 3], -1)).toEqual([2, 3]);
+         |                                 ^
+      19 |     expect(drop([1, 2, 3], -5)).toEqual([1, 2, 3]);
+      20 |     expect(drop([], -1)).toEqual([]);
+      21 |   });
+
+      at Object.toEqual (projects/lodash/drop.test.ts:18:33)
+
+  ● drop › handles strings
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+        "l",
+    +   "l",
+        "o",
+      ]
+
+      28 |
+      29 |   it('handles strings', () => {
+    > 30 |     expect(drop('hello', 2)).toEqual(['l', 'o']);
+         |                              ^
+      31 |     expect(drop('hello', 5)).toEqual([]);
+      32 |     expect(drop('hello', 0)).toEqual(['h', 'e', 'l', 'l', 'o']);
+      33 |   });
+
+      at Object.toEqual (projects/lodash/drop.test.ts:30:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 4 passed, 6 total
+Snapshots:   0 total
+Time:        0.563 s
+Ran all test suites matching /projects\/lodash\/drop.test.ts/i.

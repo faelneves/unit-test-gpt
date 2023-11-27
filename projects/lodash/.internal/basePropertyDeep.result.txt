@@ -1,0 +1,12 @@
+PASS projects/lodash/.internal/basePropertyDeep.test.ts
+  basePropertyDeep
+    ✓ should return a function (2 ms)
+    ✓ should return the value deep in the object (1 ms)
+    ✓ should return undefined if the property does not exist (1 ms)
+    ✓ should handle array paths
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.538 s
+Ran all test suites matching /projects\/lodash\/.internal\/basePropertyDeep.test.ts/i.

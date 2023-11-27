@@ -1,0 +1,104 @@
+FAIL projects/lodash/result.test.ts
+  result
+    when path exists in object
+      ✓ should return the resolved value (2 ms)
+    when path does not exist in object
+      ✕ should return the default value if specified
+      ✕ should return undefined if default value is not specified
+    when path is empty
+      ✕ should return the object itself (1 ms)
+    when path contains an empty key
+      ✕ should return the default value if specified
+      ✕ should return undefined if default value is not specified
+    when path contains a class name
+      ✕ should return the resolved value
+
+  ● result › when path does not exist in object › should return the default value if specified
+
+    TypeError: result is not a function
+
+      22 |       const path = 'a[0].b.c3';
+      23 |       const defaultValue = 'default';
+    > 24 |       const result = result(object, path, defaultValue);
+         |                      ^
+      25 |
+      26 |       expect(result).toBe(defaultValue);
+      27 |     });
+
+      at Object.result (projects/lodash/result.test.ts:24:22)
+
+  ● result › when path does not exist in object › should return undefined if default value is not specified
+
+    TypeError: result is not a function
+
+      31 |
+      32 |       const path = 'a[0].b.c3';
+    > 33 |       const result = result(object, path);
+         |                      ^
+      34 |
+      35 |       expect(result).toBeUndefined();
+      36 |     });
+
+      at Object.result (projects/lodash/result.test.ts:33:22)
+
+  ● result › when path is empty › should return the object itself
+
+    TypeError: result is not a function
+
+      42 |
+      43 |       const path = '';
+    > 44 |       const result = result(object, path);
+         |                      ^
+      45 |
+      46 |       expect(result).toBe(object);
+      47 |     });
+
+      at Object.result (projects/lodash/result.test.ts:44:22)
+
+  ● result › when path contains an empty key › should return the default value if specified
+
+    TypeError: result is not a function
+
+      54 |       const path = 'a[0].b.';
+      55 |       const defaultValue = 'default';
+    > 56 |       const result = result(object, path, defaultValue);
+         |                      ^
+      57 |
+      58 |       expect(result).toBe(defaultValue);
+      59 |     });
+
+      at Object.result (projects/lodash/result.test.ts:56:22)
+
+  ● result › when path contains an empty key › should return undefined if default value is not specified
+
+    TypeError: result is not a function
+
+      63 |
+      64 |       const path = 'a[0].b.';
+    > 65 |       const result = result(object, path);
+         |                      ^
+      66 |
+      67 |       expect(result).toBeUndefined();
+      68 |     });
+
+      at Object.result (projects/lodash/result.test.ts:65:22)
+
+  ● result › when path contains a class name › should return the resolved value
+
+    TypeError: result is not a function
+
+      74 |
+      75 |       const path = 'a[0].className';
+    > 76 |       const result = result(object, path);
+         |                      ^
+      77 |
+      78 |       expect(result).toBe('some-class');
+      79 |     });
+
+      at Object.result (projects/lodash/result.test.ts:76:22)
+
+Test Suites: 1 failed, 1 total
+Tests:       6 failed, 1 passed, 7 total
+Snapshots:   0 total
+Time:        0.689 s
+Ran all test suites matching /projects\/lodash\/result.test.ts/i.

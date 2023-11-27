@@ -1,0 +1,11 @@
+PASS projects/lodash/.internal/assocIndexOf.test.ts
+  assocIndexOf
+    ✓ should return the index of the matched value (3 ms)
+    ✓ should return -1 if the key is not found in the array
+    ✓ should use strict equality comparison with eq function (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.476 s, estimated 1 s
+Ran all test suites matching /projects\/lodash\/.internal\/assocIndexOf.test.ts/i.

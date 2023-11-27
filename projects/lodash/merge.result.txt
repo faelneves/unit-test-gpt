@@ -1,0 +1,12 @@
+PASS projects/lodash/merge.test.ts
+  merge
+    ✓ should merge two objects correctly (4 ms)
+    ✓ should merge three objects correctly (2 ms)
+    ✓ should skip undefined properties
+    ✓ should merge arrays recursively
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.563 s
+Ran all test suites matching /projects\/lodash\/merge.test.ts/i.

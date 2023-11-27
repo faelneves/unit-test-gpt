@@ -1,0 +1,12 @@
+PASS projects/lodash/.internal/baseProperty.test.ts
+  baseProperty
+    ✓ should return a function (2 ms)
+    ✓ should return the value of the property when the object is not null or undefined (1 ms)
+    ✓ should return undefined when the object is null
+    ✓ should return undefined when the object is undefined (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.504 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseProperty.test.ts/i.

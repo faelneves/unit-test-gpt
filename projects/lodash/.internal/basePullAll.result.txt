@@ -1,0 +1,60 @@
+FAIL projects/lodash/.internal/basePullAll.test.ts
+  basePullAll
+    ✓ should remove values from array (3 ms)
+    ✕ should remove values from array based on iteratee (3 ms)
+    ✓ should remove values from array using a comparator function
+    ✕ should remove values from array using a custom comparator function (1 ms)
+
+  ● basePullAll › should remove values from array based on iteratee
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 2
+
+      Array [
+    +   "apple",
+    +   "banana",
+        "peach",
+        "orange",
+      ]
+
+      20 |     const result = basePullAll(array, values, iteratee);
+      21 |
+    > 22 |     expect(result).toEqual(['peach', 'orange']);
+         |                    ^
+      23 |   });
+      24 |
+      25 |   it('should remove values from array using a comparator function', () => {
+
+      at Object.toEqual (projects/lodash/.internal/basePullAll.test.ts:22:20)
+
+  ● basePullAll › should remove values from array using a custom comparator function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 2
+
+      Array [
+    +   "apple",
+        "banana",
+        "peach",
+    +   "orange",
+      ]
+
+      39 |     const result = basePullAll(array, values, undefined, comparator);
+      40 |
+    > 41 |     expect(result).toEqual(['banana', 'peach']);
+         |                    ^
+      42 |   });
+      43 | });
+      44 |
+
+      at Object.toEqual (projects/lodash/.internal/basePullAll.test.ts:41:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 passed, 4 total
+Snapshots:   0 total
+Time:        0.571 s
+Ran all test suites matching /projects\/lodash\/.internal\/basePullAll.test.ts/i.

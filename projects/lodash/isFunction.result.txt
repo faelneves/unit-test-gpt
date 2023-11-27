@@ -1,0 +1,18 @@
+PASS projects/lodash/isFunction.test.ts
+  isFunction
+    ✓ should return true for a regular function (3 ms)
+    ✓ should return true for an async function (2 ms)
+    ✓ should return true for a generator function (1 ms)
+    ✓ should return true for a class (1 ms)
+    ✓ should return true for built-in functions (1 ms)
+    ✓ should return false for a regular expression (1 ms)
+    ✓ should return false for a number
+    ✓ should return false for a string
+    ✓ should return false for an object
+    ✓ should return false for null (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        2.441 s
+Ran all test suites matching /projects\/lodash\/isFunction.test.ts/i.

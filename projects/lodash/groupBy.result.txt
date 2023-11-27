@@ -1,0 +1,11 @@
+PASS projects/lodash/groupBy.test.ts
+  groupBy
+    ✓ should group elements correctly when using Math.floor as iteratee (3 ms)
+    ✓ should group elements correctly when using a custom iteratee (1 ms)
+    ✓ should group elements correctly when using an iteratee that returns boolean values
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        1.006 s
+Ran all test suites matching /projects\/lodash\/groupBy.test.ts/i.

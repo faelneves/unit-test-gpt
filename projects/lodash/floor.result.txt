@@ -1,0 +1,45 @@
+FAIL projects/lodash/floor.test.ts
+  floor
+    ✓ should return the number rounded down to 0 decimal places (3 ms)
+    ✕ should return the number rounded down to the specified decimal places (15 ms)
+    ✕ should return the number rounded down to the specified negative decimal places (power of 10) (1 ms)
+
+  ● floor › should return the number rounded down to the specified decimal places
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: -7.8912
+    Received: -7.8913
+
+      12 |     expect(floor(0.046, 2)).toBe(0.04);
+      13 |     expect(floor(3.14159, 3)).toBe(3.141);
+    > 14 |     expect(floor(-7.8912345, 4)).toBe(-7.8912);
+         |                                  ^
+      15 |   });
+      16 |
+      17 |   it('should return the number rounded down to the specified negative decimal places (power of 10)', () => {
+
+      at Object.toBe (projects/lodash/floor.test.ts:14:34)
+
+  ● floor › should return the number rounded down to the specified negative decimal places (power of 10)
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 100000000
+    Received: 123000000
+
+      17 |   it('should return the number rounded down to the specified negative decimal places (power of 10)', () => {
+      18 |     expect(floor(4060, -2)).toBe(4000);
+    > 19 |     expect(floor(123456789, -6)).toBe(100000000);
+         |                                  ^
+      20 |     expect(floor(987654321, -9)).toBe(900000000);
+      21 |   });
+      22 | });
+
+      at Object.toBe (projects/lodash/floor.test.ts:19:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        1.374 s
+Ran all test suites matching /projects\/lodash\/floor.test.ts/i.

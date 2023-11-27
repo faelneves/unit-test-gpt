@@ -1,0 +1,14 @@
+PASS projects/lodash/reduceRight.test.ts
+  reduceRight
+    with array
+      ✓ should reduce the array from right to left (3 ms)
+      ✓ should reduce the array from right to left with initial value (1 ms)
+    with object
+      ✓ should reduce the object from right to left (2 ms)
+      ✓ should reduce the object from right to left with initial value (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.707 s
+Ran all test suites matching /projects\/lodash\/reduceRight.test.ts/i.

@@ -1,0 +1,10 @@
+PASS projects/lodash/upperFirst.test.ts
+  upperFirst
+    ✓ should convert the first character of a string to uppercase (3 ms)
+    ✓ should return an empty string if input is empty
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.545 s
+Ran all test suites matching /projects\/lodash\/upperFirst.test.ts/i.

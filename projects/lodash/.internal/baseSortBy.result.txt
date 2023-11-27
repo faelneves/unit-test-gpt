@@ -1,0 +1,41 @@
+FAIL projects/lodash/.internal/baseSortBy.test.ts
+  baseSortBy
+    ✕ should sort the array based on the comparer (7 ms)
+
+  ● baseSortBy › should sort the array based on the comparer
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 9
+    + Received  + 3
+
+      Array [
+    -   Object {
+    -     "value": 1,
+    -   },
+    -   Object {
+    -     "value": 2,
+    -   },
+    -   Object {
+    -     "value": 3,
+    -   },
+    +   1,
+    +   2,
+    +   3,
+      ]
+
+       8 |     const result = baseSortBy(array, comparer)
+       9 |
+    > 10 |     expect(result).toEqual([{ value: 1 }, { value: 2 }, { value: 3 }])
+         |                    ^
+      11 |   })
+      12 | })
+      13 |
+
+      at Object.toEqual (projects/lodash/.internal/baseSortBy.test.ts:10:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.504 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseSortBy.test.ts/i.

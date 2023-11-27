@@ -1,0 +1,11 @@
+PASS projects/lodash/unzip.test.ts
+  unzip
+    ✓ should return an empty array if input is an empty array (2 ms)
+    ✓ should correctly unzip an array of grouped elements
+    ✓ should correctly unzip an array of grouped elements of different lengths (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.968 s
+Ran all test suites matching /projects\/lodash\/unzip.test.ts/i.

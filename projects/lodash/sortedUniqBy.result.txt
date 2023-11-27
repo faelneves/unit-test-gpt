@@ -1,0 +1,118 @@
+FAIL projects/lodash/sortedUniqBy.test.ts
+  sortedUniqBy
+    ✓ should return an empty array when the input array is empty (3 ms)
+    ✓ should return an array with unique elements based on the iteratee function (1 ms)
+    ✓ should return the same array if there are no duplicate elements
+    ✕ should return an array with unique elements of different types based on the iteratee function (3 ms)
+    ✕ should return an array with unique elements when the iteratee function returns NaN (1 ms)
+    ✕ should return an array with unique elements when the iteratee function returns Infinity
+    ✕ should return an array with unique elements when the iteratee function returns -Infinity
+    ✓ should return an array with unique elements when the iteratee function returns 0
+
+  ● sortedUniqBy › should return an array with unique elements of different types based on the iteratee function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 0
+
+      Array [
+        1,
+    -   "1",
+        2,
+    -   "2",
+        3,
+    -   "3",
+      ]
+
+      20 |     const array = [1, '1', 2, '2', 3, '3'];
+      21 |     const iteratee = (n) => typeof n === 'number' ? n : parseInt(n);
+    > 22 |     expect(sortedUniqBy(array, iteratee)).toEqual([1, '1', 2, '2', 3, '3']);
+         |                                           ^
+      23 |   });
+      24 |
+      25 |   it('should return an array with unique elements when the iteratee function returns NaN', () => {
+
+      at Object.toEqual (projects/lodash/sortedUniqBy.test.ts:22:43)
+
+  ● sortedUniqBy › should return an array with unique elements when the iteratee function returns NaN
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 4
+
+      Array [
+        NaN,
+        1,
+    +   NaN,
+    +   2,
+    +   NaN,
+    +   3,
+      ]
+
+      26 |     const array = [NaN, 1, NaN, 2, NaN, 3];
+      27 |     const iteratee = (n) => Math.sqrt(n);
+    > 28 |     expect(sortedUniqBy(array, iteratee)).toEqual([NaN, 1]);
+         |                                           ^
+      29 |   });
+      30 |
+      31 |   it('should return an array with unique elements when the iteratee function returns Infinity', () => {
+
+      at Object.toEqual (projects/lodash/sortedUniqBy.test.ts:28:43)
+
+  ● sortedUniqBy › should return an array with unique elements when the iteratee function returns Infinity
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 4
+
+      Array [
+        1,
+    +   2,
+    +   3,
+    +   4,
+    +   5,
+      ]
+
+      32 |     const array = [1, 2, 3, 4, 5];
+      33 |     const iteratee = (n) => 1 / n;
+    > 34 |     expect(sortedUniqBy(array, iteratee)).toEqual([1]);
+         |                                           ^
+      35 |   });
+      36 |
+      37 |   it('should return an array with unique elements when the iteratee function returns -Infinity', () => {
+
+      at Object.toEqual (projects/lodash/sortedUniqBy.test.ts:34:43)
+
+  ● sortedUniqBy › should return an array with unique elements when the iteratee function returns -Infinity
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 4
+
+      Array [
+        1,
+    +   2,
+    +   3,
+    +   4,
+    +   5,
+      ]
+
+      38 |     const array = [1, 2, 3, 4, 5];
+      39 |     const iteratee = (n) => -1 / n;
+    > 40 |     expect(sortedUniqBy(array, iteratee)).toEqual([1]);
+         |                                           ^
+      41 |   });
+      42 |
+      43 |   it('should return an array with unique elements when the iteratee function returns 0', () => {
+
+      at Object.toEqual (projects/lodash/sortedUniqBy.test.ts:40:43)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 4 passed, 8 total
+Snapshots:   0 total
+Time:        0.558 s
+Ran all test suites matching /projects\/lodash\/sortedUniqBy.test.ts/i.

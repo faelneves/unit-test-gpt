@@ -1,0 +1,13 @@
+PASS projects/lodash/uniqWith.test.ts
+  uniqWith
+    ✓ should return an array with duplicate elements removed based on a custom comparator function (3 ms)
+    ✓ should return an empty array when input array is undefined (1 ms)
+    ✓ should return an empty array when input array is empty
+    ✓ should return a new array with the same elements when no duplicates are found
+    ✓ should return a new array with a single element when input array contains only one element (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        1.968 s
+Ran all test suites matching /projects\/lodash\/uniqWith.test.ts/i.

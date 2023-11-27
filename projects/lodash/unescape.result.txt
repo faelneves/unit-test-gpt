@@ -1,0 +1,10 @@
+PASS projects/lodash/unescape.test.ts
+  unescape
+    ✓ should unescape HTML entities in string (2 ms)
+    ✓ should return an empty string for falsy values (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.928 s
+Ran all test suites matching /projects\/lodash\/unescape.test.ts/i.

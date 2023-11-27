@@ -1,0 +1,82 @@
+FAIL projects/lodash/truncate.test.ts
+  truncate
+    ✕ should truncate string if it is longer than the given maximum length (3 ms)
+    ✓ should not truncate string if it is shorter than the given maximum length
+    ✓ should add an omission string to indicate text is omitted (1 ms)
+    ✕ should truncate string at the separator pattern (1 ms)
+    ✕ should truncate string at the separator pattern with regular expression (10 ms)
+    ✕ should support custom omission string (1 ms)
+
+  ● truncate › should truncate string if it is longer than the given maximum length
+
+    expect(received).toMatch(expected)
+
+    Expected substring: "This is a very lon..."
+    Received string:    "This is a very lo..."
+
+       6 |     const truncatedString = truncate(longString, { length: 20 });
+       7 |     expect(truncatedString.length).toBe(20);
+    >  8 |     expect(truncatedString).toMatch('This is a very lon...');
+         |                             ^
+       9 |   });
+      10 |
+      11 |   it('should not truncate string if it is shorter than the given maximum length', () => {
+
+      at Object.toMatch (projects/lodash/truncate.test.ts:8:29)
+
+  ● truncate › should truncate string at the separator pattern
+
+    expect(received).toMatch(expected)
+
+    Expected substring: "One, Two, Three, Four..."
+    Received string:    "One, Two, Three, Four, Five..."
+
+      24 |     const string = 'One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten';
+      25 |     const truncatedString = truncate(string, { length: 30, separator: ',' });
+    > 26 |     expect(truncatedString).toMatch('One, Two, Three, Four...');
+         |                             ^
+      27 |   });
+      28 |
+      29 |   it('should truncate string at the separator pattern with regular expression', () => {
+
+      at Object.toMatch (projects/lodash/truncate.test.ts:26:29)
+
+  ● truncate › should truncate string at the separator pattern with regular expression
+
+    expect(received).toMatch(expected)
+
+    Expected substring: "One, Two, Three, Four..."
+    Received string:    "One, Two, Three, Four, Five..."
+
+      30 |     const string = 'One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten';
+      31 |     const truncatedString = truncate(string, { length: 30, separator: /,\s?/ });
+    > 32 |     expect(truncatedString).toMatch('One, Two, Three, Four...');
+         |                             ^
+      33 |   });
+      34 |
+      35 |   it('should support custom omission string', () => {
+
+      at Object.toMatch (projects/lodash/truncate.test.ts:32:29)
+
+  ● truncate › should support custom omission string
+
+    expect(received).toMatch(expected)
+
+    Expected substring: "This is a very lon..."
+    Received string:    "This is a very lo..."
+
+      36 |     const longString = 'This is a very long string that needs to be truncated';
+      37 |     const truncatedString = truncate(longString, { length: 20, omission: '...' });
+    > 38 |     expect(truncatedString).toMatch('This is a very lon...');
+         |                             ^
+      39 |   });
+      40 | });
+      41 |
+
+      at Object.toMatch (projects/lodash/truncate.test.ts:38:29)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 2 passed, 6 total
+Snapshots:   0 total
+Time:        0.724 s
+Ran all test suites matching /projects\/lodash\/truncate.test.ts/i.

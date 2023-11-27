@@ -1,0 +1,30 @@
+FAIL projects/lodash/.internal/isIndex.test.ts
+  isIndex
+    ✓ should return true for valid array-like index (1 ms)
+    ✓ should return false for invalid array-like index (1 ms)
+    ✕ should use MAX_SAFE_INTEGER as upper bounds by default (2 ms)
+    ✓ should treat negative numbers as invalid index (1 ms)
+    ✓ should treat non-integer numbers as invalid index (1 ms)
+
+  ● isIndex › should use MAX_SAFE_INTEGER as upper bounds by default
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      22 |   it('should use MAX_SAFE_INTEGER as upper bounds by default', () => {
+      23 |     expect(isIndex(0)).toBe(true);
+    > 24 |     expect(isIndex(Number.MAX_SAFE_INTEGER)).toBe(true);
+         |                                              ^
+      25 |     expect(isIndex(Number.MAX_SAFE_INTEGER + 1)).toBe(false);
+      26 |   });
+      27 |
+
+      at Object.toBe (projects/lodash/.internal/isIndex.test.ts:24:46)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.514 s
+Ran all test suites matching /projects\/lodash\/.internal\/isIndex.test.ts/i.

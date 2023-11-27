@@ -1,0 +1,12 @@
+PASS projects/lodash/sortedIndexBy.test.ts
+  sortedIndexBy
+    ✓ should return the correct index when value is greater than all elements in the array (17 ms)
+    ✓ should return the correct index when value is smaller than all elements in the array
+    ✓ should return the correct index when value is between two elements in the array (1 ms)
+    ✓ should return the correct index when value is equal to an element in the array
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        3.88 s
+Ran all test suites matching /projects\/lodash\/sortedIndexBy.test.ts/i.

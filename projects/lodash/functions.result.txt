@@ -1,0 +1,12 @@
+PASS projects/lodash/functions.test.ts
+  functions
+    ✓ should return an empty array if object is null (7 ms)
+    ✓ should return an empty array if object has no function properties
+    ✓ should return an array of function property names (8 ms)
+    ✓ should not include function properties inherited from the prototype chain (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        1.573 s
+Ran all test suites matching /projects\/lodash\/functions.test.ts/i.

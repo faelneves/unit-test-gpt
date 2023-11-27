@@ -1,0 +1,86 @@
+FAIL projects/lodash/pick.test.ts
+  pick
+    ✓ should return an empty object if the source object is null (2 ms)
+    ✓ should return an empty object if the source object is undefined (1 ms)
+    ✕ should return a new object with the picked properties from the source object (3 ms)
+    ✓ should return an empty object if no paths are provided (1 ms)
+    ✕ should handle nested paths (1 ms)
+    ✕ should ignore non-existing paths (1 ms)
+
+  ● pick › should return a new object with the picked properties from the source object
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 4
+    + Received  + 1
+
+    - Object {
+    -   "a": 1,
+    -   "c": 3,
+    - }
+    + Object {}
+
+      12 |   it('should return a new object with the picked properties from the source object', () => {
+      13 |     const object = { 'a': 1, 'b': 2, 'c': 3 };
+    > 14 |     expect(pick(object, ['a', 'c'])).toEqual({ 'a': 1, 'c': 3 });
+         |                                      ^
+      15 |   });
+      16 |   
+      17 |   it('should return an empty object if no paths are provided', () => {
+
+      at Object.toEqual (projects/lodash/pick.test.ts:14:38)
+
+  ● pick › should handle nested paths
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 8
+    + Received  + 1
+
+    - Object {
+    -   "a": Object {
+    -     "b": 1,
+    -   },
+    -   "d": Object {
+    -     "f": 4,
+    -   },
+    - }
+    + Object {}
+
+      22 |   it('should handle nested paths', () => {
+      23 |     const object = { 'a': { 'b': 1, 'c': 2 }, 'd': { 'e': 3, 'f': 4 } };
+    > 24 |     expect(pick(object, ['a.b', 'd.f'])).toEqual({ 'a': { 'b': 1 }, 'd': { 'f': 4 } });
+         |                                          ^
+      25 |   });
+      26 |   
+      27 |   it('should ignore non-existing paths', () => {
+
+      at Object.toEqual (projects/lodash/pick.test.ts:24:42)
+
+  ● pick › should ignore non-existing paths
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Object {
+    -   "a": 1,
+    - }
+    + Object {}
+
+      27 |   it('should ignore non-existing paths', () => {
+      28 |     const object = { 'a': 1, 'b': 2, 'c': 3 };
+    > 29 |     expect(pick(object, ['a', 'd', 'e'])).toEqual({ 'a': 1 });
+         |                                           ^
+      30 |   });
+      31 | });
+      32 |
+
+      at Object.toEqual (projects/lodash/pick.test.ts:29:43)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 passed, 6 total
+Snapshots:   0 total
+Time:        0.572 s
+Ran all test suites matching /projects\/lodash\/pick.test.ts/i.

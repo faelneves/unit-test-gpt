@@ -1,0 +1,10 @@
+PASS projects/lodash/.internal/getHolder.test.ts
+  getHolder
+    ✓ should return the placeholder value of the function (2 ms)
+    ✓ should return undefined if the function does not have a placeholder value
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.564 s
+Ran all test suites matching /projects\/lodash\/.internal\/getHolder.test.ts/i.

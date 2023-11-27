@@ -1,0 +1,30 @@
+FAIL projects/lodash/.internal/baseConformsTo.test.ts
+  baseConformsTo
+    ✓ should return true if `object` conforms to `source` (4 ms)
+    ✓ should return false if `object` does not conform to `source`
+    ✓ should return true if `object` is null or undefined and `props` is empty array
+    ✕ should return true if `object` is null or undefined and `props` is non-empty array (3 ms)
+    ✓ should return false if `object` is null or undefined and `props` contains non-empty array (1 ms)
+
+  ● baseConformsTo › should return true if `object` is null or undefined and `props` is non-empty array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      31 |     const props = ['a'];
+      32 |
+    > 33 |     expect(baseConformsTo(object, source, props)).toBe(true);
+         |                                                   ^
+      34 |   });
+      35 |
+      36 |   it('should return false if `object` is null or undefined and `props` contains non-empty array', () => {
+
+      at Object.toBe (projects/lodash/.internal/baseConformsTo.test.ts:33:51)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.543 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseConformsTo.test.ts/i.

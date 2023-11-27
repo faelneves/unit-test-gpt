@@ -1,0 +1,11 @@
+PASS projects/lodash/isWeakSet.test.ts
+  isWeakSet
+    ✓ should return true for a WeakSet object (3 ms)
+    ✓ should return false for a Set object
+    ✓ should return false for other types of values (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        1.898 s
+Ran all test suites matching /projects\/lodash\/isWeakSet.test.ts/i.

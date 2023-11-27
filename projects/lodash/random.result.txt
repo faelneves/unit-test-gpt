@@ -1,0 +1,34 @@
+FAIL projects/lodash/random.test.ts
+  random
+    ✓ should return a random number between the lower and upper bounds (3 ms)
+    ✓ should return a random number between 0 and the given number if only one argument is provided
+    ✓ should return a floating-point number between the lower and upper bounds if `floating` is true (1 ms)
+    ✓ should return a floating-point number between 0 and the given number if `floating` is true and only one argument is provided
+    ✕ should return a random number between 0 and 1 if no arguments are provided (3 ms)
+    ✓ should handle negative bounds correctly
+    ✓ should handle negative and positive bounds correctly (1 ms)
+    ✓ should handle the case when upper and lower bounds are equal
+    ✓ should handle the case when upper and lower bounds are floats and equal (1 ms)
+
+  ● random › should return a random number between 0 and 1 if no arguments are provided
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      40 |     expect(result).toBeGreaterThanOrEqual(0);
+      41 |     expect(result).toBeLessThanOrEqual(1);
+    > 42 |     expect(Number.isInteger(result)).toBe(false);
+         |                                      ^
+      43 |   });
+      44 |
+      45 |   it('should handle negative bounds correctly', () => {
+
+      at Object.toBe (projects/lodash/random.test.ts:42:38)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 passed, 9 total
+Snapshots:   0 total
+Time:        0.664 s
+Ran all test suites matching /projects\/lodash\/random.test.ts/i.

@@ -1,0 +1,11 @@
+PASS projects/lodash/eq.test.ts
+  eq
+    ✓ should return true when values are the same (2 ms)
+    ✓ should return false when values are not the same (1 ms)
+    ✓ should return false when comparing different data types (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.816 s
+Ran all test suites matching /projects\/lodash\/eq.test.ts/i.

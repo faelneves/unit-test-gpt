@@ -1,0 +1,13 @@
+PASS projects/lodash/intersectionWith.test.ts
+  intersectionWith
+    ✓ should return an empty array if no arrays are provided (2 ms)
+    ✓ should return an empty array if any of the arrays are empty (1 ms)
+    ✓ should return an empty array if there are no intersecting values (1 ms)
+    ✓ should return the intersecting values based on the first array (8 ms)
+    ✓ should handle arrays of different lengths (9 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.581 s
+Ran all test suites matching /projects\/lodash\/intersectionWith.test.ts/i.

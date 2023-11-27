@@ -1,0 +1,11 @@
+PASS projects/lodash/countBy.test.ts
+  countBy
+    ✓ should return an object with keys generated from the results of running iteratee on each element of the collection (3 ms)
+    ✓ should return an object with the count of keys returned by iteratee
+    ✓ should return an empty object if the collection is empty (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.723 s
+Ran all test suites matching /projects\/lodash\/countBy.test.ts/i.

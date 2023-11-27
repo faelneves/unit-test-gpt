@@ -1,0 +1,30 @@
+FAIL projects/lodash/clone.test.ts
+  clone
+    ✓ should create a shallow clone of an object (3 ms)
+    ✓ should create a shallow clone of an array
+    ✓ should create a shallow clone of a map (1 ms)
+    ✓ should create a shallow clone of a set (1 ms)
+    ✕ should return an empty object for uncloneable values
+
+  ● clone › should return an empty object for uncloneable values
+
+    The error below may be caused by using the wrong test environment, see https://jestjs.io/docs/configuration#testenvironment-string.
+    Consider using the "jsdom" test environment.
+
+    ReferenceError: document is not defined
+
+      46 |     const func = () => {};
+      47 |     const error = new Error('error');
+    > 48 |     const domNode = document.createElement('div');
+         |                     ^
+      49 |     const weakMap = new WeakMap();
+      50 |
+      51 |     const clonedFunc = clone(func);
+
+      at Object.document (projects/lodash/clone.test.ts:48:21)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.626 s
+Ran all test suites matching /projects\/lodash\/clone.test.ts/i.

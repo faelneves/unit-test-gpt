@@ -1,0 +1,14 @@
+PASS projects/lodash/debounce.test.ts
+  debounce
+    ✓ should debounce the function (4 ms)
+    ✓ should debounce the function with leading option (1 ms)
+    ✓ should debounce the function with trailing option
+    ✓ should cancel the debounced function (1 ms)
+    ✓ should flush the debounced function (1 ms)
+    ✓ should check if the debounced function is pending
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.624 s
+Ran all test suites matching /projects\/lodash\/debounce.test.ts/i.

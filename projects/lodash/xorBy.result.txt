@@ -1,0 +1,59 @@
+FAIL projects/lodash/xorBy.test.ts (5.068 s)
+  xorBy
+    ✓ should return an array of filtered values (4 ms)
+    ✓ should handle empty arrays (1 ms)
+    ✕ should handle arrays with one element (42 ms)
+    ✓ should handle arrays with duplicate values (1 ms)
+    ✕ should handle arrays with different types of elements (2 ms)
+
+  ● xorBy › should handle arrays with one element
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   2.1,
+    - ]
+    + Array []
+
+      14 |   it('should handle arrays with one element', () => {
+      15 |     const result = xorBy([2.1], [2.3], Math.floor);
+    > 16 |     expect(result).toEqual([2.1]);
+         |                    ^
+      17 |   });
+      18 |
+      19 |   it('should handle arrays with duplicate values', () => {
+
+      at Object.toEqual (projects/lodash/xorBy.test.ts:16:20)
+
+  ● xorBy › should handle arrays with different types of elements
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 0
+
+      Array [
+        2.1,
+    -   "a",
+    -   "b",
+        3.4,
+      ]
+
+      24 |   it('should handle arrays with different types of elements', () => {
+      25 |     const result = xorBy([2.1, 'a'], ['b', 3.4], Math.floor);
+    > 26 |     expect(result).toEqual([2.1, 'a', 'b', 3.4]);
+         |                    ^
+      27 |   });
+      28 | });
+      29 |
+
+      at Object.toEqual (projects/lodash/xorBy.test.ts:26:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        5.303 s
+Ran all test suites matching /projects\/lodash\/xorBy.test.ts/i.

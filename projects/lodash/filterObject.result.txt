@@ -1,0 +1,12 @@
+PASS projects/lodash/filterObject.test.ts
+  filterObject
+    ✓ should return an empty array if the object is empty (4 ms)
+    ✓ should return an array of filtered elements based on the predicate (8 ms)
+    ✓ should return an array of filtered elements when the predicate returns truthy for all elements (1 ms)
+    ✓ should return an empty array when the predicate returns falsy for all elements
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        2.115 s
+Ran all test suites matching /projects\/lodash\/filterObject.test.ts/i.

@@ -1,0 +1,15 @@
+PASS projects/lodash/range.test.ts
+  range
+    ✓ should return an empty array when no arguments are provided (3 ms)
+    ✓ should return an array of numbers from 0 to (end - 1) when only end is provided
+    ✓ should return an array of numbers from start to (end - 1) when both start and end are provided (1 ms)
+    ✓ should return an array of numbers with the specified step when start, end, and step are provided
+    ✓ should return an array of numbers from 0 to (end - 1) when only a negative end is provided (1 ms)
+    ✓ should return an array of numbers from start to (end - 1) when both a negative start and end are provided (1 ms)
+    ✓ should return an array of numbers with the same value when step is 0
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        0.611 s
+Ran all test suites matching /projects\/lodash\/range.test.ts/i.

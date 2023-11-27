@@ -1,0 +1,58 @@
+FAIL projects/lodash/delay.test.ts
+  ● Test suite failed to run
+
+    SyntaxError: /home/rafael/Desktop/faculdade/TCC2/unit-test-gpt/projects/lodash/delay.ts: Unexpected token, expected "," (16:19)
+
+      14 |  * // => Logs 'later' after one second.
+      15 |  */
+    > 16 | function delay(func: Function, wait: number, ...args: any[]) {
+         |                    ^
+      17 |     if (typeof func !== 'function') {
+      18 |         throw new TypeError('Expected a function');
+      19 |     }
+
+    > 1 | import delay from './delay';
+        | ^
+      2 |
+      3 | describe('delay', () => {
+      4 |   it('should delay the invocation of the function', async () => {
+
+      at constructor (node_modules/@babel/parser/src/parse-error.ts:81:19)
+      at Parser.toParseError [as raise] (node_modules/@babel/parser/src/tokenizer/index.ts:1487:19)
+      at Parser.raise [as unexpected] (node_modules/@babel/parser/src/tokenizer/index.ts:1528:16)
+      at Parser.unexpected [as expect] (node_modules/@babel/parser/src/parser/util.ts:149:28)
+      at Parser.expect [as parseBindingList] (node_modules/@babel/parser/src/parser/lval.ts:402:14)
+      at Parser.parseBindingList [as parseFunctionParams] (node_modules/@babel/parser/src/parser/statement.ts:1666:24)
+      at Parser.parseFunctionParams [as parseFunction] (node_modules/@babel/parser/src/parser/statement.ts:1626:10)
+      at Parser.parseFunction [as parseFunctionStatement] (node_modules/@babel/parser/src/parser/statement.ts:1032:17)
+      at Parser.parseFunctionStatement [as parseStatementContent] (node_modules/@babel/parser/src/parser/statement.ts:460:21)
+      at Parser.parseStatementContent [as parseStatementLike] (node_modules/@babel/parser/src/parser/statement.ts:417:17)
+      at Parser.parseStatementLike [as parseModuleItem] (node_modules/@babel/parser/src/parser/statement.ts:354:17)
+      at Parser.parseModuleItem [as parseBlockOrModuleBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1394:16)
+      at Parser.parseBlockOrModuleBlockBody [as parseBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1368:10)
+      at Parser.parseBlockBody [as parseProgram] (node_modules/@babel/parser/src/parser/statement.ts:213:10)
+      at Parser.parseProgram [as parseTopLevel] (node_modules/@babel/parser/src/parser/statement.ts:195:25)
+      at Parser.parseTopLevel [as parse] (node_modules/@babel/parser/src/parser/index.ts:45:10)
+      at parse (node_modules/@babel/parser/src/index.ts:66:38)
+      at parser (node_modules/@babel/core/src/parser/index.ts:28:19)
+          at parser.next (<anonymous>)
+      at normalizeFile (node_modules/@babel/core/src/transformation/normalize-file.ts:50:24)
+          at normalizeFile.next (<anonymous>)
+      at run (node_modules/@babel/core/src/transformation/index.ts:39:36)
+          at run.next (<anonymous>)
+      at transform (node_modules/@babel/core/src/transform.ts:29:20)
+          at transform.next (<anonymous>)
+      at evaluateSync (node_modules/gensync/index.js:251:28)
+      at sync (node_modules/gensync/index.js:89:14)
+      at fn (node_modules/@babel/core/src/errors/rewrite-stack-trace.ts:99:14)
+      at transformSync (node_modules/@babel/core/src/transform.ts:66:52)
+      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/ScriptTransformer.js:545:31)
+      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/ScriptTransformer.js:674:40)
+      at ScriptTransformer.transform (node_modules/@jest/transform/build/ScriptTransformer.js:726:19)
+      at Object.require (projects/lodash/delay.test.ts:1:1)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        3.209 s
+Ran all test suites matching /projects\/lodash\/delay.test.ts/i.

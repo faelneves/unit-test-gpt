@@ -1,0 +1,71 @@
+FAIL projects/lodash/differenceWith.test.ts
+  differenceWith
+    ✓ should return new array excluding values based on the comparator function (2 ms)
+    ✓ should return an empty array if no valid array is provided
+    ✕ should return an empty array if no values are provided (4 ms)
+    ✕ should return an empty array if values are not found in the array based on the comparator function (2 ms)
+    ✓ should return the same array if values are an empty array (1 ms)
+
+  ● differenceWith › should return an empty array if no values are provided
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 10
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "x": 1,
+    +     "y": 2,
+    +   },
+    +   Object {
+    +     "x": 2,
+    +     "y": 1,
+    +   },
+    + ]
+
+      23 |     const result = differenceWith(objects);
+      24 |
+    > 25 |     expect(result).toEqual([]);
+         |                    ^
+      26 |   });
+      27 |
+      28 |   it('should return an empty array if values are not found in the array based on the comparator function', () => {
+
+      at Object.toEqual (projects/lodash/differenceWith.test.ts:25:20)
+
+  ● differenceWith › should return an empty array if values are not found in the array based on the comparator function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 10
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "x": 1,
+    +     "y": 2,
+    +   },
+    +   Object {
+    +     "x": 2,
+    +     "y": 1,
+    +   },
+    + ]
+
+      33 |     const result = differenceWith(objects, values, comparator);
+      34 |
+    > 35 |     expect(result).toEqual([]);
+         |                    ^
+      36 |   });
+      37 |
+      38 |   it('should return the same array if values are an empty array', () => {
+
+      at Object.toEqual (projects/lodash/differenceWith.test.ts:35:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        0.656 s
+Ran all test suites matching /projects\/lodash\/differenceWith.test.ts/i.

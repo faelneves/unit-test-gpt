@@ -1,0 +1,28 @@
+FAIL projects/lodash/escapeRegExp.test.ts
+  escapeRegExp
+    ✓ should escape special characters in a string (2 ms)
+    ✓ should return an empty string for falsy values
+    ✕ should not escape already escaped characters (3 ms)
+
+  ● escapeRegExp › should not escape already escaped characters
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "\\[lodash\\]\\(https://lodash\\.com/\\)"
+    Received: "\\\\\\[lodash\\\\\\]\\\\\\(https://lodash\\\\\\.com/\\\\\\)"
+
+      15 |
+      16 |   it('should not escape already escaped characters', () => {
+    > 17 |     expect(escapeRegExp('\\[lodash\\]\\(https://lodash\\.com/\\)')).toBe('\\[lodash\\]\\(https://lodash\\.com/\\)');
+         |                                                                     ^
+      18 |     expect(escapeRegExp('\\^\\$\\.\\*\\+\\?\\(\\)\\[\\]\\{\\}\\|')).toBe('\\^\\$\\.\\*\\+\\?\\(\\)\\[\\]\\{\\}\\|');
+      19 |   });
+      20 | });
+
+      at Object.toBe (projects/lodash/escapeRegExp.test.ts:17:69)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.527 s
+Ran all test suites matching /projects\/lodash\/escapeRegExp.test.ts/i.

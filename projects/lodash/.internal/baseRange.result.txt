@@ -1,0 +1,88 @@
+FAIL projects/lodash/.internal/baseRange.test.ts
+  baseRange
+    ✕ should return an array of numbers in ascending order (5 ms)
+    ✓ should return an empty array if end is less than start
+    ✕ should return an array of numbers in descending order if fromRight is true (2 ms)
+    ✕ should handle negative steps and return an array of numbers (1 ms)
+
+  ● baseRange › should return an array of numbers in ascending order
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        1,
+        2,
+        3,
+        4,
+    -   5,
+      ]
+
+      3 | describe('baseRange', () => {
+      4 |   it('should return an array of numbers in ascending order', () => {
+    > 5 |     expect(baseRange(1, 5, 1)).toEqual([1, 2, 3, 4, 5]);
+        |                                ^
+      6 |   });
+      7 |
+      8 |   it('should return an empty array if end is less than start', () => {
+
+      at Object.toEqual (projects/lodash/.internal/baseRange.test.ts:5:32)
+
+  ● baseRange › should return an array of numbers in descending order if fromRight is true
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 1
+
+    - Array [
+    -   5,
+    -   4,
+    -   3,
+    -   2,
+    -   1,
+    - ]
+    + Array []
+
+      11 |
+      12 |   it('should return an array of numbers in descending order if fromRight is true', () => {
+    > 13 |     expect(baseRange(5, 1, 1, true)).toEqual([5, 4, 3, 2, 1]);
+         |                                      ^
+      14 |   });
+      15 |
+      16 |   it('should handle negative steps and return an array of numbers', () => {
+
+      at Object.toEqual (projects/lodash/.internal/baseRange.test.ts:13:38)
+
+  ● baseRange › should handle negative steps and return an array of numbers
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        5,
+        4,
+        3,
+        2,
+    -   1,
+      ]
+
+      15 |
+      16 |   it('should handle negative steps and return an array of numbers', () => {
+    > 17 |     expect(baseRange(5, 1, -1)).toEqual([5, 4, 3, 2, 1]);
+         |                                 ^
+      18 |   });
+      19 | });
+      20 |
+
+      at Object.toEqual (projects/lodash/.internal/baseRange.test.ts:17:33)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 1 passed, 4 total
+Snapshots:   0 total
+Time:        0.895 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseRange.test.ts/i.

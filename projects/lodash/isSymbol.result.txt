@@ -1,0 +1,10 @@
+PASS projects/lodash/isSymbol.test.ts
+  isSymbol
+    ✓ should return true for a Symbol (21 ms)
+    ✓ should return false for a non-Symbol value (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.601 s
+Ran all test suites matching /projects\/lodash\/isSymbol.test.ts/i.

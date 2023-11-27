@@ -1,0 +1,10 @@
+PASS projects/lodash/inRange.test.ts
+  inRange
+    ✓ should return true if number is in the range (inclusive) (3 ms)
+    ✓ should return false if number is not in the range (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        1.674 s
+Ran all test suites matching /projects\/lodash\/inRange.test.ts/i.

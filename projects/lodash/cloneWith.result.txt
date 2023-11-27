@@ -1,0 +1,35 @@
+FAIL projects/lodash/cloneWith.test.ts
+  cloneWith
+    ✕ should return cloned value with customizer (5 ms)
+    ✓ should return cloned value without customizer (1 ms)
+    ✓ should handle cloning of symbols
+
+  ● cloneWith › should return cloned value with customizer
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "a": 20,
+    -   "b": 40,
+    +   "a": 10,
+    +   "b": 20,
+      }
+
+      12 |     const clonedObj = cloneWith(obj, customizer);
+      13 |
+    > 14 |     expect(clonedObj).toEqual({ a: 20, b: 40 });
+         |                       ^
+      15 |   });
+      16 |
+      17 |   it('should return cloned value without customizer', () => {
+
+      at Object.toEqual (projects/lodash/cloneWith.test.ts:14:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.58 s
+Ran all test suites matching /projects\/lodash\/cloneWith.test.ts/i.

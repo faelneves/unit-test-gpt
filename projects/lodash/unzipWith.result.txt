@@ -1,0 +1,90 @@
+FAIL projects/lodash/unzipWith.test.ts
+  unzipWith
+    ✓ should return an empty array if the input array is empty (2 ms)
+    ✕ should return the regrouped and combined elements (5 ms)
+    ✕ should correctly handle different types of the iteratee function (1 ms)
+    ✕ should handle empty groups within the input array (1 ms)
+
+  ● unzipWith › should return the regrouped and combined elements
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 3
+
+      Array [
+    -   3,
+    -   30,
+    -   300,
+    +   NaN,
+    +   NaN,
+    +   NaN,
+      ]
+
+      12 |     const input = [[1, 10, 100], [2, 20, 200]];
+      13 |     const result = unzipWith(input, add);
+    > 14 |     expect(result).toEqual([3, 30, 300]);
+         |                    ^
+      15 |   });
+      16 |
+      17 |   it('should correctly handle different types of the iteratee function', () => {
+
+      at Object.toEqual (projects/lodash/unzipWith.test.ts:14:20)
+
+  ● unzipWith › should correctly handle different types of the iteratee function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 3
+
+      Array [
+    -   200,
+    -   4000,
+    -   20000,
+    +   NaN,
+    +   NaN,
+    +   NaN,
+      ]
+
+      19 |     const input = [[1, 10, 100], [2, 20, 200]];
+      20 |     const result = unzipWith(input, multiply);
+    > 21 |     expect(result).toEqual([200, 4000, 20000]);
+         |                    ^
+      22 |   });
+      23 |
+      24 |   it('should handle empty groups within the input array', () => {
+
+      at Object.toEqual (projects/lodash/unzipWith.test.ts:21:20)
+
+  ● unzipWith › should handle empty groups within the input array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 3
+
+      Array [
+    -   "110100",
+    -   "",
+    -   "220200",
+    +   "1undefined2",
+    +   "10undefined20",
+    +   "100undefined200",
+      ]
+
+      26 |     const input = [[1, 10, 100], [], [2, 20, 200]];
+      27 |     const result = unzipWith(input, concat);
+    > 28 |     expect(result).toEqual(['110100', '', '220200']);
+         |                    ^
+      29 |   });
+      30 | });
+      31 |
+
+      at Object.toEqual (projects/lodash/unzipWith.test.ts:28:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 1 passed, 4 total
+Snapshots:   0 total
+Time:        4.244 s
+Ran all test suites matching /projects\/lodash\/unzipWith.test.ts/i.

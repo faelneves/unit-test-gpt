@@ -1,0 +1,14 @@
+PASS projects/lodash/subtract.test.ts
+  subtract
+    ✓ should subtract two numbers and return the difference (10 ms)
+    ✓ should subtract two negative numbers and return the negative difference
+    ✓ should subtract a positive and a negative number and return the sum
+    ✓ should subtract a negative and a positive number and return the negative sum (1 ms)
+    ✓ should subtract zero from a number and return the number (1 ms)
+    ✓ should subtract zero from zero and return zero
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.722 s
+Ran all test suites matching /projects\/lodash\/subtract.test.ts/i.

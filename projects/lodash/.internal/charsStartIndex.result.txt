@@ -1,0 +1,47 @@
+FAIL projects/lodash/.internal/charsStartIndex.test.ts
+  charsStartIndex
+    ✕ should return the index of the first unmatched string symbol (3 ms)
+    ✕ should return 0 if all string symbols are matched
+    ✓ should return 0 if string symbols array is empty (1 ms)
+    ✓ should return 0 if character symbols array is empty
+    ✓ should return 0 if both the string symbols and character symbols arrays are empty (1 ms)
+
+  ● charsStartIndex › should return the index of the first unmatched string symbol
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+       8 |     const result = charsStartIndex(strSymbols, chrSymbols)
+       9 |
+    > 10 |     expect(result).toBe(3)
+         |                    ^
+      11 |   })
+      12 |
+      13 |   it('should return 0 if all string symbols are matched', () => {
+
+      at Object.toBe (projects/lodash/.internal/charsStartIndex.test.ts:10:20)
+
+  ● charsStartIndex › should return 0 if all string symbols are matched
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 4
+
+      17 |     const result = charsStartIndex(strSymbols, chrSymbols)
+      18 |
+    > 19 |     expect(result).toBe(0)
+         |                    ^
+      20 |   })
+      21 |
+      22 |   it('should return 0 if string symbols array is empty', () => {
+
+      at Object.toBe (projects/lodash/.internal/charsStartIndex.test.ts:19:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        0.636 s
+Ran all test suites matching /projects\/lodash\/.internal\/charsStartIndex.test.ts/i.

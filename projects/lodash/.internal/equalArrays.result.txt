@@ -1,0 +1,27 @@
+FAIL projects/lodash/.internal/equalArrays.test.ts
+  equalArrays
+    ✕ should return true if the arrays are equivalent (3 ms)
+    ✓ should return false if the arrays are not equivalent
+    ✓ should return false if one array is shorter than the other (1 ms)
+
+  ● equalArrays › should return true if the arrays are equivalent
+
+    expect(received).toBeTruthy()
+
+    Received: undefined
+
+      14 |     const array1 = [1, 2, 3];
+      15 |     const array2 = [1, 2, 3];
+    > 16 |     expect(equalArrays(array1, array2, 0, null, null, new Map())).toBeTruthy();
+         |                                                                   ^
+      17 |   });
+      18 |
+      19 |   it('should return false if the arrays are not equivalent', () => {
+
+      at Object.toBeTruthy (projects/lodash/.internal/equalArrays.test.ts:16:67)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.552 s
+Ran all test suites matching /projects\/lodash\/.internal\/equalArrays.test.ts/i.

@@ -1,0 +1,14 @@
+PASS projects/lodash/slice.test.ts
+  slice
+    ✓ should return a slice of the array from start to end (2 ms)
+    ✓ should return an empty array if the input array is null or empty
+    ✓ should use 0 as the default start if not provided
+    ✓ should handle negative values for start (1 ms)
+    ✓ should handle negative values for end
+    ✓ should handle start greater than end (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.576 s
+Ran all test suites matching /projects\/lodash\/slice.test.ts/i.

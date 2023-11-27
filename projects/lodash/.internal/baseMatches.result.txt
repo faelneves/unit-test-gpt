@@ -1,0 +1,43 @@
+FAIL projects/lodash/.internal/baseMatches.test.ts
+  baseMatches
+    ✓ returns a function (2 ms)
+    ✓ returns true when given source and object are equal
+    ✓ returns false when given source and object are not equal
+    ✕ calls matchesStrictComparable when matchData length is 1 and has a strict comparison value (2 ms)
+    ✕ calls baseIsMatch when matchData length is not 1 or does not have a strict comparison value
+
+  ● baseMatches › calls matchesStrictComparable when matchData length is 1 and has a strict comparison value
+
+    Property `matchesStrictComparable` does not exist in the provided object
+
+      28 |     const source = { foo: 'bar' };
+      29 |     const matchData = [['foo', 'bar', true]];
+    > 30 |     jest.spyOn(matchesStrictComparable, 'matchesStrictComparable');
+         |          ^
+      31 |     matchesStrictComparable.matchesStrictComparable.mockReturnValueOnce(true);
+      32 |     const matcher = baseMatches(source);
+      33 |     expect(matcher({ foo: 'bar' })).toBe(true);
+
+      at ModuleMocker.spyOn (node_modules/jest-mock/build/index.js:731:13)
+      at Object.spyOn (projects/lodash/.internal/baseMatches.test.ts:30:10)
+
+  ● baseMatches › calls baseIsMatch when matchData length is not 1 or does not have a strict comparison value
+
+    Property `baseIsMatch` does not exist in the provided object
+
+      39 |     const source = { foo: 'bar' };
+      40 |     const matchData = [['foo', 'bar', false]];
+    > 41 |     jest.spyOn(baseIsMatch, 'baseIsMatch');
+         |          ^
+      42 |     baseIsMatch.baseIsMatch.mockReturnValueOnce(true);
+      43 |     const matcher = baseMatches(source);
+      44 |     expect(matcher({ foo: 'bar' })).toBe(true);
+
+      at ModuleMocker.spyOn (node_modules/jest-mock/build/index.js:731:13)
+      at Object.spyOn (projects/lodash/.internal/baseMatches.test.ts:41:10)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        0.646 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseMatches.test.ts/i.

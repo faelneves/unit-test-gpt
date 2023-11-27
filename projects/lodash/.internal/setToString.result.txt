@@ -1,0 +1,10 @@
+PASS projects/lodash/.internal/setToString.test.ts
+  setToString
+    ✓ should set the toString method of func to return string (2 ms)
+    ✓ should return the modified func (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.496 s
+Ran all test suites matching /projects\/lodash\/.internal\/setToString.test.ts/i.

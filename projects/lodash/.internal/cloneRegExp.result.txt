@@ -1,0 +1,11 @@
+PASS projects/lodash/.internal/cloneRegExp.test.ts
+  cloneRegExp
+    ✓ should create a clone of the regular expression (13 ms)
+    ✓ should handle regular expression flags properly (1 ms)
+    ✓ should preserve the constructor of the regular expression (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.493 s
+Ran all test suites matching /projects\/lodash\/.internal\/cloneRegExp.test.ts/i.

@@ -1,0 +1,48 @@
+FAIL projects/lodash/sum.test.ts
+  sum
+    ✓ should return the sum of the values in the array (2 ms)
+    ✓ should return 0 if the array is empty
+    ✓ should return 0 if the array is null
+    ✓ should return 0 if the array is undefined
+    ✕ should return 0 if the array is not an array (1 ms)
+    ✕ should ignore non-numeric values in the array (1 ms)
+
+  ● sum › should return 0 if the array is not an array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: "not an array"
+
+      19 |
+      20 |   it('should return 0 if the array is not an array', () => {
+    > 21 |     expect(sum('not an array')).toBe(0);
+         |                                 ^
+      22 |   });
+      23 |
+      24 |   it('should ignore non-numeric values in the array', () => {
+
+      at Object.toBe (projects/lodash/sum.test.ts:21:33)
+
+  ● sum › should ignore non-numeric values in the array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 12
+    Received: "428six"
+
+      23 |
+      24 |   it('should ignore non-numeric values in the array', () => {
+    > 25 |     expect(sum([4, '2', 8, 'six'])).toBe(12);
+         |                                     ^
+      26 |   });
+      27 | });
+      28 |
+
+      at Object.toBe (projects/lodash/sum.test.ts:25:37)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 4 passed, 6 total
+Snapshots:   0 total
+Time:        0.725 s
+Ran all test suites matching /projects\/lodash\/sum.test.ts/i.

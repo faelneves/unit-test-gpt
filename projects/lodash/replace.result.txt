@@ -1,0 +1,13 @@
+PASS projects/lodash/replace.test.ts
+  replace
+    ✓ should replace pattern with replacement (2 ms)
+    ✓ should replace multiple patterns with replacement (1 ms)
+    ✓ should replace no pattern with replacement
+    ✓ should replace pattern with function replacement (1 ms)
+    ✓ should replace pattern case-insensitive
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.663 s
+Ran all test suites matching /projects\/lodash\/replace.test.ts/i.

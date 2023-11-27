@@ -1,0 +1,20 @@
+PASS projects/lodash/.internal/baseMatchesProperty.test.ts
+  baseMatchesProperty
+    when the path is a valid key and the srcValue is strictly comparable
+      ✓ should return the result of matchesStrictComparable function (2 ms)
+    when the path is not a valid key or the srcValue is not strictly comparable
+      ✓ should return the result of baseIsEqual function (1 ms)
+    when objValue is undefined and objValue is not equal to srcValue
+      ✓ should return the result of hasIn function (1 ms)
+    when objValue is undefined and objValue is equal to srcValue
+      ✓ should return the result of hasIn function
+    when objValue is not undefined and objValue is equal to srcValue
+      ✓ should return the result of baseIsEqual function
+    when objValue is not undefined and objValue is not equal to srcValue
+      ✓ should return the result of baseIsEqual function
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.591 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseMatchesProperty.test.ts/i.

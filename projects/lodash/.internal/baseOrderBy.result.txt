@@ -1,0 +1,50 @@
+FAIL projects/lodash/.internal/baseOrderBy.test.ts
+  baseOrderBy
+    ✕ should return sorted array based on iteratees and orders (1 ms)
+    ✕ should return sorted array with single iteratee and order
+    ✓ should return sorted array with identity function if no iteratees provided (2 ms)
+    ✓ should return an empty array if the collection is empty
+
+  ● baseOrderBy › should return sorted array based on iteratees and orders
+
+    TypeError: iteratee is not a function
+
+      35 |
+      36 |   baseEach(collection, (value) => {
+    > 37 |     const criteria = iteratees.map((iteratee) => iteratee(value))
+         |                                                  ^
+      38 |
+      39 |     result[++eachIndex] = {
+      40 |       criteria,
+
+      at iteratee (projects/lodash/.internal/baseOrderBy.ts:37:50)
+          at Array.map (<anonymous>)
+      at map (projects/lodash/.internal/baseOrderBy.ts:37:32)
+      at iteratee (projects/lodash/.internal/baseEach.ts:24:9)
+      at baseOrderBy (projects/lodash/.internal/baseOrderBy.ts:36:11)
+      at Object.<anonymous> (projects/lodash/.internal/baseOrderBy.test.ts:9:31)
+
+  ● baseOrderBy › should return sorted array with single iteratee and order
+
+    TypeError: iteratee is not a function
+
+      35 |
+      36 |   baseEach(collection, (value) => {
+    > 37 |     const criteria = iteratees.map((iteratee) => iteratee(value))
+         |                                                  ^
+      38 |
+      39 |     result[++eachIndex] = {
+      40 |       criteria,
+
+      at iteratee (projects/lodash/.internal/baseOrderBy.ts:37:50)
+          at Array.map (<anonymous>)
+      at map (projects/lodash/.internal/baseOrderBy.ts:37:32)
+      at iteratee (projects/lodash/.internal/baseEach.ts:24:9)
+      at baseOrderBy (projects/lodash/.internal/baseOrderBy.ts:36:11)
+      at Object.<anonymous> (projects/lodash/.internal/baseOrderBy.test.ts:19:31)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 passed, 4 total
+Snapshots:   0 total
+Time:        0.656 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseOrderBy.test.ts/i.

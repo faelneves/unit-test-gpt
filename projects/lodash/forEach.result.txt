@@ -1,0 +1,13 @@
+PASS projects/lodash/forEach.test.ts
+  forEach
+    ✓ should iterate over an array and invoke iteratee for each element (3 ms)
+    ✓ should iterate over an object and invoke iteratee for each key-value pair
+    ✓ should iterate over an array-like object and invoke iteratee for each element
+    ✓ should iterate over an empty collection and not invoke iteratee
+    ✓ should iterate over a collection and stop early when iteratee returns false (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.531 s
+Ran all test suites matching /projects\/lodash\/forEach.test.ts/i.

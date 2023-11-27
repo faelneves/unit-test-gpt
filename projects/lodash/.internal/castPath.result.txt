@@ -1,0 +1,11 @@
+PASS projects/lodash/.internal/castPath.test.ts
+  castPath
+    ✓ should return the input array if value is already an array (3 ms)
+    ✓ should return an array with the input value if value is a valid key (1 ms)
+    ✓ should return an array with the path of the input string value (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.593 s
+Ran all test suites matching /projects\/lodash\/.internal\/castPath.test.ts/i.

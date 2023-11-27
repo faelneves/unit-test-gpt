@@ -1,0 +1,13 @@
+PASS projects/lodash/sortedLastIndexBy.test.ts
+  sortedLastIndexBy
+    ✓ should return the index where the value should be inserted into the sorted array (3 ms)
+    ✓ should return the index where the value should be inserted when array contains duplicated values (7 ms)
+    ✓ should return the index at which value can be inserted to maintain the sorted order when given an empty array (1 ms)
+    ✓ should return the index at which value can be inserted to maintain the sorted order when the array only contains one element (1 ms)
+    ✓ should return the index at which value can be inserted to maintain the sorted order when the array only contains two identical elements
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.545 s
+Ran all test suites matching /projects\/lodash\/sortedLastIndexBy.test.ts/i.

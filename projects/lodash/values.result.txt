@@ -1,0 +1,12 @@
+PASS projects/lodash/values.test.ts
+  values
+    ✓ should return an empty array if object is null or undefined (3 ms)
+    ✓ should return an array of values for an object
+    ✓ should return an array of values for a string
+    ✓ should return an array of values for an object with non-enumerable properties
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.74 s
+Ran all test suites matching /projects\/lodash\/values.test.ts/i.

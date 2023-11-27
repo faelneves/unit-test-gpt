@@ -1,0 +1,11 @@
+PASS projects/lodash/.internal/basePropertyOf.test.ts
+  basePropertyOf
+    ✓ should return a function (2 ms)
+    ✓ should return undefined if object is null
+    ✓ should return the property value if object is not null
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.564 s
+Ran all test suites matching /projects\/lodash\/.internal\/basePropertyOf.test.ts/i.

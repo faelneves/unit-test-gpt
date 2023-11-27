@@ -1,0 +1,12 @@
+PASS projects/lodash/findKey.test.ts
+  findKey
+    ✓ should return the key of the first element that satisfies the predicate (4 ms)
+    ✓ should return undefined if the object is null (1 ms)
+    ✓ should return undefined if no element satisfies the predicate (1 ms)
+    ✓ should iterate over properties in the original order (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        1.045 s
+Ran all test suites matching /projects\/lodash\/findKey.test.ts/i.

@@ -1,0 +1,38 @@
+FAIL projects/lodash/zipObject.test.ts
+  zipObject
+    ✓ should return an object with properties and values from two arrays (5 ms)
+    ✓ should return an empty object when both arrays are empty (1 ms)
+    ✓ should handle an empty array for properties
+    ✓ should handle an empty array for values (2 ms)
+    ✓ should ignore extra properties if the values array is shorter
+    ✕ should assign undefined if the properties array is shorter (3 ms)
+    ✓ should assign values to properties with the same name as reserved keywords (1 ms)
+
+  ● zipObject › should assign undefined if the properties array is shorter
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Object {
+        "a": 1,
+        "b": 2,
+    -   "undefined": 3,
+      }
+
+      35 |     const props = ['a', 'b'];
+      36 |     const values = [1, 2, 3];
+    > 37 |     expect(zipObject(props, values)).toEqual({ 'a': 1, 'b': 2, 'undefined': 3 });
+         |                                      ^
+      38 |   });
+      39 |
+      40 |   it('should assign values to properties with the same name as reserved keywords', () => {
+
+      at Object.toEqual (projects/lodash/zipObject.test.ts:37:38)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.693 s
+Ran all test suites matching /projects\/lodash\/zipObject.test.ts/i.

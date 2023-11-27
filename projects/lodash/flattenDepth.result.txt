@@ -1,0 +1,42 @@
+FAIL projects/lodash/flattenDepth.test.ts
+  flattenDepth
+    ✓ should flatten array by default depth (3 ms)
+    ✓ should flatten array to specified depth (1 ms)
+    ✓ should handle empty array
+    ✓ should handle null or undefined array (1 ms)
+    ✓ should handle empty sub-arrays
+    ✓ should handle depth greater than actual depth of the array
+    ✕ should handle negative depth (3 ms)
+
+  ● flattenDepth › should handle negative depth
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 2
+
+      Array [
+        1,
+    +   Array [
+          2,
+          Array [
+            3,
+    +     ],
+        ],
+      ]
+
+      42 |     const array = [1, [2, [3]]];
+      43 |     const result = flattenDepth(array, -1);
+    > 44 |     expect(result).toEqual([1, 2, [3]]);
+         |                    ^
+      45 |   });
+      46 |
+      47 | });
+
+      at Object.toEqual (projects/lodash/flattenDepth.test.ts:44:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.544 s
+Ran all test suites matching /projects\/lodash\/flattenDepth.test.ts/i.

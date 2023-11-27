@@ -1,0 +1,14 @@
+PASS projects/lodash/compact.test.ts
+  compact
+    ✓ should return an array without falsey values (3 ms)
+    ✓ should return an empty array if input is null (1 ms)
+    ✓ should return an empty array if input is undefined
+    ✓ should return an empty array if input has no falsey values
+    ✓ should return an empty array if input is an empty array
+    ✓ should return an empty array if input is an empty string
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        1.039 s
+Ran all test suites matching /projects\/lodash\/compact.test.ts/i.

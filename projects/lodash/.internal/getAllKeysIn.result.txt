@@ -1,0 +1,63 @@
+FAIL projects/lodash/.internal/getAllKeysIn.test.ts
+  getAllKeysIn
+    ✓ should return an array of own and inherited enumerable property names and symbols of an object (3 ms)
+    ✓ should return an empty array if the object is empty
+    ✓ should include inherited enumerable property names and symbols (1 ms)
+    ✕ should include inherited enumerable property names and symbols from multiple levels of inheritance (3 ms)
+    ✕ should include only enumerable property names and symbols from the object itself (1 ms)
+
+  ● getAllKeysIn › should include inherited enumerable property names and symbols from multiple levels of inheritance
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+      Array [
+        "a",
+    -   "b",
+    -   "d",
+        "e",
+    -   Any<Symbol>,
+    +   Symbol(f),
+      ]
+
+      48 |
+      49 |     const result = getAllKeysIn(child)
+    > 50 |     expect(result).toEqual(['a', 'b', 'd', 'e', expect.any(Symbol)])
+         |                    ^
+      51 |   })
+      52 |
+      53 |   it('should include only enumerable property names and symbols from the object itself', () => {
+
+      at Object.toEqual (projects/lodash/.internal/getAllKeysIn.test.ts:50:20)
+
+  ● getAllKeysIn › should include only enumerable property names and symbols from the object itself
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Array [
+    -   "c",
+    +   "a",
+        Any<Symbol>,
+        Any<Symbol>,
+      ]
+
+      70 |
+      71 |     const result = getAllKeysIn(obj)
+    > 72 |     expect(result).toEqual(['c', expect.any(Symbol), expect.any(Symbol)])
+         |                    ^
+      73 |   })
+      74 | })
+      75 |
+
+      at Object.toEqual (projects/lodash/.internal/getAllKeysIn.test.ts:72:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        0.556 s
+Ran all test suites matching /projects\/lodash\/.internal\/getAllKeysIn.test.ts/i.

@@ -1,0 +1,33 @@
+FAIL projects/lodash/.internal/parent.test.ts
+  parent
+    ✕ should return the parent value of a nested object (8 ms)
+    ✓ should return the object itself if path length is less than 2
+
+  ● parent › should return the parent value of a nested object
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 0
+
+      Object {
+    -   "bar": Object {
+        "baz": "value",
+    -   },
+      }
+
+      14 |     const result = parent(object, path)
+      15 |     
+    > 16 |     expect(result).toEqual({
+         |                    ^
+      17 |       bar: {
+      18 |         baz: 'value'
+      19 |       }
+
+      at Object.toEqual (projects/lodash/.internal/parent.test.ts:16:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.584 s
+Ran all test suites matching /projects\/lodash\/.internal\/parent.test.ts/i.

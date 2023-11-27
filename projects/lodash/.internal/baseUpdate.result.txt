@@ -1,0 +1,35 @@
+FAIL projects/lodash/.internal/baseUpdate.test.ts
+  baseUpdate
+    ✓ should update a property in the object (3 ms)
+    ✓ should update a property using a custom path (1 ms)
+    ✕ should use a customizer for path creation (7 ms)
+
+  ● baseUpdate › should use a customizer for path creation
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "foo": Object {
+    -     "bar": 1,
+    +     "bar": NaN,
+        },
+      }
+
+      32 |     const result = baseUpdate(object, path, updater, customizer)
+      33 |     
+    > 34 |     expect(result).toEqual({ foo: { bar: 1 } })
+         |                    ^
+      35 |   })
+      36 | })
+      37 |
+
+      at Object.toEqual (projects/lodash/.internal/baseUpdate.test.ts:34:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.582 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseUpdate.test.ts/i.

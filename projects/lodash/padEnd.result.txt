@@ -1,0 +1,29 @@
+FAIL projects/lodash/padEnd.test.ts
+  padEnd
+    ✓ should pad the string on the right side if it's shorter than length (28 ms)
+    ✓ should truncate padding characters if they exceed length (1 ms)
+    ✓ should return the string if it's longer than or equal to length (1 ms)
+    ✕ should return an empty string if the input string is empty (2 ms)
+
+  ● padEnd › should return an empty string if the input string is empty
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "123123"
+
+      18 |
+      19 |   it('should return an empty string if the input string is empty', () => {
+    > 20 |     expect(padEnd('', 6, '123')).toBe('');
+         |                                  ^
+      21 |     expect(padEnd('', 0)).toBe('');
+      22 |   });
+      23 | });
+
+      at Object.toBe (projects/lodash/padEnd.test.ts:20:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        2.257 s
+Ran all test suites matching /projects\/lodash\/padEnd.test.ts/i.

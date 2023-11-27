@@ -1,0 +1,11 @@
+PASS projects/lodash/.internal/unicodeSize.test.ts
+  unicodeSize
+    ✓ should return the correct size of a Unicode string (2 ms)
+    ✓ should handle empty strings
+    ✓ should handle strings with no Unicode characters (5 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.472 s
+Ran all test suites matching /projects\/lodash\/.internal\/unicodeSize.test.ts/i.

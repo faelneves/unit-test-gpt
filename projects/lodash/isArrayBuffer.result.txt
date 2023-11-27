@@ -1,0 +1,10 @@
+PASS projects/lodash/isArrayBuffer.test.ts
+  isArrayBuffer
+    ✓ should return true if value is an ArrayBuffer (3 ms)
+    ✓ should return false if value is not an ArrayBuffer (3 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        2.233 s
+Ran all test suites matching /projects\/lodash\/isArrayBuffer.test.ts/i.

@@ -1,0 +1,11 @@
+PASS projects/lodash/toInteger.test.ts
+  toInteger
+    ✓ should return an integer when the input is a number (2 ms)
+    ✓ should return an integer when the input is a string representation of a number (1 ms)
+    ✓ should return 0 when the input is Number.MIN_VALUE
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.758 s
+Ran all test suites matching /projects\/lodash\/toInteger.test.ts/i.

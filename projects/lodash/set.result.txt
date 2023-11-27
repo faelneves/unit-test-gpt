@@ -1,0 +1,65 @@
+FAIL projects/lodash/set.test.ts
+  set
+    ✓ should set the value at the specified path of the object (22 ms)
+    ✓ should handle null and undefined object
+    ✓ should create missing properties and arrays (1 ms)
+    ✕ should handle empty path (3 ms)
+    ✕ should handle numeric path (10 ms)
+    ✕ should handle path with brackets (1 ms)
+
+  ● set › should handle empty path
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 1
+    Received: {"": 1}
+
+      31 |
+      32 |     set(object, '', 1);
+    > 33 |     expect(object).toEqual(1);
+         |                    ^
+      34 |   });
+      35 |
+      36 |   it('should handle numeric path', () => {
+
+      at Object.toEqual (projects/lodash/set.test.ts:33:20)
+
+  ● set › should handle numeric path
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [1]
+    Received: {"0": 1}
+
+      38 |
+      39 |     set(object, '0', 1);
+    > 40 |     expect(object).toEqual([1]);
+         |                    ^
+      41 |   });
+      42 |
+      43 |   it('should handle path with brackets', () => {
+
+      at Object.toEqual (projects/lodash/set.test.ts:40:20)
+
+  ● set › should handle path with brackets
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [1]
+    Received: {"0": 1}
+
+      45 |
+      46 |     set(object, '[0]', 1);
+    > 47 |     expect(object).toEqual([1]);
+         |                    ^
+      48 |   });
+      49 | });
+      50 |
+
+      at Object.toEqual (projects/lodash/set.test.ts:47:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 passed, 6 total
+Snapshots:   0 total
+Time:        4.266 s
+Ran all test suites matching /projects\/lodash\/set.test.ts/i.

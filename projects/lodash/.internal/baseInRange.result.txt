@@ -1,0 +1,49 @@
+FAIL projects/lodash/.internal/baseInRange.test.ts
+  baseInRange
+    ✓ should return true if number is in the range (2 ms)
+    ✓ should return false if number is outside the range
+    ✕ should return true if number is equal to the start or end of the range (1 ms)
+    ✓ should return true if start and end are swapped and number is in the range
+    ✓ should return false if start and end are swapped and number is outside the range
+    ✕ should return true if number is NaN and start is less than end
+    ✓ should return false if number is NaN and start is greater than end
+
+  ● baseInRange › should return true if number is equal to the start or end of the range
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      13 |   it('should return true if number is equal to the start or end of the range', () => {
+      14 |     expect(baseInRange(0, 0, 10)).toBe(true)
+    > 15 |     expect(baseInRange(10, 0, 10)).toBe(true)
+         |                                    ^
+      16 |   })
+      17 |
+      18 |   it('should return true if start and end are swapped and number is in the range', () => {
+
+      at Object.toBe (projects/lodash/.internal/baseInRange.test.ts:15:36)
+
+  ● baseInRange › should return true if number is NaN and start is less than end
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      26 |
+      27 |   it('should return true if number is NaN and start is less than end', () => {
+    > 28 |     expect(baseInRange(NaN, 0, 10)).toBe(true)
+         |                                     ^
+      29 |   })
+      30 |
+      31 |   it('should return false if number is NaN and start is greater than end', () => {
+
+      at Object.toBe (projects/lodash/.internal/baseInRange.test.ts:28:37)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        0.519 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseInRange.test.ts/i.

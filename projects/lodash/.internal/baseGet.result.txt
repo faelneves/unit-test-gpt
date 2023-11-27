@@ -1,0 +1,12 @@
+PASS projects/lodash/.internal/baseGet.test.ts
+  baseGet
+    ✓ should return the resolved value when the path exists (3 ms)
+    ✓ should return undefined when the path does not exist (1 ms)
+    ✓ should return undefined when the object is null or undefined
+    ✓ should return undefined when the path is an empty array (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.561 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseGet.test.ts/i.

@@ -1,0 +1,47 @@
+FAIL projects/lodash/endsWith.test.ts
+  endsWith
+    ✓ should return true if string ends with target (3 ms)
+    ✓ should return false if string does not end with target
+    ✕ should return true if string ends with target within the specified position (4 ms)
+    ✕ should handle negative position correctly (1 ms)
+    ✓ should return true if string ends with empty target after the specified position (1 ms)
+
+  ● endsWith › should return true if string ends with target within the specified position
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      16 |     expect(endsWith('abc', 'b', 2)).toBe(true);
+      17 |     expect(endsWith('abc', 'c', 2)).toBe(false);
+    > 18 |     expect(endsWith('abc', 'a', 2)).toBe(true);
+         |                                     ^
+      19 |   });
+      20 |   
+      21 |   it('should handle negative position correctly', () => {
+
+      at Object.toBe (projects/lodash/endsWith.test.ts:18:37)
+
+  ● endsWith › should handle negative position correctly
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      21 |   it('should handle negative position correctly', () => {
+      22 |     expect(endsWith('abc', 'c', -1)).toBe(false);
+    > 23 |     expect(endsWith('abc', 'c', -3)).toBe(true);
+         |                                      ^
+      24 |     expect(endsWith('abc', 'c', -4)).toBe(true);
+      25 |   });
+      26 |   
+
+      at Object.toBe (projects/lodash/endsWith.test.ts:23:38)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        1.109 s
+Ran all test suites matching /projects\/lodash\/endsWith.test.ts/i.

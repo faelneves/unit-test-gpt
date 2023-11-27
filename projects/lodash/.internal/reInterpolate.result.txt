@@ -1,0 +1,78 @@
+FAIL projects/lodash/.internal/reInterpolate.test.ts
+  reInterpolate
+    ✕ should match template delimiters (7 ms)
+    ✕ should handle multiple occurrences of template delimiters (1 ms)
+    ✕ should return an empty array when there are no matches (1 ms)
+
+  ● reInterpolate › should match template delimiters
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 3
+
+      Array [
+    -   "dolor",
+    -   "consectetur",
+    -   "elit",
+    +   "<%= dolor %>",
+    +   "<%= consectetur %>",
+    +   "<%= elit %>",
+      ]
+
+       8 |     const matches = input.match(reInterpolate);
+       9 |
+    > 10 |     expect(matches).toEqual(expectedMatches);
+         |                     ^
+      11 |   });
+      12 |
+      13 |   it('should handle multiple occurrences of template delimiters', () => {
+
+      at Object.toEqual (projects/lodash/.internal/reInterpolate.test.ts:10:21)
+
+  ● reInterpolate › should handle multiple occurrences of template delimiters
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Array [
+    -   "name",
+    -   "name",
+    +   "<%= name %>",
+    +   "<%= name %>",
+      ]
+
+      17 |     const matches = input.match(reInterpolate);
+      18 |
+    > 19 |     expect(matches).toEqual(expectedMatches);
+         |                     ^
+      20 |   });
+      21 |
+      22 |   it('should return an empty array when there are no matches', () => {
+
+      at Object.toEqual (projects/lodash/.internal/reInterpolate.test.ts:19:21)
+
+  ● reInterpolate › should return an empty array when there are no matches
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: []
+    Received: null
+
+      25 |     const matches = input.match(reInterpolate);
+      26 |
+    > 27 |     expect(matches).toEqual([]);
+         |                     ^
+      28 |   });
+      29 | });
+      30 |
+
+      at Object.toEqual (projects/lodash/.internal/reInterpolate.test.ts:27:21)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 total
+Snapshots:   0 total
+Time:        0.719 s
+Ran all test suites matching /projects\/lodash\/.internal\/reInterpolate.test.ts/i.

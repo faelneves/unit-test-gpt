@@ -1,0 +1,11 @@
+PASS projects/lodash/.internal/stringToArray.test.ts
+  stringToArray
+    ✓ should convert string to an array with ASCII characters (2 ms)
+    ✓ should convert string to an array with Unicode characters (1 ms)
+    ✓ should convert an empty string to an empty array
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.472 s
+Ran all test suites matching /projects\/lodash\/.internal\/stringToArray.test.ts/i.

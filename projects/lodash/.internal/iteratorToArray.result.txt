@@ -1,0 +1,10 @@
+PASS projects/lodash/.internal/iteratorToArray.test.ts
+  iteratorToArray
+    ✓ should convert an iterator to an array (6 ms)
+    ✓ should handle an empty iterator (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        1.018 s
+Ran all test suites matching /projects\/lodash\/.internal\/iteratorToArray.test.ts/i.

@@ -1,0 +1,20 @@
+FAIL projects/lodash/property.test.ts
+  ● Test suite failed to run
+
+    Cannot find module '@testing-library/dom' from 'projects/lodash/property.test.ts'
+
+      1 | import property from './property';
+    > 2 | import { getByTestId } from '@testing-library/dom';
+        | ^
+      3 |
+      4 | describe('property', () => {
+      5 |   describe('when path is a string', () => {
+
+      at Resolver._throwModNotFoundError (node_modules/jest-resolve/build/resolver.js:427:11)
+      at Object.require (projects/lodash/property.test.ts:2:1)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.549 s
+Ran all test suites matching /projects\/lodash\/property.test.ts/i.

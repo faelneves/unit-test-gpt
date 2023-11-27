@@ -1,0 +1,13 @@
+PASS projects/lodash/flattenDeep.test.ts
+  flattenDeep
+    ✓ should return an empty array if the input is null (4 ms)
+    ✓ should return an empty array if the input is an empty array
+    ✓ should return the flattened array (1 ms)
+    ✓ should handle arrays with multiple levels of nesting
+    ✓ should handle arrays that contain non-array elements (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        1.781 s
+Ran all test suites matching /projects\/lodash\/flattenDeep.test.ts/i.

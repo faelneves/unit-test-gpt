@@ -1,0 +1,10 @@
+PASS projects/lodash/.internal/copyArray.test.ts
+  copyArray
+    ✓ should copy values from source array to target array (2 ms)
+    ✓ should create a new array if target array is not provided
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.467 s
+Ran all test suites matching /projects\/lodash\/.internal\/copyArray.test.ts/i.

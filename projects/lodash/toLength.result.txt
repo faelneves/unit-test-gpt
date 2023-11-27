@@ -1,0 +1,27 @@
+FAIL projects/lodash/toLength.test.ts
+  toLength
+    ✓ should return 0 when value is falsy (2 ms)
+    ✓ should convert value to an integer
+    ✓ should not convert value if it is already an integer
+    ✓ should return 0 if value is a negative number (1 ms)
+    ✕ should return the maximum length if value exceeds it
+
+  ● toLength › should return the maximum length if value exceeds it
+
+    ReferenceError: MAX_ARRAY_LENGTH is not defined
+
+      27 |   it('should return the maximum length if value exceeds it', () => {
+      28 |     expect(toLength(Infinity)).toBe(4294967295);
+    > 29 |     expect(toLength(MAX_ARRAY_LENGTH + 1)).toBe(4294967295);
+         |                     ^
+      30 |   });
+      31 | });
+      32 |
+
+      at Object.MAX_ARRAY_LENGTH (projects/lodash/toLength.test.ts:29:21)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.541 s
+Ran all test suites matching /projects\/lodash\/toLength.test.ts/i.

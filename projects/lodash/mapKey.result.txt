@@ -1,0 +1,35 @@
+FAIL projects/lodash/mapKey.test.ts
+  mapKey
+    ✓ should return an object with mapped keys (2 ms)
+    ✓ should return an empty object if input object is empty
+    ✓ should return the same object if iteratee function does not change keys
+    ✓ should return the same object with modified keys if iteratee function modifies keys (1 ms)
+    ✕ should ignore non-enumerable properties on the object (3 ms)
+
+  ● mapKey › should ignore non-enumerable properties on the object
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Object {
+    -   "a1": 1,
+    - }
+    + Object {}
+
+      44 |     const result = mapKey(object, iteratee);
+      45 |
+    > 46 |     expect(result).toEqual({ a1: 1 });
+         |                    ^
+      47 |   });
+      48 | });
+      49 |
+
+      at Object.toEqual (projects/lodash/mapKey.test.ts:46:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.543 s
+Ran all test suites matching /projects\/lodash\/mapKey.test.ts/i.

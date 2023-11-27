@@ -1,0 +1,47 @@
+FAIL projects/lodash/startsWith.test.ts
+  startsWith
+    ✓ should return true if string starts with target (2 ms)
+    ✓ should return false if string does not start with target
+    ✓ should return true if string starts with target at specified position
+    ✓ should handle empty string correctly (1 ms)
+    ✕ should handle undefined and null correctly
+    ✕ should handle negative position correctly (2 ms)
+    ✓ should handle position beyond string length correctly
+
+  ● startsWith › should handle undefined and null correctly
+
+    TypeError: Cannot read properties of undefined (reading 'length')
+
+      22 |  */
+      23 | function startsWith(string, target, position) {
+    > 24 |     const { length } = string;
+         |             ^
+      25 |     position = position == null ? 0 : position;
+      26 |     if (position < 0) {
+      27 |         position = 0;
+
+      at length (projects/lodash/startsWith.ts:24:13)
+      at Object.<anonymous> (projects/lodash/startsWith.test.ts:28:22)
+
+  ● startsWith › should handle negative position correctly
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      33 |   it('should handle negative position correctly', () => {
+      34 |     expect(startsWith('abc', 'a', -1)).toBe(true);
+    > 35 |     expect(startsWith('hello world', 'he', -6)).toBe(false);
+         |                                                 ^
+      36 |     expect(startsWith('1234567890', '12', -20)).toBe(true);
+      37 |   });
+      38 |
+
+      at Object.toBe (projects/lodash/startsWith.test.ts:35:49)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        0.599 s
+Ran all test suites matching /projects\/lodash\/startsWith.test.ts/i.

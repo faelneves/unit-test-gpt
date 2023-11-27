@@ -1,0 +1,21 @@
+PASS projects/lodash/isEmpty.test.ts
+  isEmpty
+    ✓ should return true for null (2 ms)
+    ✓ should return true for true
+    ✓ should return true for 1 (1 ms)
+    ✓ should return false for non-empty array
+    ✓ should return false for non-empty string
+    ✓ should return false for non-empty object
+    ✓ should return true for empty array
+    ✓ should return true for empty string (1 ms)
+    ✓ should return true for empty object
+    ✓ should return true for empty map
+    ✓ should return true for empty set (1 ms)
+    ✓ should return true for empty arguments (1 ms)
+    ✓ should return false for non-empty arguments
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        0.572 s
+Ran all test suites matching /projects\/lodash\/isEmpty.test.ts/i.

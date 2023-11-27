@@ -1,0 +1,15 @@
+PASS projects/lodash/isBuffer.test.ts
+  isBuffer
+    ✓ should return true for a Buffer object (2 ms)
+    ✓ should return false for a Uint8Array object (1 ms)
+    ✓ should return false for a string
+    ✓ should return false for a number
+    ✓ should return false for an empty object (1 ms)
+    ✓ should return false for null
+    ✓ should return false for undefined
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        2.451 s
+Ran all test suites matching /projects\/lodash\/isBuffer.test.ts/i.

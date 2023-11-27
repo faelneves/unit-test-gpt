@@ -1,0 +1,13 @@
+PASS projects/lodash/pullAll.test.ts
+  pullAll
+    ✓ should remove all occurrences of values from array (7 ms)
+    ✓ should not modify array if values is empty (30 ms)
+    ✓ should not modify array if array is empty
+    ✓ should not modify array if both array and values are empty (1 ms)
+    ✓ should handle arrays with different types
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        3.195 s
+Ran all test suites matching /projects\/lodash\/pullAll.test.ts/i.

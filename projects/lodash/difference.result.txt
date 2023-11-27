@@ -1,0 +1,12 @@
+PASS projects/lodash/difference.test.ts
+  difference
+    ✓ returns an empty array when provided array is empty (3 ms)
+    ✓ returns the array with non-duplicate values when provided arrays have same values (1 ms)
+    ✓ returns the array with values that are not in the other arrays
+    ✓ returns the array with values that are not in the other arrays (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.526 s
+Ran all test suites matching /projects\/lodash\/difference.test.ts/i.

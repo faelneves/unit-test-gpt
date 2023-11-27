@@ -1,0 +1,71 @@
+FAIL projects/lodash/.internal/baseFlatten.test.ts
+  baseFlatten
+    ✓ should return an empty array if input array is null (2 ms)
+    ✓ should return the original array if depth is 0
+    ✓ should flatten the array with a depth of 1
+    ✓ should flatten the array with a depth of 2 (1 ms)
+    ✕ should apply the predicate function for flattening (3 ms)
+    ✕ should apply the predicate function and be strict (1 ms)
+
+  ● baseFlatten › should apply the predicate function for flattening
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 0
+
+      Array [
+        1,
+        2,
+        3,
+    -   Array [
+        4,
+    -   ],
+      ]
+
+      25 |     const array = [[1, 2], [3, [4]]]
+      26 |     const predicate = (value) => Array.isArray(value)
+    > 27 |     expect(baseFlatten(array, Infinity, predicate)).toEqual([1, 2, 3, [4]])
+         |                                                     ^
+      28 |   })
+      29 |
+      30 |   it('should apply the predicate function and be strict', () => {
+
+      at Object.toEqual (projects/lodash/.internal/baseFlatten.test.ts:27:53)
+
+  ● baseFlatten › should apply the predicate function and be strict
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 12
+    + Received  +  1
+
+    - Array [
+    -   Array [
+    -     1,
+    -     2,
+    -   ],
+    -   Array [
+    -     3,
+    -     Array [
+    -       4,
+    -     ],
+    -   ],
+    - ]
+    + Array []
+
+      31 |     const array = [[1, 2], [3, [4]]]
+      32 |     const predicate = (value) => Array.isArray(value)
+    > 33 |     expect(baseFlatten(array, Infinity, predicate, true)).toEqual([[1, 2], [3, [4]]])
+         |                                                           ^
+      34 |   })
+      35 | })
+      36 |
+
+      at Object.toEqual (projects/lodash/.internal/baseFlatten.test.ts:33:59)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 4 passed, 6 total
+Snapshots:   0 total
+Time:        0.628 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseFlatten.test.ts/i.

@@ -1,0 +1,11 @@
+PASS projects/lodash/at.test.ts
+  at
+    ✓ should return an array of values corresponding to the given paths in the object (5 ms)
+    ✓ should return an empty array if no paths are provided
+    ✓ should return an array with undefined values for non-existent paths (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        1.132 s
+Ran all test suites matching /projects\/lodash\/at.test.ts/i.

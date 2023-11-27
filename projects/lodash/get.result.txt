@@ -1,0 +1,11 @@
+PASS projects/lodash/get.test.ts
+  get
+    ✓ should return the value at the specified object path (13 ms)
+    ✓ should return the default value for undefined resolved values
+    ✓ should return undefined for null or undefined object
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        1.673 s
+Ran all test suites matching /projects\/lodash\/get.test.ts/i.

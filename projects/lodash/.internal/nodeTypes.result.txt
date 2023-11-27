@@ -1,0 +1,9 @@
+PASS projects/lodash/.internal/nodeTypes.test.ts
+  nodeTypes
+    ✓ should return a defined value (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.472 s
+Ran all test suites matching /projects\/lodash\/.internal\/nodeTypes.test.ts/i.

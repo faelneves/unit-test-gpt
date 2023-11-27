@@ -1,0 +1,91 @@
+FAIL projects/lodash/.internal/baseWhile.test.ts
+  baseWhile
+    when called with an array, a predicate function, and no options
+      ✓ should return a new array with elements taken from the beginning until the predicate returns false (2 ms)
+      ✓ should return an empty array if the predicate returns false for all elements
+    when called with an array, a predicate function, and the isDrop option set to true
+      ✓ should return a new array with elements dropped from the beginning until the predicate returns false
+      ✕ should return the original array if the predicate returns true for all elements (3 ms)
+    when called with an array, a predicate function, and the fromRight option set to true
+      ✓ should return a new array with elements taken from the end until the predicate returns false (1 ms)
+      ✕ should return the original array if the predicate returns true for all elements (2 ms)
+    when called with an array, a predicate function, the isDrop option set to true, and the fromRight option set to true
+      ✓ should return a new array with elements dropped from the end until the predicate returns false
+      ✕ should return the original array if the predicate returns true for all elements
+
+  ● baseWhile › when called with an array, a predicate function, and the isDrop option set to true › should return the original array if the predicate returns true for all elements
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 1
+
+    - Array [
+    -   1,
+    -   2,
+    -   3,
+    -   4,
+    -   5,
+    - ]
+    + Array []
+
+      54 |
+      55 |       // Assert
+    > 56 |       expect(result).toEqual(array)
+         |                      ^
+      57 |       expect(result).toBe(array)
+      58 |     })
+      59 |   })
+
+      at Object.toEqual (projects/lodash/.internal/baseWhile.test.ts:56:22)
+
+  ● baseWhile › when called with an array, a predicate function, and the fromRight option set to true › should return the original array if the predicate returns true for all elements
+
+    expect(received).toBe(expected) // Object.is equality
+
+    If it should pass with deep equality, replace "toBe" with "toStrictEqual"
+
+    Expected: [1, 2, 3, 4, 5]
+    Received: serializes to the same string
+
+      83 |       // Assert
+      84 |       expect(result).toEqual(array)
+    > 85 |       expect(result).toBe(array)
+         |                      ^
+      86 |     })
+      87 |   })
+      88 |
+
+      at Object.toBe (projects/lodash/.internal/baseWhile.test.ts:85:22)
+
+  ● baseWhile › when called with an array, a predicate function, the isDrop option set to true, and the fromRight option set to true › should return the original array if the predicate returns true for all elements
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 1
+
+    - Array [
+    -   1,
+    -   2,
+    -   3,
+    -   4,
+    -   5,
+    - ]
+    + Array []
+
+      110 |
+      111 |       // Assert
+    > 112 |       expect(result).toEqual(array)
+          |                      ^
+      113 |       expect(result).toBe(array)
+      114 |     })
+      115 |   })
+
+      at Object.toEqual (projects/lodash/.internal/baseWhile.test.ts:112:22)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 5 passed, 8 total
+Snapshots:   0 total
+Time:        0.575 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseWhile.test.ts/i.

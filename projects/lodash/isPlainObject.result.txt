@@ -1,0 +1,15 @@
+PASS projects/lodash/isPlainObject.test.ts
+  isPlainObject
+    ✓ should return true for plain object created with Object constructor (4 ms)
+    ✓ should return true for plain object created with literal notation (1 ms)
+    ✓ should return false for null (1 ms)
+    ✓ should return false for undefined (1 ms)
+    ✓ should return false for array
+    ✓ should return false for object with prototype
+    ✓ should return true for object with null prototype
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        1.214 s
+Ran all test suites matching /projects\/lodash\/isPlainObject.test.ts/i.

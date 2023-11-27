@@ -1,0 +1,63 @@
+FAIL projects/lodash/.internal/composeArgsRight.test.ts
+  composeArgsRight
+    ✕ should return the correctly composed arguments (5 ms)
+    ✓ should return an empty array when there are no arguments or partials provided
+    ✕ should return an array with only the partials when there are no arguments provided (1 ms)
+    ✓ should return an array with only the arguments when there are no partials provided (1 ms)
+
+  ● composeArgsRight › should return the correctly composed arguments
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Array [
+        1,
+    -   4,
+    -   3,
+    +   2,
+        5,
+    +   3,
+      ]
+
+      10 |     const result = composeArgsRight(args, partials, holders, isCurried)
+      11 |
+    > 12 |     expect(result).toEqual([1, 4, 3, 5])
+         |                    ^
+      13 |   })
+      14 |
+      15 |   it('should return an empty array when there are no arguments or partials provided', () => {
+
+      at Object.toEqual (projects/lodash/.internal/composeArgsRight.test.ts:12:20)
+
+  ● composeArgsRight › should return an array with only the partials when there are no arguments provided
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 0
+
+      Array [
+        1,
+    -   undefined,
+        2,
+    -   undefined,
+        3,
+      ]
+
+      32 |     const result = composeArgsRight(args, partials, holders, isCurried)
+      33 |
+    > 34 |     expect(result).toEqual([1, undefined, 2, undefined, 3])
+         |                    ^
+      35 |   })
+      36 |
+      37 |   it('should return an array with only the arguments when there are no partials provided', () => {
+
+      at Object.toEqual (projects/lodash/.internal/composeArgsRight.test.ts:34:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 passed, 4 total
+Snapshots:   0 total
+Time:        0.568 s
+Ran all test suites matching /projects\/lodash\/.internal\/composeArgsRight.test.ts/i.

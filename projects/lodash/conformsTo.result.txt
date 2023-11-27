@@ -1,0 +1,11 @@
+PASS projects/lodash/conformsTo.test.ts
+  conformsTo
+    ✓ should return true if object conforms to source (23 ms)
+    ✓ should return false if object does not conform to source (1 ms)
+    ✓ should return true if source is null (32 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.666 s
+Ran all test suites matching /projects\/lodash\/conformsTo.test.ts/i.

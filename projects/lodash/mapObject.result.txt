@@ -1,0 +1,37 @@
+FAIL projects/lodash/mapObject.test.ts
+  mapObject
+    ✓ should return an empty array when given an empty object (2 ms)
+    ✓ should map object values using the iteratee function
+    ✓ should pass the key as the second argument to the iteratee function (1 ms)
+    ✓ should pass the object as the third argument to the iteratee function
+    ✕ should maintain the order of the properties (4 ms)
+
+  ● mapObject › should maintain the order of the properties
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Array [
+    -   2,
+        3,
+    +   2,
+        4,
+      ]
+
+      27 |     const object = { b: 2, a: 1, c: 3 };
+      28 |     const iteratee = (value) => value + 1;
+    > 29 |     expect(mapObject(object, iteratee)).toEqual([2, 3, 4]);
+         |                                         ^
+      30 |   });
+      31 | });
+      32 |
+
+      at Object.toEqual (projects/lodash/mapObject.test.ts:29:41)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.53 s
+Ran all test suites matching /projects\/lodash\/mapObject.test.ts/i.

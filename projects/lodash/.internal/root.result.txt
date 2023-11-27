@@ -1,0 +1,11 @@
+PASS projects/lodash/.internal/root.test.ts
+  root
+    ✓ should be defined (2 ms)
+    ✓ should be an object (1 ms)
+    ✓ should have Object property (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.486 s
+Ran all test suites matching /projects\/lodash\/.internal\/root.test.ts/i.

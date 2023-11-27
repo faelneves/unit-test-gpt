@@ -1,0 +1,11 @@
+PASS projects/lodash/tail.test.ts
+  tail
+    ✓ should return an empty array if the input array is empty (2 ms)
+    ✓ should return all elements except the first element of the input array
+    ✓ should return an empty array if the input array contains only one element (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.5 s
+Ran all test suites matching /projects\/lodash\/tail.test.ts/i.

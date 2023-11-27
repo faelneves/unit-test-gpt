@@ -1,0 +1,14 @@
+PASS projects/lodash/sortedLastIndexOf.test.ts
+  sortedLastIndexOf
+    ✓ should return the index of the last occurrence of the value in a sorted array (2 ms)
+    ✓ should return -1 if the value is not found in the sorted array (1 ms)
+    ✓ should handle arrays with duplicate values
+    ✓ should handle array with negative values (1 ms)
+    ✓ should handle array with mixed positive and negative values (1 ms)
+    ✓ should handle array with non-numeric values
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.786 s
+Ran all test suites matching /projects\/lodash\/sortedLastIndexOf.test.ts/i.

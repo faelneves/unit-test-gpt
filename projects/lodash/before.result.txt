@@ -1,0 +1,11 @@
+PASS projects/lodash/before.test.ts
+  before
+    ✓ should return a function that invokes `func` less than `n` times (3 ms)
+    ✓ should return the result of the last `func` invocation (1 ms)
+    ✓ should throw a TypeError if `func` is not a function (6 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.548 s
+Ran all test suites matching /projects\/lodash\/before.test.ts/i.

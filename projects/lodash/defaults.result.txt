@@ -1,0 +1,16 @@
+PASS projects/lodash/defaults.test.ts
+  defaults
+    ✓ should assign properties from source objects to destination object (3 ms)
+    ✓ should not overwrite existing properties in the destination object
+    ✓ should handle null or undefined source objects (1 ms)
+    ✓ should handle undefined properties in the destination object
+    ✓ should handle inherited properties in source objects
+    ✓ should handle non-enumerable properties in source objects
+    ✓ should handle nested properties in source objects
+    ✓ should use custom equality function for property comparison (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        0.562 s
+Ran all test suites matching /projects\/lodash\/defaults.test.ts/i.

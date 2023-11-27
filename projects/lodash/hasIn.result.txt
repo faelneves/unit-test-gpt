@@ -1,0 +1,28 @@
+FAIL projects/lodash/hasIn.test.ts
+  hasIn
+    ✕ should return true if the key exists in the object (3 ms)
+    ✓ should return false if the key does not exist in the object (1 ms)
+    ✓ should return false if the object is null or undefined (1 ms)
+
+  ● hasIn › should return true if the key exists in the object
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      17 |     expect(hasIn(object, 'b')).toBe(true);
+      18 |     expect(hasIn(object, 'c')).toBe(true);
+    > 19 |     expect(hasIn(object, 'c.d')).toBe(true);
+         |                                  ^
+      20 |     expect(hasIn(object, 'c.e')).toBe(true);
+      21 |     expect(hasIn(object, 'c.e.f')).toBe(true);
+      22 |   });
+
+      at Object.toBe (projects/lodash/hasIn.test.ts:19:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.494 s
+Ran all test suites matching /projects\/lodash\/hasIn.test.ts/i.

@@ -1,0 +1,27 @@
+FAIL projects/lodash/multiply.test.ts
+  multiply
+    ✓ should multiply two numbers correctly (2 ms)
+    ✕ should handle edge cases (2 ms)
+
+  ● multiply › should handle edge cases
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: -0
+
+      11 |   it('should handle edge cases', () => {
+      12 |     expect(multiply(0, 0)).toBe(0);
+    > 13 |     expect(multiply(0, -100)).toBe(0);
+         |                               ^
+      14 |     expect(multiply(-1, -1)).toBe(1);
+      15 |   });
+      16 | });
+
+      at Object.toBe (projects/lodash/multiply.test.ts:13:31)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.861 s
+Ran all test suites matching /projects\/lodash\/multiply.test.ts/i.

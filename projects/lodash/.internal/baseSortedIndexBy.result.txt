@@ -1,0 +1,101 @@
+FAIL projects/lodash/.internal/baseSortedIndexBy.test.ts
+  baseSortedIndexBy
+    ✓ should return the index at which the value should be inserted into the array (2 ms)
+    ✓ should return 0 if the array is empty
+    ✓ should return the highest qualified index if specified
+    ✕ should correctly handle NaN values (1 ms)
+    ✕ should correctly handle undefined values
+    ✕ should correctly handle null values
+    ✕ should correctly handle symbol values (1 ms)
+    ✕ should correctly handle null or symbol values in the array (1 ms)
+
+  ● baseSortedIndexBy › should correctly handle NaN values
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 5
+
+      40 |     const result = baseSortedIndexBy(array, value, iteratee)
+      41 |
+    > 42 |     expect(result).toBe(0)
+         |                    ^
+      43 |   })
+      44 |
+      45 |   it('should correctly handle undefined values', () => {
+
+      at Object.toBe (projects/lodash/.internal/baseSortedIndexBy.test.ts:42:20)
+
+  ● baseSortedIndexBy › should correctly handle undefined values
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 5
+
+      50 |     const result = baseSortedIndexBy(array, value, iteratee)
+      51 |
+    > 52 |     expect(result).toBe(0)
+         |                    ^
+      53 |   })
+      54 |
+      55 |   it('should correctly handle null values', () => {
+
+      at Object.toBe (projects/lodash/.internal/baseSortedIndexBy.test.ts:52:20)
+
+  ● baseSortedIndexBy › should correctly handle null values
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 5
+
+      60 |     const result = baseSortedIndexBy(array, value, iteratee)
+      61 |
+    > 62 |     expect(result).toBe(0)
+         |                    ^
+      63 |   })
+      64 |
+      65 |   it('should correctly handle symbol values', () => {
+
+      at Object.toBe (projects/lodash/.internal/baseSortedIndexBy.test.ts:62:20)
+
+  ● baseSortedIndexBy › should correctly handle symbol values
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 5
+
+      70 |     const result = baseSortedIndexBy(array, value, iteratee)
+      71 |
+    > 72 |     expect(result).toBe(0)
+         |                    ^
+      73 |   })
+      74 |
+      75 |   it('should correctly handle null or symbol values in the array', () => {
+
+      at Object.toBe (projects/lodash/.internal/baseSortedIndexBy.test.ts:72:20)
+
+  ● baseSortedIndexBy › should correctly handle null or symbol values in the array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 5
+
+      80 |     const result = baseSortedIndexBy(array, value, iteratee)
+      81 |
+    > 82 |     expect(result).toBe(1)
+         |                    ^
+      83 |   })
+      84 |
+      85 | })
+
+      at Object.toBe (projects/lodash/.internal/baseSortedIndexBy.test.ts:82:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 3 passed, 8 total
+Snapshots:   0 total
+Time:        0.543 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseSortedIndexBy.test.ts/i.

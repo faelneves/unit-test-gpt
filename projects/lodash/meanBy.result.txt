@@ -1,0 +1,31 @@
+FAIL projects/lodash/meanBy.test.ts
+  meanBy
+    ✓ should return the mean of an array of numbers (2 ms)
+    ✓ should return NaN if the array is empty (1 ms)
+    ✓ should return NaN if the array is null
+    ✓ should return NaN if the array is undefined (1 ms)
+    ✕ should return NaN if the array contains non-numeric values (2 ms)
+    ✓ should handle custom iteratee functions
+
+  ● meanBy › should return NaN if the array contains non-numeric values
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: NaN
+    Received: 171.5
+
+      30 |     const array = [4, 2, '8', 6];
+      31 |     const iteratee = (value) => value;
+    > 32 |     expect(meanBy(array, iteratee)).toBe(NaN);
+         |                                     ^
+      33 |   });
+      34 |
+      35 |   it('should handle custom iteratee functions', () => {
+
+      at Object.toBe (projects/lodash/meanBy.test.ts:32:37)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        1.077 s
+Ran all test suites matching /projects\/lodash\/meanBy.test.ts/i.

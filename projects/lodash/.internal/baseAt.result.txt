@@ -1,0 +1,14 @@
+PASS projects/lodash/.internal/baseAt.test.ts
+  baseAt
+    ✓ should return an array of picked elements (3 ms)
+    ✓ should return an array of undefined if object is null or undefined
+    ✓ should return an array of undefined if object is missing paths
+    ✓ should handle edge cases with empty paths
+    ✓ should return an array of undefined if object is an empty object (1 ms)
+    ✓ should return an array of undefined if object is an empty array
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.651 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseAt.test.ts/i.

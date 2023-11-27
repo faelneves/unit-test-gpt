@@ -1,0 +1,11 @@
+PASS projects/lodash/round.test.ts
+  round
+    ✓ should round a number without precision (2 ms)
+    ✓ should round a number with precision
+    ✓ should round a number with negative precision
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.54 s
+Ran all test suites matching /projects\/lodash\/round.test.ts/i.

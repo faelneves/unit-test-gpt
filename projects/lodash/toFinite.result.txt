@@ -1,0 +1,40 @@
+FAIL projects/lodash/toFinite.test.ts
+  toFinite
+    ✓ should convert positive number to finite number (3 ms)
+    ✓ should convert negative number to finite number (1 ms)
+    ✓ should convert zero to finite number
+    ✓ should convert negative infinity to the maximum finite number (1 ms)
+    ✓ should convert positive infinity to the maximum finite number
+    ✓ should convert NaN to 0 (1 ms)
+    ✓ should convert string number to finite number
+    ✓ should convert empty string to 0 (1 ms)
+    ✓ should convert non-numeric string to 0
+    ✓ should convert null and undefined to 0
+    ✓ should convert object to 0
+    ✓ should convert array to 0 (1 ms)
+    ✕ should convert boolean to 0 (1 ms)
+    ✓ should convert function to 0
+    ✓ should convert Symbol to 0 (1 ms)
+
+  ● toFinite › should convert boolean to 0
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 0
+    Received: 1
+
+      62 |
+      63 |   it('should convert boolean to 0', () => {
+    > 64 |     expect(toFinite(true)).toEqual(0);
+         |                            ^
+      65 |     expect(toFinite(false)).toEqual(0);
+      66 |   });
+      67 |
+
+      at Object.toEqual (projects/lodash/toFinite.test.ts:64:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 14 passed, 15 total
+Snapshots:   0 total
+Time:        0.546 s
+Ran all test suites matching /projects\/lodash\/toFinite.test.ts/i.

@@ -1,0 +1,13 @@
+PASS projects/lodash/flatten.test.ts
+  flatten
+    ✓ should return empty array when array is empty (2 ms)
+    ✓ should return flattened array when given a nested array with one level (1 ms)
+    ✓ should return flattened array when given a nested array with multiple levels
+    ✓ should return the same array when given a flat array (1 ms)
+    ✓ should return the same array when given an array with non-array elements (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        1.259 s
+Ran all test suites matching /projects\/lodash\/flatten.test.ts/i.

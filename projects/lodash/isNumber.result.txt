@@ -1,0 +1,10 @@
+PASS projects/lodash/isNumber.test.ts
+  isNumber
+    ✓ should return true if the value is a number (2 ms)
+    ✓ should return false if the value is not a number (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.599 s
+Ran all test suites matching /projects\/lodash\/isNumber.test.ts/i.

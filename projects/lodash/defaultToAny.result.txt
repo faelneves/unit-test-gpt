@@ -1,0 +1,28 @@
+FAIL projects/lodash/defaultToAny.test.ts
+  defaultToAny
+    ✓ should return the value if it is not NaN, null, or undefined (4 ms)
+    ✓ should return the first non NaN, null, or undefined default value (1 ms)
+    ✓ should return NaN if all default values are NaN (1 ms)
+    ✕ should return undefined if no default values are provided (2 ms)
+
+  ● defaultToAny › should return undefined if no default values are provided
+
+    expect(received).toBeUndefined()
+
+    Received: null
+
+      22 |   it('should return undefined if no default values are provided', () => {
+      23 |     expect(defaultToAny(undefined)).toBeUndefined();
+    > 24 |     expect(defaultToAny(null)).toBeUndefined();
+         |                                ^
+      25 |     expect(defaultToAny(NaN)).toBeUndefined();
+      26 |   });
+      27 | });
+
+      at Object.toBeUndefined (projects/lodash/defaultToAny.test.ts:24:32)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        1.285 s
+Ran all test suites matching /projects\/lodash\/defaultToAny.test.ts/i.

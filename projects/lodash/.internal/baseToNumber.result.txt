@@ -1,0 +1,11 @@
+PASS projects/lodash/.internal/baseToNumber.test.ts
+  baseToNumber
+    ✓ should return the number if value is already a number (2 ms)
+    ✓ should return NaN if value is a symbol (1 ms)
+    ✓ should convert string values to number (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.539 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseToNumber.test.ts/i.

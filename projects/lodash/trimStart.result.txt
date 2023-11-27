@@ -1,0 +1,31 @@
+FAIL projects/lodash/trimStart.test.ts
+  trimStart
+    ✓ should trim leading whitespace from the string (2 ms)
+    ✓ should trim leading specified characters from the string (1 ms)
+    ✓ should return an empty string if the input string is empty (28 ms)
+    ✓ should return an empty string if the input string is null (1 ms)
+    ✓ should return the input string if the input string contains no leading whitespace or specified characters
+    ✕ should return the input string if the input string contains only leading whitespace or specified characters (3 ms)
+
+  ● trimStart › should return the input string if the input string contains only leading whitespace or specified characters
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "  "
+    Received: ""
+
+      35 |     const result = trimStart('  ', ' ');
+      36 |
+    > 37 |     expect(result).toBe('  ')
+         |                    ^
+      38 |   });
+      39 | });
+      40 |
+
+      at Object.toBe (projects/lodash/trimStart.test.ts:37:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        5.094 s
+Ran all test suites matching /projects\/lodash\/trimStart.test.ts/i.

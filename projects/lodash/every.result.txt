@@ -1,0 +1,12 @@
+PASS projects/lodash/every.test.ts
+  every
+    ✓ should return true for an empty array (1 ms)
+    ✓ should return false if any element fails the predicate check
+    ✓ should return true if all elements pass the predicate check
+    ✓ should correctly handle index argument in the predicate function
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.528 s
+Ran all test suites matching /projects\/lodash\/every.test.ts/i.

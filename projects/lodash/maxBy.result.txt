@@ -1,0 +1,11 @@
+PASS projects/lodash/maxBy.test.ts
+  maxBy
+    ✓ should return maximum value based on the iteratee function (3 ms)
+    ✓ should return undefined if the array is empty
+    ✓ should return undefined if the array is null
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.935 s
+Ran all test suites matching /projects\/lodash\/maxBy.test.ts/i.

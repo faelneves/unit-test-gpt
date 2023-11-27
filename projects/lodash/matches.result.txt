@@ -1,0 +1,13 @@
+PASS projects/lodash/matches.test.ts
+  matches
+    ✓ should return a function (19 ms)
+    ✓ should return true for matching objects (1 ms)
+    ✓ should return false for non-matching objects (1 ms)
+    ✓ should return true for matching empty array (1 ms)
+    ✓ should return true for matching empty object (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        2.09 s
+Ran all test suites matching /projects\/lodash\/matches.test.ts/i.

@@ -1,0 +1,70 @@
+FAIL projects/lodash/flatMap.test.ts
+  flatMap
+    ✓ should return a flattened array of values (25 ms)
+    ✓ should return an empty array for an empty collection (1 ms)
+    ✕ should return an empty array for a collection with no iterable values (8 ms)
+    ✕ should handle objects as collections and iterate over their values (2 ms)
+
+  ● flatMap › should return an empty array for a collection with no iterable values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 12
+
+    - Array []
+    + Array [
+    +   null,
+    +   null,
+    +   undefined,
+    +   undefined,
+    +   true,
+    +   true,
+    +   false,
+    +   false,
+    +   0,
+    +   0,
+    + ]
+
+      23 |     const result = flatMap(collection, iteratee);
+      24 |   
+    > 25 |     expect(result).toEqual([]);
+         |                    ^
+      26 |   });
+      27 |
+      28 |   it('should handle objects as collections and iterate over their values', () => {
+
+      at Object.toEqual (projects/lodash/flatMap.test.ts:25:20)
+
+  ● flatMap › should handle objects as collections and iterate over their values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 6
+    + Received  + 1
+
+      Array [
+    -   1,
+    -   1,
+    -   2,
+    -   2,
+    -   3,
+    -   3,
+    +   undefined,
+      ]
+
+      31 |     const result = flatMap(collection, iteratee);
+      32 |   
+    > 33 |     expect(result).toEqual([1, 1, 2, 2, 3, 3]);
+         |                    ^
+      34 |   });
+      35 | });
+      36 |
+
+      at Object.toEqual (projects/lodash/flatMap.test.ts:33:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 passed, 4 total
+Snapshots:   0 total
+Time:        2.317 s
+Ran all test suites matching /projects\/lodash\/flatMap.test.ts/i.

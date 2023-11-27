@@ -1,0 +1,26 @@
+FAIL projects/lodash/toSafeInteger.test.ts
+  toSafeInteger
+    ✓ should convert floating point number to safe integer (2 ms)
+    ✓ should convert smallest number to 0 (1 ms)
+    ✕ should convert infinity to max safe integer
+    ✓ should convert string representation of number to safe integer (1 ms)
+
+  ● toSafeInteger › should convert infinity to max safe integer
+
+    ReferenceError: MAX_SAFE_INTEGER is not defined
+
+      11 |
+      12 |   it('should convert infinity to max safe integer', () => {
+    > 13 |     expect(toSafeInteger(Infinity)).toBe(MAX_SAFE_INTEGER);
+         |                                          ^
+      14 |   });
+      15 |
+      16 |   it('should convert string representation of number to safe integer', () => {
+
+      at Object.MAX_SAFE_INTEGER (projects/lodash/toSafeInteger.test.ts:13:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        0.519 s
+Ran all test suites matching /projects\/lodash\/toSafeInteger.test.ts/i.

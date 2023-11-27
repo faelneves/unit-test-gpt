@@ -1,0 +1,68 @@
+FAIL projects/lodash/.internal/baseSortedUniq.test.ts
+  baseSortedUniq
+    ✕ should return a new array with duplicate elements removed (1 ms)
+    ✕ should return an array with only unique elements when an iteratee is provided
+    ✕ should return an empty array when the input is an empty array
+    ✕ should handle arrays with objects correctly (1 ms)
+
+  ● baseSortedUniq › should return a new array with duplicate elements removed
+
+    ReferenceError: baseSortedUniq is not defined
+
+      4 |   it('should return a new array with duplicate elements removed', () => {
+      5 |     const array = [1, 2, 2, 3, 4, 4, 5];
+    > 6 |     const result = baseSortedUniq(array);
+        |                    ^
+      7 |     expect(result).toEqual([1, 2, 3, 4, 5]);
+      8 |   });
+      9 |
+
+      at Object.baseSortedUniq (projects/lodash/.internal/baseSortedUniq.test.ts:6:20)
+
+  ● baseSortedUniq › should return an array with only unique elements when an iteratee is provided
+
+    ReferenceError: baseSortedUniq is not defined
+
+      11 |     const array = [1, 2, 2, 3, 4, 4, 5];
+      12 |     const iteratee = (n) => n % 2 === 0;
+    > 13 |     const result = baseSortedUniq(array, iteratee);
+         |                    ^
+      14 |     expect(result).toEqual([1, 2]);
+      15 |   });
+      16 |
+
+      at Object.baseSortedUniq (projects/lodash/.internal/baseSortedUniq.test.ts:13:20)
+
+  ● baseSortedUniq › should return an empty array when the input is an empty array
+
+    ReferenceError: baseSortedUniq is not defined
+
+      17 |   it('should return an empty array when the input is an empty array', () => {
+      18 |     const array = [];
+    > 19 |     const result = baseSortedUniq(array);
+         |                    ^
+      20 |     expect(result).toEqual([]);
+      21 |   });
+      22 |
+
+      at Object.baseSortedUniq (projects/lodash/.internal/baseSortedUniq.test.ts:19:20)
+
+  ● baseSortedUniq › should handle arrays with objects correctly
+
+    ReferenceError: baseSortedUniq is not defined
+
+      24 |     const array = [{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }, { id: 2, name: 'Doe' }];
+      25 |     const iteratee = (obj) => obj.id;
+    > 26 |     const result = baseSortedUniq(array, iteratee);
+         |                    ^
+      27 |     expect(result).toEqual([{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }]);
+      28 |   });
+      29 | });
+
+      at Object.baseSortedUniq (projects/lodash/.internal/baseSortedUniq.test.ts:26:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 4 total
+Snapshots:   0 total
+Time:        0.645 s
+Ran all test suites matching /projects\/lodash\/.internal\/baseSortedUniq.test.ts/i.

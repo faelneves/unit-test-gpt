@@ -1,0 +1,44 @@
+FAIL projects/lodash/isError.test.ts
+  isError
+    ✓ should return true for an Error object (2 ms)
+    ✓ should return false for non-Error objects (1 ms)
+    ✕ should return true for a DOMException object (1 ms)
+    ✕ should return true for an Error-like object (2 ms)
+    ✓ should return false for an Error-like object with additional properties (1 ms)
+
+  ● isError › should return true for a DOMException object
+
+    ReferenceError: DOMException is not defined
+
+      23 |
+      24 |   it('should return true for a DOMException object', () => {
+    > 25 |     const domException = new DOMException('This is a DOMException');
+         |                          ^
+      26 |     expect(isError(domException)).toBe(true);
+      27 |   });
+      28 |
+
+      at Object.<anonymous> (projects/lodash/isError.test.ts:25:26)
+
+  ● isError › should return true for an Error-like object
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      32 |       message: 'This is a custom error',
+      33 |     };
+    > 34 |     expect(isError(customError)).toBe(true);
+         |                                  ^
+      35 |   });
+      36 |
+      37 |   it('should return false for an Error-like object with additional properties', () => {
+
+      at Object.toBe (projects/lodash/isError.test.ts:34:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        0.508 s
+Ran all test suites matching /projects\/lodash\/isError.test.ts/i.

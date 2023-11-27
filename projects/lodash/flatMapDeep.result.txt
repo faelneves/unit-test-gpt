@@ -1,0 +1,71 @@
+FAIL projects/lodash/flatMapDeep.test.ts
+  flatMapDeep
+    ✓ should return a new flattened array (2 ms)
+    ✓ should recursively flatten the mapped results
+    ✓ should return an empty array if the input collection is empty (1 ms)
+    ✓ should return an empty array if the input collection contains nested empty arrays
+    ✕ should return an empty array if the input collection contains nested empty objects (4 ms)
+    ✕ should return an empty array if the input collection is a string (2 ms)
+    ✓ should return an empty array if the input collection is null
+    ✓ should return an empty array if the input collection is undefined
+    ✓ should return an empty array if the iteratee returns undefined for all elements
+
+  ● flatMapDeep › should return an empty array if the input collection contains nested empty objects
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 4
+
+    - Array []
+    + Array [
+    +   Object {},
+    +   Object {},
+    + ]
+
+      39 |     const result = flatMapDeep([1, 2], duplicate);
+      40 |
+    > 41 |     expect(result).toEqual([]);
+         |                    ^
+      42 |   });
+      43 |
+      44 |   it('should return an empty array if the input collection is a string', () => {
+
+      at Object.toEqual (projects/lodash/flatMapDeep.test.ts:41:20)
+
+  ● flatMapDeep › should return an empty array if the input collection is a string
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 12
+
+    - Array []
+    + Array [
+    +   "h",
+    +   "h",
+    +   "e",
+    +   "e",
+    +   "l",
+    +   "l",
+    +   "l",
+    +   "l",
+    +   "o",
+    +   "o",
+    + ]
+
+      47 |     const result = flatMapDeep('hello', duplicate);
+      48 |
+    > 49 |     expect(result).toEqual([]);
+         |                    ^
+      50 |   });
+      51 |
+      52 |   it('should return an empty array if the input collection is null', () => {
+
+      at Object.toEqual (projects/lodash/flatMapDeep.test.ts:49:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 7 passed, 9 total
+Snapshots:   0 total
+Time:        0.57 s
+Ran all test suites matching /projects\/lodash\/flatMapDeep.test.ts/i.
