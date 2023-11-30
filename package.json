@@ -7,7 +7,8 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "test": "jest",
-    "test:project": "jest ./project/**.test.js"
+    "test:project": "jest ./projects/**/**.test.js",
+    "test:lodash": "jest ./projects/lodash/**/*.test.ts"
   },
   "author": "",
   "license": "ISC",

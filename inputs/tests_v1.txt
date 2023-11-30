@@ -2,7 +2,6 @@ I want you to act as a expert programmer, I will type code and you will reply wi
 Please note that you should not reply with tests for functions that solely return a value.
 
 Please use Jest to reply with unit tests and prefer "describe", "it" with multiple "expect" methods.
-And use all methods from screen like "screen.getByTestId".
 
 Note that you only need to reply with the unit tests code in single markdown code block.
 Note that tou should consider the classNames test case.
